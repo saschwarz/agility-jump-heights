@@ -177,6 +177,6 @@ function displayError() {
   document.getElementById('graph').appendChild(p);
 }
 
-window.onresize = function () {
+window.onresize = _.debounce(function () {
   Plotly.Plots.resize(gd);
-};
+}, 250);
