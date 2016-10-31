@@ -39,6 +39,10 @@ var config = [{
   maxheights: [11, 14, 18, 22, 26],
   jumpheights: [8, 12, 16, 20, 24],
   org: '<a href="http://www.docna.com/Forms/2_Organizational_Structure.pdf">DOCNA Competition</a>'
+},{
+  maxheights: [10, 14, 20, 26],
+  jumpheights: [4, 8, 14, 20],
+  org: '<a href="http://res.ukcdogs.com/pdf/2011AgilityRulebookInsert.pdf">UKC</a>'
 }, {
   maxheights: [8, 12, 16, 20, 24, 26],
   jumpheights: [4, 8, 12, 16, 20, 24],
