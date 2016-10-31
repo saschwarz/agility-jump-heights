@@ -1,3 +1,1 @@
-A Pen created at CodePen.io. You can find this one at http://codepen.io/saschwarz/pen/qazxgE.
-
- 
+You can see this page in action at: http://agilitynerd.com/jumpheights/
