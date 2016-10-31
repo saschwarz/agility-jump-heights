@@ -144,9 +144,7 @@ function update(gd, dataLayout) {
   var heights, yvals;
   var values = dataLayout.data.slice();
   if (height) {
-    yvals = [];
-    yvals.length = orgs.length;
-    yvals.fill(height);
+    yvals = _.fill(Array(orgs.length), height);
     heights = {
       x: orgs,
       y: yvals,
