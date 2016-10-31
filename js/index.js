@@ -1,5 +1,9 @@
 // Copyright 2016 Steve Schwarz All Rights Reserved.
 var config = [{
+  maxheights: [4, 8, 12, 16, 20],
+  jumpheights: [2, 4, 8, 12, 16],
+  org: '<a href="http://www.k9tdaa.com/documents/2011%20Forms/Rules%20and%20Regulations%20v%205.2.pdf">TDAA</a>'
+}, {
   maxheights: [11, 14, 18, 26],
   jumpheights: [4, 8, 12, 16],
   org: '<a href="http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Skilled</a>'
@@ -32,6 +36,10 @@ var config = [{
   jumpheights: [8, 12, 16, 20],
   org: '<a href="http://www.asca.org/wp-content/uploads/sites/35/2016/04/AgilityRules.pdf">ASCA Championship</a>'
 }, {
+  maxheights: [11, 14, 18, 26],
+  jumpheights: [8, 12, 16, 20],
+  org: '<a href="http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Proficient</a>'
+}, {
   maxheights: [11, 14, 18, 22, 26],
   jumpheights: [8, 12, 16, 20, 24],
   org: '<a href="http://images.akc.org/pdf/rulebooks/REAGIL.pdf">AKC Regular</a>'
@@ -48,13 +56,9 @@ var config = [{
   jumpheights: [4, 8, 12, 16, 20, 24],
   org: '<a href="http://www.k9cpe.com/forms/2016rb.pdf">CPE Regular</a>'
 }, {
-  maxheights: [11, 14, 18, 26],
-  jumpheights: [8, 12, 16, 20],
-  org: '<a href="http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Proficient</a>'
-}, {
   maxheights: [11, 14, 17.5, 22, 26],
   jumpheights: [8, 12, 16, 20, 22],
-  org: '<a href="https://www.ukagilityinternational.com/DynamicContent.aspx?PageName=jump+heights">UKI</a>'
+  org: '<a href="https://www.ukagilityinternational.com/DynamicContent.aspx?PageName=jump+heights">UKI Regular</a>'
 }, {
   maxheights: [12, 14, 17, 19, 21, 26],
   jumpheights: [10, 14, 16, 20, 22, 24],
@@ -131,23 +135,38 @@ function setup() {
 function updateTable(height) {
   var data = _.map(config, function(org){
     var index = _.findIndex(org.maxheights, function(h) { return height <= h});
+    var jumpheight = org.jumpheights[index];
     var rule = 'height <= ' + org.maxheights[index];
     if (index === org.maxheights.length - 1) {
       rule = 'height > ' + org.maxheights[index - 1];
+    } else if (index < 0) {
+      rule = 'N/A';
     }
-    return {name: org.org, jumpheight: org.jumpheights[index], rule: rule};
+    if (jumpheight) {
+      jumpheight += ' in';
+    } else {
+      jumpheight = 'N/A';
+    }
+    return {name: org.org, jumpheight: jumpheight, rule: rule};
   });
   var dest = document.getElementById('results-body');
-  var template = _.template('<tr><td><%= name %></td><td class="jump-height"><%= jumpheight %> in</td><td class="max-height"><%= rule %></td></tr>');
+  var template = _.template('<tr><td><%= name %></td><td class="jump-height"><%= jumpheight %></td><td class="max-height"><%= rule %></td></tr>');
   dest.innerHTML = _.map(data, template).join('');
   var dest = document.getElementById('results').style.display = 'block';
 }
 
 function update(gd, dataLayout) {
-  var height = document.getElementById('height').value;
+  var heightInput = document.getElementById('height');
+  var height = heightInput.value;
   var heights, yvals;
   var values = dataLayout.data.slice();
   if (height) {
+    if (height < 0) {
+      height = 2;
+    } else if (height > 26) {
+      height = 26;
+    }
+    heightInput.value = height;
     yvals = _.fill(Array(orgs.length), height);
     heights = {
       x: orgs,
