@@ -2,70 +2,68 @@
 var config = [{
   maxheights: [4, 8, 12, 16, 20],
   jumpheights: [2, 4, 8, 12, 16],
-  org: '<a href="http://www.k9tdaa.com/documents/2011%20Forms/Rules%20and%20Regulations%20v%205.2.pdf">TDAA</a>'
+  name: '<a href="http://www.k9tdaa.com/documents/2011%20Forms/Rules%20and%20Regulations%20v%205.2.pdf">TDAA</a>'
 }, {
   maxheights: [11, 14, 18, 26],
   jumpheights: [4, 8, 12, 16],
-  org: '<a href="http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Skilled</a>'
+  name: '<a href="http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Skilled</a>'
 }, {
   maxheights: [11, 14, 18, 26],
   jumpheights: [4, 8, 12, 16],
-  org: '<a href="http://www.asca.org/wp-content/uploads/sites/35/2016/04/AgilityRules.pdf">ASCA ACE</a>'
+  name: '<a href="http://www.asca.org/wp-content/uploads/sites/35/2016/04/AgilityRules.pdf">ASCA ACE</a>'
 }, {
   maxheights: [12, 16, 20, 24, 26],
   jumpheights: [4, 8, 12, 16, 20],
-  org: '<a href="http://www.k9cpe.com/forms/2016rb.pdf">CPE Enthusiast</a>'
+  name: '<a href="http://www.k9cpe.com/forms/2016rb.pdf">CPE Enthusiast</a>'
 }, {
   maxheights: [11, 14, 18, 22, 26],
   jumpheights: [4, 8, 12, 16, 20],
-  org: '<a href="http://images.akc.org/pdf/rulebooks/REAGIL.pdf">AKC Preferred</a>'
+  name: '<a href="http://images.akc.org/pdf/rulebooks/REAGIL.pdf">AKC Preferred</a>'
 }, {
   maxheights: [11, 14, 18, 22, 26],
   jumpheights: [4, 8, 12, 16, 20],
-  org: '<a href="http://www.docna.com/Forms/2_Organizational_Structure.pdf">DOCNA Select</a>'
+  name: '<a href="http://www.docna.com/Forms/2_Organizational_Structure.pdf">DOCNA Select</a>'
 }, {
   maxheights: [11, 14, 17.5, 22, 26],
   jumpheights: [4, 8, 12, 16, 20],
-  org: '<a href="https://www.ukagilityinternational.com/ImageUploads/UKI%20Rules%202016%20.pdf">UKI Select</a>'
+  name: '<a href="https://www.ukagilityinternational.com/ImageUploads/UKI%20Rules%202016%20.pdf">UKI Select</a>'
 }, {
   maxheights: [12, 16, 19, 21, 26],
   jumpheights: [8, 12, 14, 16, 20],
-  org: '<a href="https://www.usdaa.com/article.cfm?newsID=3387">USDAA Performance</a>'
+  name: '<a href="https://www.usdaa.com/article.cfm?newsID=3387">USDAA Performance</a>'
 }, {
   maxheights: [11, 14, 18, 26],
   jumpheights: [8, 12, 16, 20],
-  org: '<a href="http://www.asca.org/wp-content/uploads/sites/35/2016/04/AgilityRules.pdf">ASCA Championship</a>'
+  name: '<a href="http://www.asca.org/wp-content/uploads/sites/35/2016/04/AgilityRules.pdf">ASCA Championship</a>'
 }, {
   maxheights: [11, 14, 18, 26],
   jumpheights: [8, 12, 16, 20],
-  org: '<a href="http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Proficient</a>'
+  name: '<a href="http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Proficient</a>'
 }, {
   maxheights: [11, 14, 18, 22, 26],
   jumpheights: [8, 12, 16, 20, 24],
-  org: '<a href="http://images.akc.org/pdf/rulebooks/REAGIL.pdf">AKC Regular</a>'
+  name: '<a href="http://images.akc.org/pdf/rulebooks/REAGIL.pdf">AKC Regular</a>'
 }, {
   maxheights: [11, 14, 18, 22, 26],
   jumpheights: [8, 12, 16, 20, 24],
-  org: '<a href="http://www.docna.com/Forms/2_Organizational_Structure.pdf">DOCNA Competition</a>'
+  name: '<a href="http://www.docna.com/Forms/2_Organizational_Structure.pdf">DOCNA Competition</a>'
 },{
   maxheights: [10, 14, 20, 26],
   jumpheights: [4, 8, 14, 20],
-  org: '<a href="http://res.ukcdogs.com/pdf/2011AgilityRulebookInsert.pdf">UKC</a>'
+  name: '<a href="http://res.ukcdogs.com/pdf/2011AgilityRulebookInsert.pdf">UKC</a>'
 }, {
   maxheights: [8, 12, 16, 20, 24, 26],
   jumpheights: [4, 8, 12, 16, 20, 24],
-  org: '<a href="http://www.k9cpe.com/forms/2016rb.pdf">CPE Regular</a>'
+  name: '<a href="http://www.k9cpe.com/forms/2016rb.pdf">CPE Regular</a>'
 }, {
   maxheights: [11, 14, 17.5, 22, 26],
   jumpheights: [8, 12, 16, 20, 22],
-  org: '<a href="https://www.ukagilityinternational.com/ImageUploads/UKI%20Rules%202016%20.pdf">UKI Regular</a>'
+  name: '<a href="https://www.ukagilityinternational.com/ImageUploads/UKI%20Rules%202016%20.pdf">UKI Regular</a>'
 }, {
   maxheights: [12, 14, 17, 19, 21, 26],
   jumpheights: [10, 14, 16, 20, 22, 24],
-  org: '<a href="https://www.usdaa.com/article.cfm?newsID=3387">USDAA Championship</a>'
+  name: '<a href="https://www.usdaa.com/article.cfm?newsID=3387">USDAA Championship</a>'
 }];
-
-var orgs = _(config).map('org').value();
 
 function setup() {
   var heights = _(config).map('jumpheights').flatten().uniq().sortBy().value();
@@ -93,7 +91,7 @@ function setup() {
           text = 'height > ' + org.maxheights[hi - 1];
         }
         // [bar name, y, hover text] for each bar
-        return [org.org, org.heightDiffs[height], text];
+        return [org.name, org.heightDiffs[height], text];
       } else {
         return [];
       }
@@ -118,7 +116,7 @@ function setup() {
       return _.map(org.maxheights, function (y, i) {
         // number on each bar x: org name, y: height - 2 in, text: jump height
         return {
-          x: org.org,
+          x: org.name,
           y: org.maxheights[i],
           xanchor: 'center',
           yanchor: 'top',
@@ -147,7 +145,7 @@ function updateTable(height) {
     } else {
       jumpheight = 'N/A';
     }
-    return {name: org.org, jumpheight: jumpheight, rule: rule};
+    return {name: org.name, jumpheight: jumpheight, rule: rule};
   });
   var dest = document.getElementById('results-body');
   var template = _.template('<tr><td><%= name %></td><td class="jump-height"><%= jumpheight %></td><td class="max-height"><%= rule %></td></tr>');
@@ -160,6 +158,8 @@ function update(gd, dataLayout) {
   var height = heightInput.value;
   var heights, yvals;
   var values = dataLayout.data.slice();
+  var columns = _(config).map('org').value();
+
   if (height) {
     if (height < 0) {
       height = 2;
@@ -167,9 +167,9 @@ function update(gd, dataLayout) {
       height = 26;
     }
     heightInput.value = height;
-    yvals = _.fill(Array(orgs.length), height);
+    yvals = _.fill(Array(columns.length), height);
     heights = {
-      x: orgs,
+      x: columns,
       y: yvals,
       name: "",
       type: 'line'
