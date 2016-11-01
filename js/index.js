@@ -24,9 +24,9 @@ var config = [{
   jumpheights: [4, 8, 12, 16, 20],
   org: '<a href="http://www.docna.com/Forms/2_Organizational_Structure.pdf">DOCNA Select</a>'
 }, {
-  maxheights: [14, 17.5, 22, 26],
-  jumpheights: [8, 12, 16, 20],
-  org: '<a href="https://www.ukagilityinternational.com/DynamicContent.aspx?PageName=jump+heights">UKI Select</a>'
+  maxheights: [11, 14, 17.5, 22, 26],
+  jumpheights: [4, 8, 12, 16, 20],
+  org: '<a href="https://www.ukagilityinternational.com/ImageUploads/UKI%20Rules%202016%20.pdf">UKI Select</a>'
 }, {
   maxheights: [12, 16, 19, 21, 26],
   jumpheights: [8, 12, 14, 16, 20],
@@ -58,7 +58,7 @@ var config = [{
 }, {
   maxheights: [11, 14, 17.5, 22, 26],
   jumpheights: [8, 12, 16, 20, 22],
-  org: '<a href="https://www.ukagilityinternational.com/DynamicContent.aspx?PageName=jump+heights">UKI Regular</a>'
+  org: '<a href="https://www.ukagilityinternational.com/ImageUploads/UKI%20Rules%202016%20.pdf">UKI Regular</a>'
 }, {
   maxheights: [12, 14, 17, 19, 21, 26],
   jumpheights: [10, 14, 16, 20, 22, 24],
