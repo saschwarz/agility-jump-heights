@@ -2,96 +2,111 @@
 var config = [{
   maxheights: [4, 8, 12, 16, 20],
   jumpheights: [2, 4, 8, 12, 16],
-  name: '<a href="http://www.k9tdaa.com/documents/2011%20Forms/Rules%20and%20Regulations%20v%205.2.pdf">TDAA</a>'
+  name: '<a href="http://www.k9tdaa.com/documents/2011%20Forms/Rules%20and%20Regulations%20v%205.2.pdf">TDAA</a>',
+  notes: ''
 }, {
   maxheights: [11, 14, 18, 26],
   jumpheights: [4, 8, 12, 16],
-  name: '<a href="http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Skilled</a>'
+  name: '<a href="http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Skilled</a>',
+  notes: ''
 }, {
   maxheights: [11, 14, 18, 26],
   jumpheights: [4, 8, 12, 16],
-  name: '<a href="http://www.asca.org/wp-content/uploads/sites/35/2016/04/AgilityRules.pdf">ASCA ACE</a>'
+  name: '<a href="http://www.asca.org/wp-content/uploads/sites/35/2016/04/AgilityRules.pdf">ASCA ACE</a>',
+  notes: ''
 }, {
   maxheights: [12, 16, 20, 24, 26],
   jumpheights: [4, 8, 12, 16, 20],
-  name: '<a href="http://www.k9cpe.com/forms/2016rb.pdf">CPE Enthusiast</a>'
+  name: '<a href="http://www.k9cpe.com/forms/2016rb.pdf">CPE Enthusiast</a>',
+  notes: ''
 }, {
   maxheights: [11, 14, 18, 22, 26],
   jumpheights: [4, 8, 12, 16, 20],
-  name: '<a href="http://images.akc.org/pdf/rulebooks/REAGIL.pdf">AKC Preferred</a>'
+  name: '<a href="http://images.akc.org/pdf/rulebooks/REAGIL.pdf">AKC Preferred</a>',
+  notes: ''
 }, {
   maxheights: [11, 14, 18, 22, 26],
   jumpheights: [4, 8, 12, 16, 20],
-  name: '<a href="http://www.docna.com/Forms/2_Organizational_Structure.pdf">DOCNA Select</a>'
+  name: '<a href="http://www.docna.com/Forms/2_Organizational_Structure.pdf">DOCNA Select</a>',
+  notes: ''
 }, {
   maxheights: [11, 14, 17.5, 22, 26],
   jumpheights: [4, 8, 12, 16, 20],
-  name: '<a href="https://www.ukagilityinternational.com/ImageUploads/UKI%20Rules%202016%20.pdf">UKI Select</a>'
+  name: '<a href="https://www.ukagilityinternational.com/ImageUploads/UKI%20Rules%202016%20.pdf">UKI Select</a>',
+  notes: ''
 }, {
   maxheights: [12, 16, 19, 21, 26],
   jumpheights: [8, 12, 14, 16, 20],
-  name: '<a href="https://www.usdaa.com/article.cfm?newsID=3387">USDAA Performance</a>'
+  name: '<a href="https://www.usdaa.com/article.cfm?newsID=3387">USDAA Performance</a>',
+  notes: 'Effective on December 28, 2016'
 }, {
   maxheights: [11, 14, 18, 26],
   jumpheights: [8, 12, 16, 20],
-  name: '<a href="http://www.asca.org/wp-content/uploads/sites/35/2016/04/AgilityRules.pdf">ASCA Championship</a>'
+  name: '<a href="http://www.asca.org/wp-content/uploads/sites/35/2016/04/AgilityRules.pdf">ASCA Championship</a>',
+  notes: ''
 }, {
   maxheights: [11, 14, 18, 26],
   jumpheights: [8, 12, 16, 20],
-  name: '<a href="http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Proficient</a>'
+  name: '<a href="http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Proficient</a>',
+  notes: ''
 }, {
   maxheights: [11, 14, 18, 22, 26],
   jumpheights: [8, 12, 16, 20, 24],
-  name: '<a href="http://images.akc.org/pdf/rulebooks/REAGIL.pdf">AKC Regular</a>'
+  name: '<a href="http://images.akc.org/pdf/rulebooks/REAGIL.pdf">AKC Regular</a>',
+  notes: ''
 }, {
   maxheights: [11, 14, 18, 22, 26],
   jumpheights: [8, 12, 16, 20, 24],
-  name: '<a href="http://www.docna.com/Forms/2_Organizational_Structure.pdf">DOCNA Competition</a>'
+  name: '<a href="http://www.docna.com/Forms/2_Organizational_Structure.pdf">DOCNA Competition</a>',
+  notes: ''
 },{
   maxheights: [10, 14, 20, 26],
   jumpheights: [4, 8, 14, 20],
-  name: '<a href="http://res.ukcdogs.com/pdf/2011AgilityRulebookInsert.pdf">UKC</a>'
+  name: '<a href="http://res.ukcdogs.com/pdf/2011AgilityRulebookInsert.pdf">UKC</a>',
+  notes: ''
 }, {
   maxheights: [8, 12, 16, 20, 24, 26],
   jumpheights: [4, 8, 12, 16, 20, 24],
-  name: '<a href="http://www.k9cpe.com/forms/2016rb.pdf">CPE Regular</a>'
+  name: '<a href="http://www.k9cpe.com/forms/2016rb.pdf">CPE Regular</a>',
+  notes: ''
 }, {
   maxheights: [11, 14, 17.5, 22, 26],
   jumpheights: [8, 12, 16, 20, 22],
-  name: '<a href="https://www.ukagilityinternational.com/ImageUploads/UKI%20Rules%202016%20.pdf">UKI Regular</a>'
+  name: '<a href="https://www.ukagilityinternational.com/ImageUploads/UKI%20Rules%202016%20.pdf">UKI Regular</a>',
+  notes: ''
 }, {
   maxheights: [12, 14, 17, 19, 21, 26],
   jumpheights: [10, 14, 16, 20, 22, 24],
-  name: '<a href="https://www.usdaa.com/article.cfm?newsID=3387">USDAA Championship</a>'
+  name: '<a href="https://www.usdaa.com/article.cfm?newsID=3387">USDAA Championship</a>',
+  notes: 'Effective on December 28, 2016'
 }];
 
-function setup() {
-  var heights = _(config).map('jumpheights').flatten().uniq().sortBy().value();
-
-  _.map(config, function (org) {
+function annotate(config) {
+  return _.map(config, function (org) {
     // calculate the difference in measured heights for each supported jump height
     // and store that as an object/hash by height in each org's configuration.
+    var numHeights = org.jumpheights.length;
     org.heightDiffs = {};
-    _.map(heights, function (height, index) {
-      var i = _.findIndex(org.jumpheights, function (jh) {
-        return jh === height;
-      });
-      if (i !== -1) {
-        org.heightDiffs[height] = i === 0 ? org.maxheights[i] : org.maxheights[i] - org.maxheights[i - 1];
-      }
+    org.text = [];  // rule text for each cutoff
+    _.map(org.jumpheights, function (height, i) {
+      org.heightDiffs[height] = i === 0 ? org.maxheights[i] : org.maxheights[i] - org.maxheights[i - 1];
+      org.text.push(i === numHeights - 1 ? 'height > ' + org.maxheights[i - 1] : 'height <= ' + org.maxheights[i]);
     });
+    return org;
   });
-  // Assemble traces using heightdiff for Y axis of each stacked bar
+}
+
+function setup(config) {
+  var heights = _(config).map('jumpheights').flatten().uniq().sortBy().value();
+  var config = annotate(config, heights);
+
+  // Create trace for each jump height using heightdiff for Y axis of each bar
   var data = _.map(heights, function (height, index) {
     var matches = _.map(config, function (org) {
       if (org.heightDiffs[height]) {
         var hi = _.indexOf(org.jumpheights, height);
-        var text = 'height <= ' + org.maxheights[hi];
-        if (hi === org.jumpheights.length - 1) {
-          text = 'height > ' + org.maxheights[hi - 1];
-        }
         // [bar name, y, hover text] for each bar
-        return [org.name, org.heightDiffs[height], text];
+        return [org.name, org.heightDiffs[height], org.text[hi]];
       } else {
         return [];
       }
@@ -145,10 +160,10 @@ function updateTable(height) {
     } else {
       jumpheight = 'N/A';
     }
-    return {name: org.name, jumpheight: jumpheight, rule: rule};
+    return {name: org.name, jumpheight: jumpheight, rule: rule, notes: org.notes};
   });
   var dest = document.getElementById('results-body');
-  var template = _.template('<tr><td><%= name %></td><td class="jump-height"><%= jumpheight %></td><td class="max-height"><%= rule %></td></tr>');
+  var template = _.template('<tr><td><%= name %></td><td class="jump-height"><%= jumpheight %></td><td class="max-height"><%= rule %></td><td><%= notes %></td></tr>');
   dest.innerHTML = _.map(data, template).join('');
   var dest = document.getElementById('results').style.display = 'block';
 }
@@ -158,7 +173,7 @@ function update(gd, dataLayout) {
   var height = heightInput.value;
   var heights, yvals;
   var values = dataLayout.data.slice();
-  var columns = _(config).map('org').value();
+  var columns = _(config).map('name').value();
 
   if (height) {
     if (height < 0) {
@@ -182,7 +197,7 @@ function update(gd, dataLayout) {
 
 try {
   var gd = Plotly.d3.select('#graph').node();
-  var dataLayout = setup();
+  var dataLayout = setup(config);
   function onHeightChange() {
     update(gd, dataLayout);
   }
