@@ -97,10 +97,9 @@ function annotate(config) {
 }
 
 function setup(config) {
-  var heights = _(config).map('jumpheights').flatten().uniq().sortBy().value();
-  var config = annotate(config, heights);
-
+  var config = annotate(config);
   // Create trace for each jump height using heightdiff for Y axis of each bar
+  var heights = _(config).map('jumpheights').flatten().uniq().sortBy().value();
   var data = _.map(heights, function (height, index) {
     var matches = _.map(config, function (org) {
       if (org.heightDiffs[height]) {

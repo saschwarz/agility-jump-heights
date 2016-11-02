@@ -2,12 +2,15 @@ input {
   font-size: 1.5rem;
   margin-top: 10px;
 }
-#height {
-  width: 300px;
-}
 #results {
   display: none;
 }
 .max-height, .jump-height {
   text-align: right;
+}
+@media (min-width: 550px) {
+  h1 {
+      font-size: 4rem;
+      text-align: center;
+  }
 }

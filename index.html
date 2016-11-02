@@ -1,20 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 	<title>Dog Agility Jump Height Calculator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="robots" content="index,follow">
+	<meta name="Description" content="AgilityNerd is the oldest dog agility blog with articles on agility training, dog handling, agility courses, agility course analysis, agility equipment and agility videos.">
+	<meta name="keywords" content="steve schwarz, agilitynerd, dog agility, dog agility training, dog agility video, dog agility blog, dog agility courses" />
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="container">
+		<h1>Dog Agility Jump Height Calculator</h1>
+		<div class="row">
+			<input class="six columns" type="text" id="height" value="" placeholder="Enter your dog's height in inches" autocomplete="off"/>
+			<input type="button" onclick="onHeightChange()"
+				value="Show My Jump Heights" class="button-primary six columns" />
+		</div>
 		<div class="row">
 			<div class="u-max-full-width" id="graph">
 			</div>
-		</div>
-		<div class="row">
-			<input type="text" id="height" value="" placeholder="Enter your dog's height in inches" autocomplete="off"/> <input type="button" onclick="onHeightChange()"
-				value="Show My Jump Heights" class="button-primary" />
 		</div>
 		<div class="row">
 			<table id="results" class="u-full-width">
