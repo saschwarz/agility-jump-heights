@@ -118,6 +118,13 @@ function setup(config) {
       text: _.map(matches, function (o) { return o[2] })
     };
   });
+  var smallScreen = document.getElementById('graph').clientWidth <= 550;
+  var margin = {
+    l: 50,
+    r: smallScreen ? 0 : 90,
+    b: smallScreen ? 150 : 90,
+  };
+
   var layout = {
     yaxis: {
       title: "Dog's Height at Withers",
@@ -126,6 +133,8 @@ function setup(config) {
     },
     barmode: 'relative',
     title: 'US Dog Agility Jump Heights',
+    showlegend: false,
+    margin: margin,
     annotations: _(config).map(function (org) {
       return _.map(org.maxheights, function (y, i) {
         // number on each bar x: org name, y: height - 2 in, text: jump height
@@ -145,6 +154,7 @@ function setup(config) {
 }
 
 function updateTable(height) {
+  var resultTable = document.getElementById('results');
   var data = _.map(config, function(org){
     var index = _.findIndex(org.maxheights, function(h) { return height <= h});
     var jumpheight = org.jumpheights[index];
@@ -164,7 +174,7 @@ function updateTable(height) {
   var dest = document.getElementById('results-body');
   var template = _.template('<tr><td><%= name %></td><td class="jump-height"><%= jumpheight %></td><td class="max-height"><%= rule %></td><td><%= notes %></td></tr>');
   dest.innerHTML = _.map(data, template).join('');
-  var dest = document.getElementById('results').style.display = 'block';
+  resultTable.className = 'u-max-full-width load';
 }
 
 function update(gd, dataLayout) {

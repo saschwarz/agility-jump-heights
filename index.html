@@ -8,13 +8,14 @@
 	<meta name="Description" content="AgilityNerd is the oldest dog agility blog with articles on agility training, dog handling, agility courses, agility course analysis, agility equipment and agility videos.">
 	<meta name="keywords" content="steve schwarz, agilitynerd, dog agility, dog agility training, dog agility video, dog agility blog, dog agility courses" />
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="container">
 		<h1>Dog Agility Jump Height Calculator</h1>
 		<div class="row">
-			<input class="six columns" type="text" id="height" value="" placeholder="Enter your dog's height in inches" autocomplete="off"/>
+			<input class="six columns" type="number" step="any" min="2" id="height" value="" placeholder="Enter your dog's height in inches: 20.5" autocomplete="off"/>
 			<input type="button" onclick="onHeightChange()"
 				value="Show My Jump Heights" class="button-primary six columns" />
 		</div>
@@ -23,7 +24,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<table id="results" class="u-full-width">
+			<table id="results" class="u-max-full-width">
 				<thead>
 					<tr>
 						<th>Organization/Division</th>
@@ -37,14 +38,21 @@
 			</table>
 		</div>
 		<div class="row">
-			<p>The graph displays the lowest jump heights by dog height for the many of the US organizations and their main competition
-				categories. There may also be additional/optional higher jump height groups. Many organizations have additional lower
-				jump height groups including: veterans, junior handlers, and height exemptions for individual breeds. Click on any organization
-				name link to view their rules.</p>
+			<div class="u-max-full-width notes">
+				<h5>Calculator Notes:</h5>
+				<ul>
+					<li>Displays the <span style="text-decoration:underline;">lowest jump heights</span> by dog height for many of the US organizations and their main competition
+					categories.</li>
+					<li>There may be additional higher jump heights.</li>
+					<li>Many organizations have additional lower
+					jump height groups including: veterans, junior handlers, and height exemptions for individual breeds.</li>
+					<li>Click on any organization name link to view their rules.</li>
+				</ul>
+			</div>
 		</div>
 		<div class="row">
-			<div class="six columns">Last Updated: 2016-11-01 </div>
-			<div class="u-pull-right">Created by Steve Schwarz <a href="http://www.agilitynerd.com">AgilityNerd.com</a></div>
+			<div class="six columns">Last Updated: 2016-11-02 </div>
+			<div class="six columns" style="text-align:right;">Created by Steve Schwarz <a href="http://www.agilitynerd.com">AgilityNerd.com</a></div>
 		</div>
 	</div>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.15.0/lodash.min.js'></script>
