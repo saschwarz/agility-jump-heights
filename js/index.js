@@ -59,7 +59,7 @@ var config = [{
   division: 'Veterans',
   maxheights: [11, 14, 18, 26],
   jumpheights: [4, 8, 12, 16],
-  display: '<a href="http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Prof.</a>',
+  display: '<a href="http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Proficient</a>',
   rules: 'http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights',
   notes: "Dog's >= 7yro"
 },  {
@@ -269,7 +269,7 @@ function buildLayout(orgs, title) {
   var margin = {
     l: 50,
     r: smallScreen ? 0 : 65,
-    b: smallScreen ? 100 : 65,
+    b: smallScreen ? 110 : 65,
   };
   return {
     xaxis: {
