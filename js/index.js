@@ -9,6 +9,69 @@ var config = [{
   rules: 'http://www.k9tdaa.com/documents/2011%20Forms/Rules%20and%20Regulations%20v%205.2.pdf',
   notes: ''
 }, {
+  group: 3,
+  name: 'CPE',
+  division: 'Specialist',
+  maxheights: [16, 20, 24, 26],
+  jumpheights: [4, 8, 12, 16],
+  display: '<a href="http://www.k9cpe.com/forms/2016rb.pdf">CPE Specialist</a>',
+  rules: 'http://www.k9cpe.com/forms/2016rb.pdf',
+  notes: ''
+}, {
+  group: 3,
+  name: 'UKC',
+  division: 'Veterans',
+  maxheights: [14, 20, 26],
+  jumpheights: [4, 8, 14],
+  display: '<a href="http://res.ukcdogs.com/pdf/2011AgilityRulebookInsert.pdf">UKC Veteran</a>',
+  rules: 'http://res.ukcdogs.com/pdf/2011AgilityRulebookInsert.pdf',
+  notes: ''
+}, {
+  group: 3,
+  name: 'USDAA',
+  division: 'Veterans',
+  maxheights: [12, 16, 26],
+  jumpheights: [4, 8, 12],
+  display: '<a href="https://www.usdaa.com/article.cfm?newsID=3387">USDAA Veterans</a>',
+  rules: 'https://www.usdaa.com/article.cfm?newsID=3387',
+  notes: 'Effective on Dec 28, 2016'
+}, {
+  group: 3,
+  name: 'DOCNA',
+  division: 'Veterans',
+  maxheights: [14, 18, 22, 26],
+  jumpheights: [4, 8, 12, 16],
+  display: '<a href="http://www.docna.com/Forms/2_Organizational_Structure.pdf">DOCNA Veterans</a>',
+  rules: 'http://www.docna.com/Forms/2_Organizational_Structure.pdf',
+  notes: "Dog's >= 7yro"
+}, {
+  group: 3,
+  name: 'ASCA',
+  division: 'Veterans',
+  maxheights: [11, 14, 18, 26],
+  jumpheights: [4, 8, 12, 16],
+  display: '<a href="http://www.asca.org/wp-content/uploads/sites/35/2016/04/AgilityRules.pdf">ASCA Veterans</a>',
+  rules: 'http://www.asca.org/wp-content/uploads/sites/35/2016/04/AgilityRules.pdf',
+  notes: "Dog's >= 7yro"
+}, {
+  group: 3,
+  name: 'NADAC',
+  division: 'Veterans',
+  maxheights: [11, 14, 18, 26],
+  jumpheights: [4, 8, 12, 16],
+  display: '<a href="http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Prof.</a>',
+  rules: 'http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights',
+  notes: "Dog's >= 7yro"
+},  {
+  group: 3,
+  name: 'CPE',
+  division: 'Veterans',
+  maxheights: [12, 16, 20, 24, 26],
+  jumpheights: [4, 8, 12, 16, 20],
+  display: '<a href="http://www.k9cpe.com/forms/2016rb.pdf">CPE Veterans</a>',
+  rules: 'http://www.k9cpe.com/forms/2016rb.pdf',
+  notes: "Dog's >= 6yro"
+}, {
   group: 2,
   name: 'NADAC',
   division: 'Skilled',
@@ -107,7 +170,7 @@ var config = [{
   display: '<a href="http://www.docna.com/Forms/2_Organizational_Structure.pdf">DOCNA Comp.</a>',
   rules: 'http://www.docna.com/Forms/2_Organizational_Structure.pdf',
   notes: ''
-},{
+}, {
   group: 1,
   name: 'UKC',
   division: '',
@@ -287,21 +350,26 @@ try {
   var gd1 = Plotly.d3.select('#graph1').node();
   var filtered1 = _.filter(annotated, {group: 1});
   var data1 = setup(filtered1);
-  var layout1 = buildLayout(filtered1, 'Jump Heights<br>"Regular/Championship"');
+  var layout1 = buildLayout(filtered1, 'US Jump Heights<br>"Regular/Championship"');
 
   var gd2 = Plotly.d3.select('#graph2').node();
   var filtered2 = _.filter(annotated, {group: 2});
   var data2 = setup(filtered2);
-  var layout2 = buildLayout(filtered2, 'Jump Heights<br>"Performance/Preferred"');
+  var layout2 = buildLayout(filtered2, 'US Jump Heights<br>"Performance/Preferred"');
+
+  var gd3 = Plotly.d3.select('#graph3').node();
+  var filtered3 = _.filter(annotated, {group: 3});
+  var data3 = setup(filtered3);
+  var layout3 = buildLayout(filtered3, 'US Jump Heights<br>"Veterans/Specialist"');
 
   function onHeightChange() {
     var height = getHeight();
-    // update modifies data
-    var values = data1.slice();
-    updateGraph(gd1, filtered1, values, layout1, height);
-    values = data2.slice();
-    updateGraph(gd2, filtered2, values, layout2, height);
     updateTable(height);
+
+    // update modifies data
+    updateGraph(gd1, filtered1, data1.slice(), layout1, height);
+    updateGraph(gd2, filtered2, data2.slice(), layout2, height);
+    updateGraph(gd3, filtered3, data3.slice(), layout3, height);
   }
   onHeightChange();
 } catch (e) {
@@ -318,4 +386,6 @@ function displayError() {
 window.onresize = _.debounce(function () {
   Plotly.Plots.resize(gd1);
   Plotly.Plots.resize(gd2);
+  Plotly.Plots.resize(gd3);
+
 }, 250);
