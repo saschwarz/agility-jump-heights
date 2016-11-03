@@ -32,9 +32,18 @@ var config = [{
   division: 'Veterans',
   maxheights: [12, 16, 26],
   jumpheights: [4, 8, 12],
-  display: '<a href="https://www.usdaa.com/article.cfm?newsID=3387">USDAA Veterans</a>',
+ display: '<a href="https://www.usdaa.com/article.cfm?newsID=3387">USDAA Veterans</a>',
   rules: 'https://www.usdaa.com/article.cfm?newsID=3387',
   notes: 'Effective on Dec 28, 2016'
+}, {
+  group: 4,
+  name: 'AAC',
+  division: 'Veterans',
+  maxheights: [16, 21, 26],
+  jumpheights: [6, 10, 16],
+  display: '<a href="https://www.aac.ca/en/rules/_pdf/AAC-RulebookV5-(SECURE).pdf">AAC Veterans</a>',
+  rules: 'https://www.aac.ca/en/rules/_pdf/AAC-RulebookV5-(SECURE).pdf',
+  notes: '> 12in can jump next higher'
 }, {
   group: 3,
   name: 'DOCNA',
@@ -43,6 +52,15 @@ var config = [{
   jumpheights: [4, 8, 12, 16],
   display: '<a href="http://www.docna.com/Forms/2_Organizational_Structure.pdf">DOCNA Veterans</a>',
   rules: 'http://www.docna.com/Forms/2_Organizational_Structure.pdf',
+  notes: "Dog's >= 7yro"
+}, {
+  group: 4,
+  name: 'CKC',
+  division: 'Veterans',
+  maxheights: [14, 18, 22, 26],
+  jumpheights: [4, 8, 12, 16],
+  display: '<a href="https://www.ckc.ca/en/Files/Forms/Shows-Trials/Event-Rules-Regulations/Agility-Rules-and-Regulations-Effective-January-1.aspx">CKC Veterans</a>',
+  rules: 'https://www.ckc.ca/en/Files/Forms/Shows-Trials/Event-Rules-Regulations/Agility-Rules-and-Regulations-Effective-January-1.aspx',
   notes: "Dog's >= 7yro"
 }, {
   group: 3,
@@ -170,6 +188,15 @@ var config = [{
   display: '<a href="http://www.docna.com/Forms/2_Organizational_Structure.pdf">DOCNA Comp.</a>',
   rules: 'http://www.docna.com/Forms/2_Organizational_Structure.pdf',
   notes: ''
+},{
+  group: 4,
+  name: 'CKC',
+  division: 'Selected',
+  maxheights: [10, 14, 18, 22, 26],
+  jumpheights: [4, 8, 12, 16, 20],
+  display: '<a href="https://www.ckc.ca/en/Files/Forms/Shows-Trials/Event-Rules-Regulations/Agility-Rules-and-Regulations-Effective-January-1.aspx">CKC Selected</a>',
+  rules: 'https://www.ckc.ca/en/Files/Forms/Shows-Trials/Event-Rules-Regulations/Agility-Rules-and-Regulations-Effective-January-1.aspx',
+  notes: ''
 }, {
   group: 1,
   name: 'UKC',
@@ -180,6 +207,15 @@ var config = [{
   rules: 'http://res.ukcdogs.com/pdf/2011AgilityRulebookInsert.pdf',
   notes: ''
 }, {
+  group: 4,
+  name: 'AAC',
+  division: 'Special',
+  maxheights: [12, 16, 21, 26],
+  jumpheights: [6, 10, 16, 22],
+  display: '<a href="https://www.aac.ca/en/rules/_pdf/AAC-RulebookV5-(SECURE).pdf">AAC Special</a>',
+  rules: 'https://www.aac.ca/en/rules/_pdf/AAC-RulebookV5-(SECURE).pdf',
+  notes: ''
+}, {
   group: 1,
   name: 'CPE',
   division: 'Regular',
@@ -187,6 +223,15 @@ var config = [{
   jumpheights: [4, 8, 12, 16, 20, 24],
   display: '<a href="http://www.k9cpe.com/forms/2016rb.pdf">CPE Regular</a>',
   rules: 'http://www.k9cpe.com/forms/2016rb.pdf',
+  notes: ''
+}, {
+  group: 4,
+  name: 'CKC',
+  division: 'Regular',
+  maxheights: [10, 14, 18, 22, 26],
+  jumpheights: [8, 12, 16, 20, 24],
+  display: '<a href="https://www.ckc.ca/en/Files/Forms/Shows-Trials/Event-Rules-Regulations/Agility-Rules-and-Regulations-Effective-January-1.aspx">CKC Regular</a>',
+  rules: 'https://www.ckc.ca/en/Files/Forms/Shows-Trials/Event-Rules-Regulations/Agility-Rules-and-Regulations-Effective-January-1.aspx',
   notes: ''
 }, {
   group: 1,
@@ -206,6 +251,15 @@ var config = [{
   display: '<a href="https://www.usdaa.com/article.cfm?newsID=3387">USDAA Champ.</a>',
   rules: 'https://www.usdaa.com/article.cfm?newsID=3387',
   notes: 'Effective on Dec 28, 2016'
+}, {
+  group: 4,
+  name: 'AAC',
+  division: 'Regular',
+  maxheights: [12, 16, 21, 26],
+  jumpheights: [10, 16, 22, 26],
+  display: '<a href="https://www.aac.ca/en/rules/_pdf/AAC-RulebookV5-(SECURE).pdf">AAC Regular</a>',
+  rules: 'https://www.aac.ca/en/rules/_pdf/AAC-RulebookV5-(SECURE).pdf',
+  notes: 'Can jump next higher height'
 }];
 
 function annotate(config) {
@@ -225,8 +279,9 @@ function annotate(config) {
 
 // from https://personal.sron.nl/~pault/colourschemes.pdf
 var colors = {
-    2: '#413B93',
-    4: '#4065B1',
+    2: '#781C81',
+    4: '#413B93',
+    6: '#4065B1',
     8: '#488BC2',
     10: '#55A1B1',
     12: '#63AD99',
@@ -310,22 +365,22 @@ function updateTable(height) {
     return;
   }
   resultsRow.innerHTML = resultsTemplate;
-  var data = _.map(config, function(org){
+  var data = _(config).map(function(org){
     var index = _.findIndex(org.maxheights, function(h) { return height <= h});
-    var jumpheight = org.jumpheights[index];
-    var rule = 'height <= ' + org.maxheights[index];
+    var jumpheight = parseInt(org.jumpheights[index], 10) || null;
+    var jump, rule = 'height <= ' + org.maxheights[index];
     if (index === org.maxheights.length - 1) {
       rule = 'height > ' + org.maxheights[index - 1];
     } else if (index < 0) {
       rule = 'N/A';
     }
     if (jumpheight) {
-      jumpheight += ' in';
+      jump = jumpheight + ' in';
     } else {
-      jumpheight = 'N/A';
+      jump = 'N/A';
     }
-    return {name: org.name, rules: org.rules, division: org.division, jumpheight: jumpheight, rule: rule, notes: org.notes};
-  });
+    return {name: org.name, rules: org.rules, division: org.division, jumpheight: jumpheight, rule: rule, notes: org.notes, jump: jump};
+  }).sortBy('jumpheight').value();
   var dest = resultsRow.getElementsByClassName('results-body')[0];
   var template = _.template('<tr><td><a href="<%= rules %>"><%= name %></a></td><td><%= division %></td><td class="jump-height"><%= jumpheight %></td><td class="max-height"><%= rule %></td><td><%= notes %></td></tr>');
   dest.innerHTML = _.map(data, template).join('');
@@ -374,10 +429,15 @@ try {
   var data2 = setup(filtered2);
   var layout2 = buildLayout(filtered2, 'Jump Heights US Organizations<br>"Performance/Preferred"');
 
-  var gd3 = Plotly.d3.select('#graph3').node();
+ var gd3 = Plotly.d3.select('#graph3').node();
   var filtered3 = _.filter(annotated, {group: 3});
   var data3 = setup(filtered3);
   var layout3 = buildLayout(filtered3, 'Jump Heights US Organizations<br>"Veterans/Specialist"');
+
+  var gd4 = Plotly.d3.select('#graph4').node();
+  var filtered4 = _.filter(annotated, {group: 4});
+  var data4 = setup(filtered4);
+  var layout4 = buildLayout(filtered4, 'Jump Heights Canadian Organizations');
 
   function onHeightChange() {
     var height = getHeight();
@@ -387,8 +447,9 @@ try {
     updateGraph(gd1, filtered1, data1.slice(), layout1, height);
     updateGraph(gd2, filtered2, data2.slice(), layout2, height);
     updateGraph(gd3, filtered3, data3.slice(), layout3, height);
+    updateGraph(gd4, filtered4, data4.slice(), layout4, height);
   }
-  onHeightChange();
+  window.setTimeout(onHeightChange); // don't busy main loop'
 } catch (e) {
   displayError();
 }
@@ -397,12 +458,11 @@ function displayError() {
   var p = document.createElement("p");
   p.style = "color:red;font-face:bold;";
   p.innerHTML = "I'm sorry!<br>If you don't see a graph here there was problem creating it.<br>This page uses some newer web technology you might try using more modern browser.";
-  document.getElementById('graph').appendChild(p);
+  document.getElementById('graph1').appendChild(p);
 }
 
 window.onresize = _.debounce(function () {
   Plotly.Plots.resize(gd1);
   Plotly.Plots.resize(gd2);
   Plotly.Plots.resize(gd3);
-
 }, 250);

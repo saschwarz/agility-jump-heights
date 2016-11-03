@@ -1,0 +1,22 @@
+{
+  "name": "agility-jump-heights",
+  "version": "1.0.0",
+  "description": "Dog Agility Jump Height Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saschwarz/agility-jump-heights.git"
+  },
+  "author": "Steve Schwarz <steve@agilitynerd.com> (http://tech.agilitynerd.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saschwarz/agility-jump-heights/issues"
+  },
+  "homepage": "https://github.com/saschwarz/agility-jump-heights#readme",
+  "devDependencies": {
+    "lodash": "^4.16.6"
+  }
+}
