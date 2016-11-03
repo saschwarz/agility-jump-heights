@@ -223,6 +223,21 @@ function annotate(config) {
   });
 }
 
+// from https://personal.sron.nl/~pault/colourschemes.pdf
+var colors = {
+    2: '#413B93',
+    4: '#4065B1',
+    8: '#488BC2',
+    10: '#55A1B1',
+    12: '#63AD99',
+    14: '#7FB972',
+    16: '#B5BD4C',
+    20: '#D9AD3C',
+    22: '#E68E34',
+    24: '#E6642C',
+    26: '#D92120',
+};
+
 function setup(config) {
   // Create trace for each jump height using heightdiff for Y axis of each bar
   var heights = _(config).map('jumpheights').flatten().uniq().sortBy().value();
@@ -230,8 +245,9 @@ function setup(config) {
     var matches = _.map(config, function (org) {
       if (org.heightDiffs[height]) {
         var hi = _.indexOf(org.jumpheights, height);
-        // [bar display, y, hover text] for each bar
-        return [org.display, org.heightDiffs[height], org.text[hi]];
+        var color = colors[height];
+        // [bar display, y, hover text, bar color] for each bar
+        return [org.display, org.heightDiffs[height], org.text[hi], color];
       } else {
         return [];
       }
@@ -241,7 +257,8 @@ function setup(config) {
       y: _.map(matches, function (o) { return o[1] }),
       name: height,
       type: 'bar',
-      text: _.map(matches, function (o) { return o[2] })
+      text: _.map(matches, function (o) { return o[2] }),
+      marker: {color: _.map(matches, function (o) { return o[3] })}
     };
   });
 }
@@ -325,7 +342,7 @@ function updateGraph(gd, orgs, data, layout, height) {
       y: yvals,
       name: "",
       type: 'line',
-      line: {color: 'navy', width: 3}
+      line: {color: '#444444', width: 3}
     };
     data.push(heights);
   }
@@ -350,17 +367,17 @@ try {
   var gd1 = Plotly.d3.select('#graph1').node();
   var filtered1 = _.filter(annotated, {group: 1});
   var data1 = setup(filtered1);
-  var layout1 = buildLayout(filtered1, 'US Jump Heights<br>"Regular/Championship"');
+  var layout1 = buildLayout(filtered1, 'Jump Heights US Organizations<br>"Regular/Championship"');
 
   var gd2 = Plotly.d3.select('#graph2').node();
   var filtered2 = _.filter(annotated, {group: 2});
   var data2 = setup(filtered2);
-  var layout2 = buildLayout(filtered2, 'US Jump Heights<br>"Performance/Preferred"');
+  var layout2 = buildLayout(filtered2, 'Jump Heights US Organizations<br>"Performance/Preferred"');
 
   var gd3 = Plotly.d3.select('#graph3').node();
   var filtered3 = _.filter(annotated, {group: 3});
   var data3 = setup(filtered3);
-  var layout3 = buildLayout(filtered3, 'US Jump Heights<br>"Veterans/Specialist"');
+  var layout3 = buildLayout(filtered3, 'Jump Heights US Organizations<br>"Veterans/Specialist"');
 
   function onHeightChange() {
     var height = getHeight();
