@@ -449,7 +449,7 @@ try {
     updateGraph(gd3, filtered3, data3.slice(), layout3, height);
     updateGraph(gd4, filtered4, data4.slice(), layout4, height);
   }
-  window.setTimeout(onHeightChange); // don't busy main loop'
+  window.setTimeout(onHeightChange); // don't busy main loop
 } catch (e) {
   displayError();
 }
@@ -465,4 +465,5 @@ window.onresize = _.debounce(function () {
   Plotly.Plots.resize(gd1);
   Plotly.Plots.resize(gd2);
   Plotly.Plots.resize(gd3);
+  Plotly.Plots.resize(gd4);
 }, 250);
