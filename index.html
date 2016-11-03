@@ -14,46 +14,52 @@
 	<div class="container">
 		<h1>Dog Agility Jump Height Calculator</h1>
 		<div class="row">
-			<input class="six columns" type="number" step="any" min="2" id="height" value="" placeholder="Enter your dog's height in inches: 20.5" autocomplete="off"/>
-			<input type="button" onclick="onHeightChange()"
-				value="Show My Jump Heights" class="button-primary six columns" />
+			<input class="six columns" type="number" step="any" min="2" id="height" value="" placeholder="Enter your dog's height in inches" autocomplete="off"/>
+			<input class="button-primary six columns" type="button" onclick="onHeightChange()" value="Show Me My Jump Heights!"/>
+		</div>
+		<div class="row" id="results">
 		</div>
 		<div class="row">
-			<div class="u-max-full-width" id="graph">
-			</div>
-		</div>
-		<div class="row">
-			<table id="results" class="u-max-full-width">
-				<thead>
-					<tr>
-						<th>Organization/Division</th>
-						<th class="jump-height">Jump Height</th>
-						<th class="max-height">Applicable Height at Withers Rule</th>
-						<th>Notes</th>
-					</tr>
-				</thead>
-				<tbody id="results-body">
-				</tbody>
-			</table>
-		</div>
-		<div class="row">
-			<div class="u-max-full-width notes">
-				<h5>Calculator Notes:</h5>
+			<div class="twelve columns u-max-full-width notes">
+				<h5>FYI:</h5>
 				<ul>
-					<li>Displays the <span style="text-decoration:underline;">lowest jump heights</span> by dog height for many of the US organizations and their main competition
-					categories.</li>
-					<li>There may be additional higher jump heights.</li>
+					<li>Displays the <em>lowest jump heights</em> by dog height for many of the US organizations and their main competition
+					divisions.</li>
+					<li>Organizations may have additional higher jump heights.</li>
 					<li>Many organizations have additional lower
-					jump height groups including: veterans, junior handlers, and height exemptions for individual breeds.</li>
-					<li>Click on any organization name link to view their rules.</li>
+					jump height divisions including: veterans, junior handlers, and height exemptions for individual breeds.</li>
+					<li>Click on any organization's' name link to view their rules.</li>
 				</ul>
 			</div>
 		</div>
 		<div class="row">
-			<div class="six columns">Last Updated: 2016-11-02 </div>
-			<div class="six columns" style="text-align:right;">Created by Steve Schwarz <a href="http://www.agilitynerd.com">AgilityNerd.com</a></div>
+			<div class="twelve columns u-max-full-width" id="graph1">
+			</div>
+		</div>
+		<div class="row">
+			<div class="twelve columns u-max-full-width" id="graph2">
+			</div>
+		</div>
+		<div class="row footer">
+			<div class="twelve columns">Updated: 2016-11-02
+			<span class="u-pull-right">Steve Schwarz <a href="http://www.agilitynerd.com">AgilityNerd.com</a></span></div>
 		</div>
 	</div>
+	<script id="results-template" type="text/x-template">
+		<table class="results-table" class="twelve columns u-max-full-width">
+			<thead>
+				<tr>
+					<th>Organization Rules</th>
+					<th>Division</th>
+					<th class="jump-height">Jump Height</th>
+					<th class="max-height">Withers Height Rule</th>
+					<th>Notes</th>
+				</tr>
+			</thead>
+			<tbody class="results-body">
+			</tbody>
+		</table>
+	</script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.15.0/lodash.min.js'></script>
 	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 	<script src="js/index.js"></script>
