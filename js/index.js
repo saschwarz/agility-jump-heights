@@ -239,7 +239,7 @@ var config = [{
   division: 'Regular',
   cutoffs: [11, 14, 17.5, 22, 26],
   jumpheights: [8, 12, 16, 20, 22],
-  jumpheightsdisplay: [8, 12, 16, 20, '22/26'],
+  jumpheightsdisplay: [8, 12, 16, 20, '22/24'],
   jumpheightsnotes: ['', '', '', '', 'Choice of 22 in or 24 in'],
   display: '<a href="https://www.ukagilityinternational.com/ImageUploads/UKI%20Rules%202016%20.pdf">UKI Regular</a>',
   rules: 'https://www.ukagilityinternational.com/ImageUploads/UKI%20Rules%202016%20.pdf',
