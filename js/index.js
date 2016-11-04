@@ -451,12 +451,12 @@ try {
     updateTable(height);
 
     // update modifies data
-    updateGraph(gd1, filtered1, data1.slice(), layout1, height);
-    updateGraph(gd2, filtered2, data2.slice(), layout2, height);
-    updateGraph(gd3, filtered3, data3.slice(), layout3, height);
-    updateGraph(gd4, filtered4, data4.slice(), layout4, height);
+    window.setTimeout(function() { updateGraph(gd1, filtered1, data1.slice(), layout1, height) });
+    window.setTimeout(function() { updateGraph(gd2, filtered2, data2.slice(), layout2, height) });
+    window.setTimeout(function() { updateGraph(gd3, filtered3, data3.slice(), layout3, height) });
+    window.setTimeout(function() { updateGraph(gd4, filtered4, data4.slice(), layout4, height) });
   }
-  window.setTimeout(onHeightChange); // don't busy main loop
+  onHeightChange();
 } catch (e) {
   displayError();
 }
