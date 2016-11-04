@@ -34,7 +34,7 @@ var config = [{
   jumpheights: [4, 8, 12],
  display: '<a href="https://www.usdaa.com/article.cfm?newsID=3387">USDAA Veterans</a>',
   rules: 'https://www.usdaa.com/article.cfm?newsID=3387',
-  notes: 'Effective on Dec 28, 2016'
+  notes: 'Effective on Dec 28, 2016.'
 }, {
   group: 4,
   name: 'AAC',
@@ -43,7 +43,7 @@ var config = [{
   jumpheights: [6, 10, 16],
   display: '<a href="https://www.aac.ca/en/rules/_pdf/AAC-RulebookV5-(SECURE).pdf">AAC Veterans</a>',
   rules: 'https://www.aac.ca/en/rules/_pdf/AAC-RulebookV5-(SECURE).pdf',
-  notes: '> 12in can jump next higher'
+  notes: '> 12in can jump next higher.'
 }, {
   group: 3,
   name: 'DOCNA',
@@ -52,7 +52,7 @@ var config = [{
   jumpheights: [4, 8, 12, 16],
   display: '<a href="http://www.docna.com/Forms/2_Organizational_Structure.pdf">DOCNA Veterans</a>',
   rules: 'http://www.docna.com/Forms/2_Organizational_Structure.pdf',
-  notes: "Dog's >= 7yro"
+  notes: "Dog's >= 7yro."
 }, {
   group: 4,
   name: 'CKC',
@@ -61,7 +61,7 @@ var config = [{
   jumpheights: [4, 8, 12, 16],
   display: '<a href="https://www.ckc.ca/en/Files/Forms/Shows-Trials/Event-Rules-Regulations/Agility-Rules-and-Regulations-Effective-January-1.aspx">CKC Veterans</a>',
   rules: 'https://www.ckc.ca/en/Files/Forms/Shows-Trials/Event-Rules-Regulations/Agility-Rules-and-Regulations-Effective-January-1.aspx',
-  notes: "Dog's >= 7yro"
+  notes: "Dog's >= 7yro."
 }, {
   group: 3,
   name: 'ASCA',
@@ -70,7 +70,7 @@ var config = [{
   jumpheights: [4, 8, 12, 16],
   display: '<a href="http://www.asca.org/wp-content/uploads/sites/35/2016/04/AgilityRules.pdf">ASCA Veterans</a>',
   rules: 'http://www.asca.org/wp-content/uploads/sites/35/2016/04/AgilityRules.pdf',
-  notes: "Dog's >= 7yro"
+  notes: "Dog's >= 7yro."
 }, {
   group: 3,
   name: 'NADAC',
@@ -79,7 +79,7 @@ var config = [{
   jumpheights: [4, 8, 12, 16],
   display: '<a href="http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Proficient</a>',
   rules: 'http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights',
-  notes: "Dog's >= 7yro"
+  notes: "Dog's >= 7yro."
 },  {
   group: 3,
   name: 'CPE',
@@ -88,7 +88,7 @@ var config = [{
   jumpheights: [4, 8, 12, 16, 20],
   display: '<a href="http://www.k9cpe.com/forms/2016rb.pdf">CPE Veterans</a>',
   rules: 'http://www.k9cpe.com/forms/2016rb.pdf',
-  notes: "Dog's >= 6yro"
+  notes: "Dog's >= 6yro."
 }, {
   group: 2,
   name: 'NADAC',
@@ -151,7 +151,7 @@ var config = [{
   jumpheights: [8, 12, 14, 16, 20],
   display: '<a href="https://www.usdaa.com/article.cfm?newsID=3387">USDAA Perf.</a>',
   rules: 'https://www.usdaa.com/article.cfm?newsID=3387',
-  notes: 'Effective on Dec 28, 2016'
+  notes: 'Effective on Dec 28, 2016.'
 }, {
   group: 1,
   name: 'ASCA',
@@ -240,7 +240,7 @@ var config = [{
   cutoffs: [11, 14, 17.5, 22, 26],
   jumpheights: [8, 12, 16, 20, 22],
   jumpheightsdisplay: [8, 12, 16, 20, '22/24'],
-  jumpheightsnotes: ['', '', '', '', 'Choice of 22 in or 24 in'],
+  jumpheightsnotes: ['', '', '', '', 'Choice of 22 in or 24 in.'],
   display: '<a href="https://www.ukagilityinternational.com/ImageUploads/UKI%20Rules%202016%20.pdf">UKI Regular</a>',
   rules: 'https://www.ukagilityinternational.com/ImageUploads/UKI%20Rules%202016%20.pdf',
   notes: ''
@@ -252,7 +252,7 @@ var config = [{
   jumpheights: [10, 14, 16, 20, 22, 24],
   display: '<a href="https://www.usdaa.com/article.cfm?newsID=3387">USDAA Champ.</a>',
   rules: 'https://www.usdaa.com/article.cfm?newsID=3387',
-  notes: 'Effective on Dec 28, 2016'
+  notes: 'Effective on Dec 28, 2016.'
 }, {
   group: 4,
   name: 'AAC',
@@ -261,7 +261,40 @@ var config = [{
   jumpheights: [10, 16, 22, 26],
   display: '<a href="https://www.aac.ca/en/rules/_pdf/AAC-RulebookV5-(SECURE).pdf">AAC Regular</a>',
   rules: 'https://www.aac.ca/en/rules/_pdf/AAC-RulebookV5-(SECURE).pdf',
-  notes: 'Can jump next higher height'
+  notes: 'Can jump next higher height.'
+}, {
+  group: 5,
+  name: 'FCI',
+  division: '',
+  cutoffs: [13.75, 16.92, 26],
+  cutoffnotes: ['(350 mm)', '(430 mm)', '(430 mm)'],
+  jumpheights: [300, 400, 600],
+  jumpheightsnotes: ['Cutoff LESS THAN 350 mm. Jump height 11.81 in.', 'Cutoff LESS THAN 430 mm. Jump height 15.75 in.', 'Jump height 23.62 in.'],
+  display: '<a href="http://www.fci.be/medias/AGI-REG-en-479.pdf">FCI</a>',
+  rules: 'http://www.fci.be/medias/AGI-REG-en-479.pdf',
+  notes: ''
+}, {
+  group: 5,
+  name: 'WAO',
+  division: '',
+  cutoffs: [12.60, 16.14, 19.69, 26],
+  cutoffnotes: ['(320 mm)', '(410 mm)', '(500 mm)', '(500mm)'],
+  jumpheights: [300, 400, 525, 600],
+  jumpheightsnotes: ['Jump height 11.81 in.', 'Jump height 15.75 in.', 'Jump height 20.66 in.', 'Jump height 23.62 in.'],
+  display: '<a href="http://www.worldagilityopen.com/waorules&regulations.pdf">WAO</a>',
+  rules: 'http://www.worldagilityopen.com/waorules&regulations.pdf',
+  notes: ''
+}, {
+  group: 5,
+  name: 'IFCS',
+  division: '',
+  cutoffs: [12.60, 15.75, 19.69, 26],
+  cutoffnotes: ['(300 mm)', '(400 mm)', '(500 mm)', '(600mm)'],
+  jumpheights: [300, 400, 500, 600],
+  jumpheightsnotes: ['Jump height 11.81 in.', 'Jump height 15.75 in.', 'Jump height 19.68 in.', 'Jump height 23.62 in.'],
+  display: '<a href="http://ifcsdogsports.org/uncategorized/ifcs-announces-regulation-changes-for-wac-2017/">IFCS</a>',
+  rules: 'http://ifcsdogsports.org/uncategorized/ifcs-announces-regulation-changes-for-wac-2017/',
+  notes: ''
 }];
 
 function annotate(config) {
@@ -275,6 +308,7 @@ function annotate(config) {
       org.heightDiffs[height] = i === 0 ? org.cutoffs[i] : org.cutoffs[i] - org.cutoffs[i - 1];
       org.heights.push({
         cutoff: org.cutoffs[i],
+        cutoffdisplay: org.cutoffnotes && (org.cutoffs[i] + ' ' +org.cutoffnotes[i]) || org.cutoffs[i],
         jumpheight: org.jumpheights[i],
         jumpheightdisplay: org.jumpheightsdisplay && org.jumpheightsdisplay[i] || org.jumpheights[i],
         notes: org.jumpheightsnotes && org.jumpheightsnotes[i] || '',
@@ -288,10 +322,15 @@ function annotate(config) {
 // from https://personal.sron.nl/~pault/colourschemes.pdf
 var colors = {
     2: '#781C81',
+    300: '#781C81',
     4: '#413B93',
+    400: '#413B93',
     6: '#4065B1',
+    500: '#4065B1',
     8: '#488BC2',
+    525: '#488BC2',
     10: '#55A1B1',
+    600: '#55A1B1',
     12: '#63AD99',
     14: '#7FB972',
     16: '#B5BD4C',
@@ -376,17 +415,19 @@ function updateTable(height) {
   }
   resultsRow.innerHTML = resultsTemplate;
   var data = _(config).map(function(org){
-    var jumpheight = 'N/A', jump = 0, rule = 'N/A', index = _.findIndex(org.cutoffs, function(h) { return height <= h });
+    var jumpheight = 'N/A', jump = 0, rule = 'N/A', notes = org.notes;
+    var index = _.findIndex(org.cutoffs, function(h) { return height <= h });
     var data = org.heights[index];
     if (data) {
-      rule = 'height <= ' + data.cutoff;
+      rule = 'height <= ' + data.cutoffdisplay;
       jumpheight = data.jumpheightdisplay;
       jump = data.jumpheight;
+      notes += ' ' + data.notes;
       if (index === org.cutoffs.length - 1) {
-        rule = 'height > ' + org.cutoffs[index - 1];
+        rule = 'height > ' + org.heights[index - 1].cutoffdisplay;
       }
     }
-    return {name: org.name, rules: org.rules, division: org.division, jumpheight: jumpheight, rule: rule, notes: org.notes, jump: jump};
+    return {name: org.name, rules: org.rules, division: org.division, jumpheight: jumpheight, rule: rule, notes: notes, jump: jump};
   }).sortBy('jump').value();
   var dest = resultsRow.getElementsByClassName('results-body')[0];
   var template = _.template('<tr><td><a href="<%= rules %>"><%= name %></a></td><td><%= division %></td><td class="jump-height"><%= jumpheight %></td><td class="max-height"><%= rule %></td><td><%= notes %></td></tr>');
@@ -446,15 +487,22 @@ try {
   var data4 = setup(filtered4);
   var layout4 = buildLayout(filtered4, 'Jump Heights Canadian Organizations');
 
+  var gd5 = Plotly.d3.select('#graph5').node();
+  var filtered5 = _.filter(annotated, {group: 5});
+  var data5 = setup(filtered5);
+  var layout5 = buildLayout(filtered5, 'Jump Heights International Championship Organizations');
+  var gds = [gd1, gd2, gd3, gd4, gd5];
+
   function onHeightChange() {
     var height = getHeight();
     updateTable(height);
 
-    // update modifies data
+    // updateGraph modifies data
     window.setTimeout(function() { updateGraph(gd1, filtered1, data1.slice(), layout1, height) });
     window.setTimeout(function() { updateGraph(gd2, filtered2, data2.slice(), layout2, height) });
     window.setTimeout(function() { updateGraph(gd3, filtered3, data3.slice(), layout3, height) });
     window.setTimeout(function() { updateGraph(gd4, filtered4, data4.slice(), layout4, height) });
+    window.setTimeout(function() { updateGraph(gd5, filtered5, data5.slice(), layout5, height) });
   }
   onHeightChange();
 } catch (e) {
@@ -468,9 +516,8 @@ function displayError() {
   document.getElementById('graph1').appendChild(p);
 }
 
-window.onresize = _.debounce(function () {
-  Plotly.Plots.resize(gd1);
-  Plotly.Plots.resize(gd2);
-  Plotly.Plots.resize(gd3);
-  Plotly.Plots.resize(gd4);
+window.onresize = _.debounce(function() {
+  _.each(gds, function(gd) {
+    Plotly.Plots.resize(gd);
+  })
 }, 250);
