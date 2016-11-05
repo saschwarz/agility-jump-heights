@@ -1,4 +1,3 @@
-// Copyright 2016 Steve Schwarz All Rights Reserved.
 var config = [{
   group: 1,
   name: 'TDAA',
@@ -435,7 +434,7 @@ function updateTable(height) {
   resultsRow.className = 'u-max-full-width load';
 }
 
-function updateGraph(gd, orgs, data, layout, height) {
+function updateGraph(gnode, orgs, data, layout, height) {
   var heights, yvals;
   var columns = _(orgs).map('display').value();
   if (height) {
@@ -449,7 +448,7 @@ function updateGraph(gd, orgs, data, layout, height) {
     };
     data.push(heights);
   }
-  Plotly.newPlot(gd, data, layout);
+  Plotly.newPlot(gnode, data, layout);
 }
 
 function getHeight() {
@@ -466,43 +465,34 @@ function getHeight() {
 
 try {
   var annotated = annotate(config);
-
-  var gd1 = Plotly.d3.select('#graph1').node();
-  var filtered1 = _.filter(annotated, {group: 1});
-  var data1 = setup(filtered1);
-  var layout1 = buildLayout(filtered1, 'Jump Heights US Organizations<br>"Regular/Championship"');
-
-  var gd2 = Plotly.d3.select('#graph2').node();
-  var filtered2 = _.filter(annotated, {group: 2});
-  var data2 = setup(filtered2);
-  var layout2 = buildLayout(filtered2, 'Jump Heights US Organizations<br>"Performance/Preferred"');
-
- var gd3 = Plotly.d3.select('#graph3').node();
-  var filtered3 = _.filter(annotated, {group: 3});
-  var data3 = setup(filtered3);
-  var layout3 = buildLayout(filtered3, 'Jump Heights US Organizations<br>"Veterans/Specialist"');
-
-  var gd4 = Plotly.d3.select('#graph4').node();
-  var filtered4 = _.filter(annotated, {group: 4});
-  var data4 = setup(filtered4);
-  var layout4 = buildLayout(filtered4, 'Jump Heights Canadian Organizations');
-
-  var gd5 = Plotly.d3.select('#graph5').node();
-  var filtered5 = _.filter(annotated, {group: 5});
-  var data5 = setup(filtered5);
-  var layout5 = buildLayout(filtered5, 'Jump Heights International Championship Organizations');
-  var gds = [gd1, gd2, gd3, gd4, gd5];
+  var gnodes = [];  // graph nodes
+  // all configs based on index in this array:
+  var graphConfigs = [
+   'Jump Heights US Organizations<br>"Regular/Championship"',
+   'Jump Heights US Organizations<br>"Performance/Preferred"',
+   'Jump Heights US Organizations<br>"Veterans/Specialist"',
+   'Jump Heights Canadian Organizations',
+   'Jump Heights International Championship Organizations'
+  ];
+  var graphData = _.map(graphConfigs, function(title, i){
+    var index = i + 1;
+    var filtered = _.filter(annotated, { group: index });
+    var data = setup(filtered);
+    gnodes.push(gnode);
+    return { gnode: Plotly.d3.select('#graph' + index).node(),
+             filtered: filtered,
+             data: data,
+             layout: buildLayout(filtered, title)
+            };
+  })
 
   function onHeightChange() {
     var height = getHeight();
     updateTable(height);
-
-    // updateGraph modifies data
-    window.setTimeout(function() { updateGraph(gd1, filtered1, data1.slice(), layout1, height) });
-    window.setTimeout(function() { updateGraph(gd2, filtered2, data2.slice(), layout2, height) });
-    window.setTimeout(function() { updateGraph(gd3, filtered3, data3.slice(), layout3, height) });
-    window.setTimeout(function() { updateGraph(gd4, filtered4, data4.slice(), layout4, height) });
-    window.setTimeout(function() { updateGraph(gd5, filtered5, data5.slice(), layout5, height) });
+    _.each(graphData, function(config) {
+      // updateGraph modifies data
+      window.setTimeout(function() { updateGraph(config.gnode, config.filtered, config.data.slice(), config.layout, height) });
+    });
   }
   onHeightChange();
 } catch (e) {
@@ -517,7 +507,7 @@ function displayError() {
 }
 
 window.onresize = _.debounce(function() {
-  _.each(gds, function(gd) {
-    Plotly.Plots.resize(gd);
+  _.each(gnodes, function(gnode) {
+    Plotly.Plots.resize(gnode);
   })
 }, 250);
