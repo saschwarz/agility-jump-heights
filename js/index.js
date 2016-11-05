@@ -435,13 +435,11 @@ function updateTable(height) {
 }
 
 function updateGraph(gnode, orgs, data, layout, height) {
-  var heights, yvals;
-  var columns = _(orgs).map('display').value();
+  var heights;
   if (height) {
-    yvals = _.fill(Array(columns.length), height);
     heights = {
-      x: columns,
-      y: yvals,
+      x: _(orgs).map('display').value(),
+      y: _.fill(Array(columns.length), height),
       name: "",
       type: 'line',
       line: {color: '#444444', width: 3}
