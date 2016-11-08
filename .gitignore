@@ -2,3 +2,4 @@ output
 theme/.webassets-cache
 *.pyc
 *.~
+*.pid
