@@ -461,7 +461,7 @@ function getHeight() {
   return height;
 }
 
-// try {
+try {
   var annotated = annotate(config);
   var gnodes = [];  // graph nodes
   // all configs based on index in this array:
@@ -494,9 +494,9 @@ function getHeight() {
     });
   }
   onHeightChange();
-// } catch (e) {
-//   displayError();
-// }
+} catch (e) {
+  displayError();
+}
 
 function displayError() {
   var p = document.createElement("p");
