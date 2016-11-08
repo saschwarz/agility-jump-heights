@@ -24,13 +24,16 @@ AUTHOR_FEED_RSS = None
 LINKS = ()
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = ()
 
 DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+CURRDATE = datetime.now().strftime('%Y-%m-%d')
+# copy PNG to root directory
+EXTRA_PATH_METADATA = {'images/jumpheights.png': {'path': 'jumpheights.png'},}
 
 STATIC_PATHS = ['images']  # put page specific assets here
 PLUGIN_PATHS = ['../pelican-plugins']  # set this to the location of your plugins checkout
@@ -47,5 +50,3 @@ DIRECT_TEMPLATES = ['index']  # Don't generate tag, category, or author output f
 PAGE_URL = '{slug}.html'
 PAGE_SAVE_AS = '{slug}.html'
 INDEX_SAVE_AS = "/ignore/index.html"  # don't use normal'
-
-CURRDATE = datetime.now().strftime('%Y-%m-%d')

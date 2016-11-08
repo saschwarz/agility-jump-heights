@@ -6,7 +6,7 @@ Uses [Plotly.js](https://plot.ly/javascript/) for graphing, [Lodash](https://lod
 
 Here's what it looks like:
 
-![Screenshot](jumpheights.png)
+![Screenshot](content/images/jumpheights.png)
 
 ## Demo
 
