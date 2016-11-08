@@ -439,7 +439,7 @@ function updateGraph(gnode, orgs, data, layout, height) {
   if (height) {
     heights = {
       x: _(orgs).map('display').value(),
-      y: _.fill(Array(columns.length), height),
+      y: _.fill(Array(orgs.length), height),
       name: "",
       type: 'line',
       line: {color: '#444444', width: 3}
@@ -476,8 +476,9 @@ try {
     var index = i + 1;
     var filtered = _.filter(annotated, { group: index });
     var data = setup(filtered);
+    var gnode = Plotly.d3.select('#graph' + index).node();
     gnodes.push(gnode);
-    return { gnode: Plotly.d3.select('#graph' + index).node(),
+    return { gnode: gnode,
              filtered: filtered,
              data: data,
              layout: buildLayout(filtered, title)

@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+	<title>Dog Agility Jump Height Calculator</title>
+	<meta name="save_as" content="index.html"/>
+</head>
+<body>
+	<h1>Dog Agility Jump Height Calculator</h1>
+	<div class="row">
+		<input class="six columns" type="number" step="any" min="2" id="height" value="" placeholder="Enter your dog's height in inches" autocomplete="off"/>
+		<input class="button-primary six columns" type="button" onclick="onHeightChange()" value="Show Me My Jump Heights!"/>
+	</div>
+	<div class="row" id="results">
+	</div>
+	<div class="row">
+		<div class="twelve columns u-max-full-width notes">
+			<h5>Please read:</h5>
+			<ul>
+				<li>The calculator displays the <em>lowest jump heights</em> by dog height for many organizations and their main competition
+				divisions, but <em>not all organizations or divisions</em>.</li>
+				<li>Organizations may have additional and/or optional higher or lower jump heights.</li>
+				<li>Organizations may have additional jump height divisions for junior handlers and senior dogs/handlers.</li>
+				<li><em>Always confirm</em> the rules by clicking on any organization's name!</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="twelve columns u-max-full-width" id="graph1">
+		</div>
+	</div>
+	<div class="row">
+		<div class="twelve columns u-max-full-width" id="graph2">
+		</div>
+	</div>
+	<div class="row">
+		<div class="twelve columns u-max-full-width" id="graph3">
+		</div>
+	</div>
+	<div class="row">
+		<div class="twelve columns u-max-full-width" id="graph4">
+		</div>
+	</div>
+	<div class="row">
+		<div class="twelve columns u-max-full-width" id="graph5">
+		</div>
+	</div>
+	<script id="results-template" type="text/x-template">
+		<table class="results-table" class="twelve columns u-max-full-width">
+			<thead>
+				<tr>
+					<th>Organization Rules</th>
+					<th>Division</th>
+					<th class="jump-height">Jump Height</th>
+					<th class="max-height">Withers Height Rule</th>
+					<th>Notes</th>
+				</tr>
+			</thead>
+			<tbody class="results-body">
+			</tbody>
+		</table>
+	</script>
+</body>
+</html>
