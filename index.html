@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="robots" content="index,follow">
+	<meta name="Description" content="AgilityNerd is the oldest dog agility blog with articles on agility training, dog handling, agility courses, agility course analysis, agility equipment and agility videos.">
+	<meta name="keywords" content="steve schwarz, agilitynerd, dog agility, dog agility training, dog agility video, dog agility blog, dog agility courses" />
+        <title>Dog Agility Jump Height Calculator</title>
+        <link rel="stylesheet" href="/agility-jump-heights/theme/css/style.b7fa7ac7.min.css">
+</head>
+<body id="index" class="home">
+        <div class="container">
+    
+	<h1>Dog Agility Jump Height Calculator</h1>
+	<div class="row">
+		<input class="six columns" type="number" step="any" min="2" id="height" value="" placeholder="Enter your dog's height in inches" autocomplete="off" />
+		<input class="button-primary six columns" type="button" onclick="onHeightChange()" value="Show Me My Jump Heights!" />
+	</div>
+	<div class="row" id="results">
+	</div>
+	<div class="row">
+		<div class="twelve columns u-max-full-width notes">
+			<h5>Please read:</h5>
+			<ul>
+				<li>The calculator displays the <em>lowest jump heights</em> by dog height for many organizations and their main competition
+				divisions, but <em>not all organizations or divisions</em>.</li>
+				<li>Organizations may have additional and/or optional higher or lower jump heights.</li>
+				<li>Organizations may have additional jump height divisions for junior handlers and senior dogs/handlers.</li>
+				<li><em>Always confirm</em> the rules by clicking on any organization's name!</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="twelve columns u-max-full-width" id="graph1">
+		</div>
+	</div>
+	<div class="row">
+		<div class="twelve columns u-max-full-width" id="graph2">
+		</div>
+	</div>
+	<div class="row">
+		<div class="twelve columns u-max-full-width" id="graph3">
+		</div>
+	</div>
+	<div class="row">
+		<div class="twelve columns u-max-full-width" id="graph4">
+		</div>
+	</div>
+	<div class="row">
+		<div class="twelve columns u-max-full-width" id="graph5">
+		</div>
+	</div>
+	<script id="results-template" type="text/x-template">
+		<table class="results-table" class="twelve columns u-max-full-width">
+			<thead>
+				<tr>
+					<th>Organization Rules</th>
+					<th>Division</th>
+					<th class="jump-height">Jump Height</th>
+					<th class="max-height">Withers Height Rule</th>
+					<th>Notes</th>
+				</tr>
+			</thead>
+			<tbody class="results-body">
+			</tbody>
+		</table>
+	</script>
+
+        <footer>
+                <div class="row footer">
+                        <div class="twelve columns">Updated: 2016-11-08
+                                <span class="u-pull-right">Steve Schwarz <a href="http://www.agilitynerd.com">AgilityNerd.com</a></span>
+                        </div>
+                </div>
+        </footer><!-- /#contentinfo -->
+        </div>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="/agility-jump-heights/theme/js/main.8ce972fc.min.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1127677-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+</body>
+</html>
