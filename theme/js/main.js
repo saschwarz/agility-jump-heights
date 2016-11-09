@@ -470,7 +470,7 @@ try {
    'Jump Heights US Organizations<br>"Performance/Preferred"',
    'Jump Heights US Organizations<br>"Veterans/Specialist"',
    'Jump Heights Canadian Organizations',
-   'Jump Heights International Championship Organizations'
+   'Jump Heights International<br>Championship Organizations'
   ];
   var graphData = _.map(graphConfigs, function(title, i){
     var index = i + 1;
