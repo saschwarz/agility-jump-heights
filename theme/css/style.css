@@ -1,61 +1,195 @@
 input {
-  font-size: 1.5rem;
-  margin-top: 10px;
+    font-size: 1.5rem;
+    margin-top: 10px;
 }
+
 #results {
-  opacity: 0;
-  -webkit-transition: opacity 1s ease-in-out;
-     -moz-transition: opacity 1s ease-in-out;
-      -ms-transition: opacity 1s ease-in-out;
-       -o-transition: opacity 1s ease-in-out;
-          transition: opacity 1s ease-in-out;
+    opacity: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
+
 #results.load {
-  opacity: 1;
+    opacity: 1;
 }
-.max-height, .jump-height {
-  text-align: right;
+
+.max-height,
+.jump-height {
+    text-align: right;
 }
+
 @media (min-width: 550px) {
-  h1 {
-      font-size: 4rem;
-      text-align: center;
-  }
+    h1 {
+        font-size: 4rem;
+        text-align: center;
+    }
 }
+
 .notes ul {
-  margin-left: 20px;
-  list-style: disc outside none;
+    margin-left: 20px;
+    list-style: disc outside none;
 }
-td, th {
+
+td,
+th {
     padding: 8px;
 }
+
 footer {
-  border-top: 1px solid #D1D1D1;
-  padding: 1rem 0;
+    padding-bottom: 2rem;
 }
+
 @media (max-width: 550px) {
-  .footer {
-    font-size: 1.1rem;
-  }
+    .footer {
+        font-size: 1.1rem;
+    }
 }
-ul.social > li {
-  display: inline-block;
-  padding: 10px;
+
+ul.social>li {
+    display: inline-block;
+    padding: 10px;
+    padding-bottom: 0;
 }
+
 .social {
-  list-style: none;
-  text-align: center;
-  margin-bottom: 0;
+    list-style: none;
+    text-align: center;
+    margin-bottom: 0;
 }
-.social a[href*='atom.xml']:before {content: url('../images/icons/rss.png'); margin-right: 2px; vertical-align: -3px;}
-.social a[href*='bitbucket.org']:before {content: url('../images/icons/bitbucket.png'); margin-right: 2px; vertical-align: -3px;}
-.social a[href*='delicious.com']:before {content: url('../images/icons/delicious.png'); margin-right: 2px; vertical-align: -3px;}
-.social a[href*='digg.com']:before {content: url('../images/icons/digg.png'); margin-right: 2px; vertical-align: -3px;}
-.social a[href*='facebook.com']:before {content: url('../images/icons/facebook.png'); margin-right: 2px; vertical-align: -3px;}
-.social a[href*='github.com']:before {content: url('./images/icons/github.png'); margin-right: 2px; vertical-align: -3px;}
-.social a[href*='google.com/reader']:before {content: url('../images/icons/reader.png'); margin-right: 2px; vertical-align: -3px;}
-.social a[href*='plus.google.com']:before {content: url('../images/icons/google-plus.png'); margin-right: 2px; vertical-align: -3px;}
-.social a[href*='linkedin.com']:before {content: url('../images/icons/linkedin.png'); margin-right: 2px; vertical-align: -3px;}
-.social a[href*='rss.xml']:before {content: url('../images/icons/rss.png'); margin-right: 2px; vertical-align: -3px;}
-.social a[href*='stackoverflow.com']:before {content: url('../images/icons/stackoverflow.png'); margin-right: 2px; vertical-align: -3px;}
-.social a[href*='twitter.com']:before {content: url('../images/icons/twitter.png'); margin-right: 2px; vertical-align: -3px;}
+
+.social a[href*='atom.xml']:before {
+    content: url('../images/icons/rss.png');
+    margin-right: 2px;
+    vertical-align: -3px;
+}
+
+.social a[href*='bitbucket.org']:before {
+    content: url('../images/icons/bitbucket.png');
+    margin-right: 2px;
+    vertical-align: -3px;
+}
+
+.social a[href*='delicious.com']:before {
+    content: url('../images/icons/delicious.png');
+    margin-right: 2px;
+    vertical-align: -3px;
+}
+
+.social a[href*='digg.com']:before {
+    content: url('../images/icons/digg.png');
+    margin-right: 2px;
+    vertical-align: -3px;
+}
+
+.social a[href*='facebook.com']:before {
+    content: url('../images/icons/facebook.png');
+    margin-right: 2px;
+    vertical-align: -3px;
+}
+
+.social a[href*='github.com']:before {
+    content: url('./images/icons/github.png');
+    margin-right: 2px;
+    vertical-align: -3px;
+}
+
+.social a[href*='google.com/reader']:before {
+    content: url('../images/icons/reader.png');
+    margin-right: 2px;
+    vertical-align: -3px;
+}
+
+.social a[href*='plus.google.com']:before {
+    content: url('../images/icons/google-plus.png');
+    margin-right: 2px;
+    vertical-align: -3px;
+}
+
+.social a[href*='linkedin.com']:before {
+    content: url('../images/icons/linkedin.png');
+    margin-right: 2px;
+    vertical-align: -3px;
+}
+
+.social a[href*='rss.xml']:before {
+    content: url('../images/icons/rss.png');
+    margin-right: 2px;
+    vertical-align: -3px;
+}
+
+.social a[href*='stackoverflow.com']:before {
+    content: url('../images/icons/stackoverflow.png');
+    margin-right: 2px;
+    vertical-align: -3px;
+}
+
+.social a[href*='twitter.com']:before {
+    content: url('../images/icons/twitter.png');
+    margin-right: 2px;
+    vertical-align: -3px;
+}
+
+nav {
+    margin-bottom: 4rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border-bottom: 1px solid #cdcdcd
+}
+
+nav li {
+    font-size: 0.8em;
+    line-height: 40px;
+    margin-bottom: 0;
+    height: 40px;
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+
+nav a:hover {
+    border-bottom: 1px solid #1EAEDB;
+}
+
+.hidden-small {
+    display: none;
+}
+
+@media (min-width: 550px) {
+    .hidden-small {
+        display: inline-block;
+    }
+}
+
+#filters {
+    display: none;
+}
+#filters label {
+  display: inline-block;
+  color: #0FA0CE;
+}
+#filters input {
+  margin: 0 10px;
+}
+
+.updates {
+  border-bottom: 1px solid #cdcdcd;
+  padding-bottom: 50px;
+}
+
+.maker {
+  color: #888;
+  text-align: center;
+}
