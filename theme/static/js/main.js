@@ -63,8 +63,8 @@ var config = [{
   notes: "Dog's >= 7yro."
 }, {
   group: 4,
-  name: 'AAC 2018',
-  division: 'Veterans',
+  name: 'AAC',
+  division: '2018 Veterans',
   cutoffs: [12, 15, 18, 22, 26],
   jumpheights: [4, 8, 12, 16, 20],
   display: '<a href="https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf">AAC 2018 Vet</a>',
@@ -198,8 +198,8 @@ var config = [{
   notes: ''
 }, {
   group: 4,
-  name: 'AAC 2018',
-  division: 'Special',
+  name: 'AAC',
+  division: '2018 Special',
   cutoffs: [12, 15, 18, 22, 26],
   jumpheights: [4, 8, 12, 16, 20],
   display: '<a href="https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf">AAC 2018 Sp</a>',
@@ -281,8 +281,8 @@ var config = [{
   notes: 'Can jump next higher height.'
 }, {
   group: 4,
-  name: 'AAC 2018',
-  division: 'Regular',
+  name: 'AAC',
+  division: '2018 Regular',
   cutoffs: [12, 15, 18, 22, 26],
   jumpheights: [8, 12, 16, 20, 24],
   display: '<a href="https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf">AAC 2018 Reg</a>',
