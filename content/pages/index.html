@@ -4,10 +4,26 @@
 	<meta name="save_as" content="index.html"/>
 </head>
 <body>
+	<nav>
+		<ul>
+			<li><a href="http://agilitynerd.com/">AgilityNerd</a></li>
+			<li><a href="http://agilitycourses.com/"><span class="hidden-small">Agility</span> Courses</a></li>
+			<li><a href="http://googility.com/"><span class="hidden-small">Googility</span> Search</a></li>
+			<li><a href="http://store.agilitynerd.com/"><span class="hidden-small">AgilityNerd</span> Store</a></li>
+		</ul>
+	</nav>
 	<h1>Dog Agility Jump Height Calculator</h1>
 	<div class="row">
 		<input class="six columns" type="number" step="any" min="2" id="height" value="" placeholder="Enter your dog's height in inches" autocomplete="off"/>
 		<input class="button-primary six columns" type="button" onclick="onHeightChange()" value="Show Me My Jump Heights!"/>
+	</div>
+	<div class="row" id="filters">
+		<label>
+			Sort by Jump Height <input type="radio" name="sort" value="jump" checked onclick="onHeightChange()"/>
+		</label>
+		<label>
+			Sort by Organization <input type="radio" name="sort" value="org" onclick="onHeightChange()"/>
+		</label>
 	</div>
 	<div class="row" id="results">
 	</div>
@@ -42,6 +58,11 @@
 	<div class="row">
 		<div class="twelve columns u-max-full-width" id="graph5">
 		</div>
+	</div>
+	<h5>Updates</h5>
+	<div class="row updates">
+		<div class="two columns">2017-03-01</div>
+		<div class="ten columns">Added AAC 2018 Jump Heights. Sort by Organization Name or by Jump Height. Removed &quot;Effective on Dec 28, 2016&quot; from USDAA entries. Added top level links.</div>
 	</div>
 	<script id="results-template" type="text/x-template">
 		<table class="results-table" class="twelve columns u-max-full-width">

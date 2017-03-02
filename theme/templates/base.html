@@ -28,7 +28,7 @@
         {% endif %}-->
         {% if SOCIAL %}
         <ul class="nav nav-list social row">
-                <li>Follow Us:</li>
+                <!-- <li>Follow Us:</li> -->
         {% for name, link in SOCIAL %}
         <li><a href="{{ link }}">{{ name }}</a></li>
         {% endfor %}
@@ -37,11 +37,9 @@
         </div><!--/.well -->
         {% endif %}
         <footer>
-                <div class="row footer">
-                        <div class="twelve columns">Updated: {{ CURRDATE }}
-                                <span class="u-pull-right">Steve Schwarz <a href="http://www.agilitynerd.com">AgilityNerd.com</a></span>
-                        </div>
-                </div>
+            <div class="row footer">
+                <div class="twelve columns maker">Made with &hearts; by Steve Schwarz and AgilityNerd LLC</div>
+            </div>
         </footer><!-- /#contentinfo -->
         </div><!-- /.container -->
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>

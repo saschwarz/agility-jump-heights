@@ -33,7 +33,7 @@ var config = [{
   jumpheights: [4, 8, 12],
  display: '<a href="https://www.usdaa.com/article.cfm?newsID=3387">USDAA Veterans</a>',
   rules: 'https://www.usdaa.com/article.cfm?newsID=3387',
-  notes: 'Effective on Dec 28, 2016.'
+  notes: ''
 }, {
   group: 4,
   name: 'AAC',
@@ -43,15 +43,6 @@ var config = [{
   display: '<a href="https://www.aac.ca/en/rules/_pdf/AAC-RulebookV5-(SECURE).pdf">AAC Veterans</a>',
   rules: 'https://www.aac.ca/en/rules/_pdf/AAC-RulebookV5-(SECURE).pdf',
   notes: '> 12in can jump next higher.'
-}, {
-  group: 3,
-  name: 'DOCNA',
-  division: 'Veterans',
-  cutoffs: [14, 18, 22, 26],
-  jumpheights: [4, 8, 12, 16],
-  display: '<a href="http://www.docna.com/Forms/2_Organizational_Structure.pdf">DOCNA Veterans</a>',
-  rules: 'http://www.docna.com/Forms/2_Organizational_Structure.pdf',
-  notes: "Dog's >= 7yro."
 }, {
   group: 4,
   name: 'CKC',
@@ -69,6 +60,24 @@ var config = [{
   jumpheights: [4, 8, 12, 16],
   display: '<a href="http://www.asca.org/wp-content/uploads/sites/35/2016/04/AgilityRules.pdf">ASCA Veterans</a>',
   rules: 'http://www.asca.org/wp-content/uploads/sites/35/2016/04/AgilityRules.pdf',
+  notes: "Dog's >= 7yro."
+}, {
+  group: 4,
+  name: 'AAC 2018',
+  division: 'Veterans',
+  cutoffs: [12, 15, 18, 22, 26],
+  jumpheights: [4, 8, 12, 16, 20],
+  display: '<a href="https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf">AAC 2018 Vet</a>',
+  rules: 'https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf',
+  notes: 'Effective 2018-Jan-01.'
+}, {
+  group: 3,
+  name: 'DOCNA',
+  division: 'Veterans',
+  cutoffs: [14, 18, 22, 26],
+  jumpheights: [4, 8, 12, 16],
+  display: '<a href="http://www.docna.com/Forms/2_Organizational_Structure.pdf">DOCNA Veterans</a>',
+  rules: 'http://www.docna.com/Forms/2_Organizational_Structure.pdf',
   notes: "Dog's >= 7yro."
 }, {
   group: 3,
@@ -150,7 +159,7 @@ var config = [{
   jumpheights: [8, 12, 14, 16, 20],
   display: '<a href="https://www.usdaa.com/article.cfm?newsID=3387">USDAA Perf.</a>',
   rules: 'https://www.usdaa.com/article.cfm?newsID=3387',
-  notes: 'Effective on Dec 28, 2016.'
+  notes: ''
 }, {
   group: 1,
   name: 'ASCA',
@@ -187,7 +196,16 @@ var config = [{
   display: '<a href="http://www.docna.com/Forms/2_Organizational_Structure.pdf">DOCNA Comp.</a>',
   rules: 'http://www.docna.com/Forms/2_Organizational_Structure.pdf',
   notes: ''
-},{
+}, {
+  group: 4,
+  name: 'AAC 2018',
+  division: 'Special',
+  cutoffs: [12, 15, 18, 22, 26],
+  jumpheights: [4, 8, 12, 16, 20],
+  display: '<a href="https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf">AAC 2018 Sp</a>',
+  rules: 'https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf',
+  notes: 'Effective 2018-Jan-01.'
+}, {
   group: 4,
   name: 'CKC',
   division: 'Selected',
@@ -251,7 +269,7 @@ var config = [{
   jumpheights: [10, 14, 16, 20, 22, 24],
   display: '<a href="https://www.usdaa.com/article.cfm?newsID=3387">USDAA Champ.</a>',
   rules: 'https://www.usdaa.com/article.cfm?newsID=3387',
-  notes: 'Effective on Dec 28, 2016.'
+  notes: ''
 }, {
   group: 4,
   name: 'AAC',
@@ -261,6 +279,15 @@ var config = [{
   display: '<a href="https://www.aac.ca/en/rules/_pdf/AAC-RulebookV5-(SECURE).pdf">AAC Regular</a>',
   rules: 'https://www.aac.ca/en/rules/_pdf/AAC-RulebookV5-(SECURE).pdf',
   notes: 'Can jump next higher height.'
+}, {
+  group: 4,
+  name: 'AAC 2018',
+  division: 'Regular',
+  cutoffs: [12, 15, 18, 22, 26],
+  jumpheights: [8, 12, 16, 20, 24],
+  display: '<a href="https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf">AAC 2018 Reg</a>',
+  rules: 'https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf',
+  notes: '> 12in can jump next higher. Effective 2018-Jan-01.'
 }, {
   group: 5,
   name: 'FCI',
@@ -404,14 +431,21 @@ function buildLayout(orgs, title) {
   }
 }
 
-function updateTable(height) {
+function updateTable(height, filter) {
   var resultsTemplate = document.getElementById('results-template').innerHTML;
   var resultsRow = document.getElementById('results');
+  var filterBy = ['jump'];
+  var filters = document.getElementById('filters');
   if (!height) {
       resultsRow.innerHTML = '';
     resultsRow.className = 'u-max-full-width';
     return;
   }
+  if (filter === 'org') {
+    // order by org name then jump height
+    filterBy.unshift('name')
+  }
+  filters.style.display = 'block';
   resultsRow.innerHTML = resultsTemplate;
   var data = _(config).map(function(org){
     var jumpheight = 'N/A', jump = 0, rule = 'N/A', notes = org.notes;
@@ -427,7 +461,7 @@ function updateTable(height) {
       }
     }
     return {name: org.name, rules: org.rules, division: org.division, jumpheight: jumpheight, rule: rule, notes: notes, jump: jump};
-  }).sortBy('jump').value();
+  }).sortBy(filterBy).value();
   var dest = resultsRow.getElementsByClassName('results-body')[0];
   var template = _.template('<tr><td><a href="<%= rules %>"><%= name %></a></td><td><%= division %></td><td class="jump-height"><%= jumpheight %></td><td class="max-height"><%= rule %></td><td><%= notes %></td></tr>');
   dest.innerHTML = _.map(data, template).join('');
@@ -447,6 +481,11 @@ function updateGraph(gnode, orgs, data, layout, height) {
     data.push(heights);
   }
   Plotly.newPlot(gnode, data, layout);
+}
+
+function getFilter() {
+  var checked = document.querySelector('input[name="sort"]:checked');
+  return checked && checked.value || 'jump';
 }
 
 function getHeight() {
@@ -487,7 +526,8 @@ try {
 
   function onHeightChange() {
     var height = getHeight();
-    updateTable(height);
+    var filter = getFilter();
+    updateTable(height, filter);
     _.each(graphData, function(config) {
       // updateGraph modifies data
       window.setTimeout(function() { updateGraph(config.gnode, config.filtered, config.data.slice(), config.layout, height) });
