@@ -10,4 +10,4 @@ import sys
 sys.path.append(os.curdir)
 from publishconf import *
 
-SITEURL = 'http://agilitynerd.com/jumpheights'
+SITEURL = 'https://agility-jump-heights.agilitynerd.com/'
