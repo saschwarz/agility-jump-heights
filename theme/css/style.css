@@ -176,20 +176,30 @@ nav a:hover {
 #filters {
     display: none;
 }
+
 #filters label {
-  display: inline-block;
-  color: #0FA0CE;
+    display: inline-block;
+    color: #0FA0CE;
 }
+
 #filters input {
-  margin: 0 10px;
+    margin: 0 10px;
+}
+
+.updates .row {
+    border-bottom: 1px solid #cdcdcd;
+    padding: 1em 0;
 }
 
 .updates {
-  border-bottom: 1px solid #cdcdcd;
-  padding-bottom: 50px;
+    margin-bottom: 2em;
 }
 
 .maker {
-  color: #888;
-  text-align: center;
+    color: #888;
+    text-align: center;
+}
+
+.maker .text-danger {
+    color: red;
 }

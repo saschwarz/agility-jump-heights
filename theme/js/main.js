@@ -13,8 +13,8 @@ var config = [{
   division: 'Specialist',
   cutoffs: [16, 20, 24, 26],
   jumpheights: [4, 8, 12, 16],
-  display: '<a href="http://www.k9cpe.com/forms/2016rb.pdf">CPE Specialist</a>',
-  rules: 'http://www.k9cpe.com/forms/2016rb.pdf',
+  display: '<a href="http://www.k9cpe.com/forms/2019rb.pdf">CPE Specialist</a>',
+  rules: 'http://www.k9cpe.com/forms/2019rb.pdf',
   notes: ''
 }, {
   group: 3,
@@ -22,8 +22,8 @@ var config = [{
   division: 'Veterans',
   cutoffs: [14, 20, 26],
   jumpheights: [4, 8, 14],
-  display: '<a href="http://res.ukcdogs.com/pdf/2011AgilityRulebookInsert.pdf">UKC Veteran</a>',
-  rules: 'http://res.ukcdogs.com/pdf/2011AgilityRulebookInsert.pdf',
+  display: '<a href="https://res.ukcdogs.com/pdf/2011AgilityRulebookInsert.pdf">UKC Veteran</a>',
+  rules: 'https://res.ukcdogs.com/pdf/2011AgilityRulebookInsert.pdf',
   notes: ''
 }, {
   group: 3,
@@ -34,15 +34,6 @@ var config = [{
  display: '<a href="https://www.usdaa.com/article.cfm?newsID=3387">USDAA Veterans</a>',
   rules: 'https://www.usdaa.com/article.cfm?newsID=3387',
   notes: ''
-}, {
-  group: 4,
-  name: 'AAC',
-  division: 'Veterans',
-  cutoffs: [16, 21, 26],
-  jumpheights: [6, 10, 16],
-  display: '<a href="https://www.aac.ca/en/rules/_pdf/AAC-RulebookV5-(SECURE).pdf">AAC Veterans</a>',
-  rules: 'https://www.aac.ca/en/rules/_pdf/AAC-RulebookV5-(SECURE).pdf',
-  notes: '> 12in can jump next higher.'
 }, {
   group: 4,
   name: 'CKC',
@@ -58,16 +49,16 @@ var config = [{
   division: 'Veterans',
   cutoffs: [11, 14, 18, 26],
   jumpheights: [4, 8, 12, 16],
-  display: '<a href="http://www.asca.org/wp-content/uploads/sites/35/2016/04/AgilityRules.pdf">ASCA Veterans</a>',
-  rules: 'http://www.asca.org/wp-content/uploads/sites/35/2016/04/AgilityRules.pdf',
+  display: '<a href="https://www.asca.org/wp-content/uploads/2019/05/June-2019-Agility-Rules.pdf">ASCA Veterans</a>',
+  rules: 'https://www.asca.org/wp-content/uploads/2019/05/June-2019-Agility-Rules.pdf',
   notes: "Dog's >= 7yro."
 }, {
   group: 4,
   name: 'AAC',
-  division: '2018 Veterans',
+  division: 'Veterans',
   cutoffs: [12, 15, 18, 22, 26],
   jumpheights: [4, 8, 12, 16, 20],
-  display: '<a href="https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf">AAC 2018 Vet</a>',
+  display: '<a href="https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf">AAC Vet</a>',
   rules: 'https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf',
   notes: 'Effective 2018-Jan-01.'
 }, {
@@ -76,8 +67,8 @@ var config = [{
   division: 'Veterans',
   cutoffs: [14, 18, 22, 26],
   jumpheights: [4, 8, 12, 16],
-  display: '<a href="http://www.docna.com/Forms/2_Organizational_Structure.pdf">DOCNA Veterans</a>',
-  rules: 'http://www.docna.com/Forms/2_Organizational_Structure.pdf',
+  display: '<a href="https://rsagility.com/Forms/2_Organizational_Structure.pdf">DOCNA Veterans</a>',
+  rules: 'https://rsagility.com/Forms/2_Organizational_Structure.pdf',
   notes: "Dog's >= 7yro."
 }, {
   group: 3,
@@ -85,8 +76,8 @@ var config = [{
   division: 'Veterans',
   cutoffs: [11, 14, 18, 26],
   jumpheights: [4, 8, 12, 16],
-  display: '<a href="http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Proficient</a>',
-  rules: 'http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights',
+  display: '<a href="https://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Proficient</a>',
+  rules: 'https://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights',
   notes: "Dog's >= 7yro."
 },  {
   group: 3,
@@ -94,8 +85,8 @@ var config = [{
   division: 'Veterans',
   cutoffs: [12, 16, 20, 24, 26],
   jumpheights: [4, 8, 12, 16, 20],
-  display: '<a href="http://www.k9cpe.com/forms/2016rb.pdf">CPE Veterans</a>',
-  rules: 'http://www.k9cpe.com/forms/2016rb.pdf',
+  display: '<a href="http://www.k9cpe.com/forms/2019rb.pdf">CPE Veterans</a>',
+  rules: 'http://www.k9cpe.com/forms/2019rb.pdf',
   notes: "Dog's >= 6yro."
 }, {
   group: 2,
@@ -103,8 +94,8 @@ var config = [{
   division: 'Skilled',
   cutoffs: [11, 14, 18, 26],
   jumpheights: [4, 8, 12, 16],
-  display: '<a href="http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Skilled</a>',
-  rules: 'http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights',
+  display: '<a href="https://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Skilled</a>',
+  rules: 'https://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights',
   notes: ''
 }, {
   group: 2,
@@ -112,8 +103,8 @@ var config = [{
   division: 'ACE',
   cutoffs: [11, 14, 18, 26],
   jumpheights: [4, 8, 12, 16],
-  display: '<a href="http://www.asca.org/wp-content/uploads/sites/35/2016/04/AgilityRules.pdf">ASCA ACE</a>',
-  rules: 'http://www.asca.org/wp-content/uploads/sites/35/2016/04/AgilityRules.pdf',
+  display: '<a href="https://www.asca.org/wp-content/uploads/2019/05/June-2019-Agility-Rules.pdf">ASCA ACE</a>',
+  rules: 'https://www.asca.org/wp-content/uploads/2019/05/June-2019-Agility-Rules.pdf',
   notes: ''
 }, {
   group: 2,
@@ -121,8 +112,8 @@ var config = [{
   division: 'Enthusiast',
   cutoffs: [12, 16, 20, 24, 26],
   jumpheights: [4, 8, 12, 16, 20],
-  display: '<a href="http://www.k9cpe.com/forms/2016rb.pdf">CPE Enth.</a>',
-  rules: 'http://www.k9cpe.com/forms/2016rb.pdf',
+  display: '<a href="http://www.k9cpe.com/forms/2019rb.pdf">CPE Enth.</a>',
+  rules: 'http://www.k9cpe.com/forms/2019rb.pdf',
   notes: ''
 }, {
   group: 2,
@@ -130,8 +121,8 @@ var config = [{
   division: 'Preferred',
   cutoffs: [11, 14, 18, 22, 26],
   jumpheights: [4, 8, 12, 16, 20],
-  display: '<a href="http://images.akc.org/pdf/rulebooks/REAGIL.pdf">AKC Pref.</a>',
-  rules: 'http://images.akc.org/pdf/rulebooks/REAGIL.pdf',
+  display: '<a href="https://images.akc.org/pdf/rulebooks/REAGIL.pdf">AKC Pref.</a>',
+  rules: 'https://images.akc.org/pdf/rulebooks/REAGIL.pdf',
   notes: ''
 }, {
   group: 2,
@@ -139,8 +130,8 @@ var config = [{
   division: 'Select',
   cutoffs: [11, 14, 18, 22, 26],
   jumpheights: [4, 8, 12, 16, 20],
-  display: '<a href="http://www.docna.com/Forms/2_Organizational_Structure.pdf">DOCNA Select</a>',
-  rules: 'http://www.docna.com/Forms/2_Organizational_Structure.pdf',
+  display: '<a href="https://rsagility.com/Forms/2_Organizational_Structure.pdf">DOCNA Select</a>',
+  rules: 'https://rsagility.com/Forms/2_Organizational_Structure.pdf',
   notes: ''
 }, {
   group: 2,
@@ -148,8 +139,8 @@ var config = [{
   division: 'Select',
   cutoffs: [11, 14, 17.5, 22, 26],
   jumpheights: [4, 8, 12, 16, 20],
-  display: '<a href="https://www.ukagilityinternational.com/ImageUploads/UKI%20Rules%202016%20.pdf">UKI Select</a>',
-  rules: 'https://www.ukagilityinternational.com/ImageUploads/UKI%20Rules%202016%20.pdf',
+  display: '<a href="https://ukagilityinternational.com/wp-content/uploads/2019/09/UKI-5th-Edition-Rules-March-1-2019-updated-2.28.pdf">UKI Select</a>',
+  rules: 'https://ukagilityinternational.com/wp-content/uploads/2019/09/UKI-5th-Edition-Rules-March-1-2019-updated-2.28.pdf',
   notes: ''
 }, {
   group: 2,
@@ -166,8 +157,8 @@ var config = [{
   division: 'Championship',
   cutoffs: [11, 14, 18, 26],
   jumpheights: [8, 12, 16, 20],
-  display: '<a href="http://www.asca.org/wp-content/uploads/sites/35/2016/04/AgilityRules.pdf">ASCA Champ.</a>',
-  rules: 'http://www.asca.org/wp-content/uploads/sites/35/2016/04/AgilityRules.pdf',
+  display: '<a href="https://www.asca.org/wp-content/uploads/2019/05/June-2019-Agility-Rules.pdf">ASCA Champ.</a>',
+  rules: 'https://www.asca.org/wp-content/uploads/2019/05/June-2019-Agility-Rules.pdf',
   notes: ''
 }, {
   group: 1,
@@ -175,8 +166,8 @@ var config = [{
   division: 'Proficient',
   cutoffs: [11, 14, 18, 26],
   jumpheights: [8, 12, 16, 20],
-  display: '<a href="http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Prof.</a>',
-  rules: 'http://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights',
+  display: '<a href="https://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Prof.</a>',
+  rules: 'https://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights',
   notes: ''
 }, {
   group: 1,
@@ -184,8 +175,8 @@ var config = [{
   division: 'Regular',
   cutoffs: [11, 14, 18, 22, 26],
   jumpheights: [8, 12, 16, 20, 24],
-  display: '<a href="http://images.akc.org/pdf/rulebooks/REAGIL.pdf">AKC Regular</a>',
-  rules: 'http://images.akc.org/pdf/rulebooks/REAGIL.pdf',
+  display: '<a href="https://images.akc.org/pdf/rulebooks/REAGIL.pdf">AKC Regular</a>',
+  rules: 'https://images.akc.org/pdf/rulebooks/REAGIL.pdf',
   notes: ''
 }, {
   group: 1,
@@ -193,16 +184,16 @@ var config = [{
   division: 'Competition',
   cutoffs: [11, 14, 18, 22, 26],
   jumpheights: [8, 12, 16, 20, 24],
-  display: '<a href="http://www.docna.com/Forms/2_Organizational_Structure.pdf">DOCNA Comp.</a>',
-  rules: 'http://www.docna.com/Forms/2_Organizational_Structure.pdf',
+  display: '<a href="https://rsagility.com/Forms/2_Organizational_Structure.pdf">DOCNA Comp.</a>',
+  rules: 'https://rsagility.com/Forms/2_Organizational_Structure.pdf',
   notes: ''
 }, {
   group: 4,
   name: 'AAC',
-  division: '2018 Special',
+  division: 'Special',
   cutoffs: [12, 15, 18, 22, 26],
   jumpheights: [4, 8, 12, 16, 20],
-  display: '<a href="https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf">AAC 2018 Sp</a>',
+  display: '<a href="https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf">AAC Special</a>',
   rules: 'https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf',
   notes: 'Effective 2018-Jan-01.'
 }, {
@@ -220,17 +211,8 @@ var config = [{
   division: '',
   cutoffs: [10, 14, 20, 26],
   jumpheights: [4, 8, 14, 20],
-  display: '<a href="http://res.ukcdogs.com/pdf/2011AgilityRulebookInsert.pdf">UKC</a>',
-  rules: 'http://res.ukcdogs.com/pdf/2011AgilityRulebookInsert.pdf',
-  notes: ''
-}, {
-  group: 4,
-  name: 'AAC',
-  division: 'Special',
-  cutoffs: [12, 16, 21, 26],
-  jumpheights: [6, 10, 16, 22],
-  display: '<a href="https://www.aac.ca/en/rules/_pdf/AAC-RulebookV5-(SECURE).pdf">AAC Special</a>',
-  rules: 'https://www.aac.ca/en/rules/_pdf/AAC-RulebookV5-(SECURE).pdf',
+  display: '<a href="https://res.ukcdogs.com/pdf/2011AgilityRulebookInsert.pdf">UKC</a>',
+  rules: 'https://res.ukcdogs.com/pdf/2011AgilityRulebookInsert.pdf',
   notes: ''
 }, {
   group: 1,
@@ -238,8 +220,8 @@ var config = [{
   division: 'Regular',
   cutoffs: [8, 12, 16, 20, 24, 26],
   jumpheights: [4, 8, 12, 16, 20, 24],
-  display: '<a href="http://www.k9cpe.com/forms/2016rb.pdf">CPE Regular</a>',
-  rules: 'http://www.k9cpe.com/forms/2016rb.pdf',
+  display: '<a href="http://www.k9cpe.com/forms/2019rb.pdf">CPE Regular</a>',
+  rules: 'http://www.k9cpe.com/forms/2019rb.pdf',
   notes: ''
 }, {
   group: 4,
@@ -258,8 +240,8 @@ var config = [{
   jumpheights: [8, 12, 16, 20, 22],
   jumpheightsdisplay: [8, 12, 16, 20, '22/24'],
   jumpheightsnotes: ['', '', '', '', 'Choice of 22 in or 24 in.'],
-  display: '<a href="https://www.ukagilityinternational.com/ImageUploads/UKI%20Rules%202016%20.pdf">UKI Regular</a>',
-  rules: 'https://www.ukagilityinternational.com/ImageUploads/UKI%20Rules%202016%20.pdf',
+  display: '<a href="https://ukagilityinternational.com/wp-content/uploads/2019/09/UKI-5th-Edition-Rules-March-1-2019-updated-2.28.pdf">UKI Regular</a>',
+  rules: 'https://ukagilityinternational.com/wp-content/uploads/2019/09/UKI-5th-Edition-Rules-March-1-2019-updated-2.28.pdf',
   notes: ''
 }, {
   group: 1,
@@ -274,18 +256,9 @@ var config = [{
   group: 4,
   name: 'AAC',
   division: 'Regular',
-  cutoffs: [12, 16, 21, 26],
-  jumpheights: [10, 16, 22, 26],
-  display: '<a href="https://www.aac.ca/en/rules/_pdf/AAC-RulebookV5-(SECURE).pdf">AAC Regular</a>',
-  rules: 'https://www.aac.ca/en/rules/_pdf/AAC-RulebookV5-(SECURE).pdf',
-  notes: 'Can jump next higher height.'
-}, {
-  group: 4,
-  name: 'AAC',
-  division: '2018 Regular',
   cutoffs: [12, 15, 18, 22, 26],
   jumpheights: [8, 12, 16, 20, 24],
-  display: '<a href="https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf">AAC 2018 Reg</a>',
+  display: '<a href="https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf">AAC Reg</a>',
   rules: 'https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf',
   notes: '> 12in can jump next higher. Effective 2018-Jan-01.'
 }, {
@@ -296,8 +269,8 @@ var config = [{
   cutoffnotes: ['(350 mm)', '(430 mm)', '(430 mm)'],
   jumpheights: [300, 400, 600],
   jumpheightsnotes: ['Cutoff LESS THAN 350 mm. Jump height 11.81 in.', 'Cutoff LESS THAN 430 mm. Jump height 15.75 in.', 'Jump height 23.62 in.'],
-  display: '<a href="http://www.fci.be/medias/AGI-REG-en-479.pdf">FCI</a>',
-  rules: 'http://www.fci.be/medias/AGI-REG-en-479.pdf',
+  display: '<a href="http://www.fci.be/medias/AGI-REG-2018-en-7610.pdf">FCI</a>',
+  rules: 'http://www.fci.be/medias/AGI-REG-2018-en-7610.pdf',
   notes: ''
 }, {
   group: 5,
@@ -307,8 +280,8 @@ var config = [{
   cutoffnotes: ['(320 mm)', '(410 mm)', '(500 mm)', '(500mm)'],
   jumpheights: [300, 400, 525, 600],
   jumpheightsnotes: ['Jump height 11.81 in.', 'Jump height 15.75 in.', 'Jump height 20.66 in.', 'Jump height 23.62 in.'],
-  display: '<a href="http://www.worldagilityopen.com/waorules&regulations.pdf">WAO</a>',
-  rules: 'http://www.worldagilityopen.com/waorules&regulations.pdf',
+  display: '<a href="https://www.worldagilityopen.com/jump-heights/">WAO</a>',
+  rules: 'https://www.worldagilityopen.com/jump-heights/',
   notes: ''
 }, {
   group: 5,
@@ -318,8 +291,8 @@ var config = [{
   cutoffnotes: ['(300 mm)', '(400 mm)', '(500 mm)', '(600mm)'],
   jumpheights: [300, 400, 500, 600],
   jumpheightsnotes: ['Jump height 11.81 in.', 'Jump height 15.75 in.', 'Jump height 19.68 in.', 'Jump height 23.62 in.'],
-  display: '<a href="http://ifcsdogsports.org/uncategorized/ifcs-announces-regulation-changes-for-wac-2017/">IFCS</a>',
-  rules: 'http://ifcsdogsports.org/uncategorized/ifcs-announces-regulation-changes-for-wac-2017/',
+  display: '<a href="https://ifcsdogsports.org/wp-content/uploads/2017/04/IFCS-Agility-Rules-Dated-February-2017.pdf">IFCS</a>',
+  rules: 'https://ifcsdogsports.org/wp-content/uploads/2017/04/IFCS-Agility-Rules-Dated-February-2017.pdf',
   notes: ''
 }];
 
