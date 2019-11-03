@@ -184,12 +184,19 @@ nav a:hover {
   margin: 0 10px;
 }
 
-.updates {
+.updates .row{
   border-bottom: 1px solid #cdcdcd;
-  padding-bottom: 50px;
+  padding: 1em 0;
+}
+
+.updates {
+    margin-bottom: 2em;
 }
 
 .maker {
   color: #888;
   text-align: center;
+}
+.maker .text-danger {
+    color: red;
 }

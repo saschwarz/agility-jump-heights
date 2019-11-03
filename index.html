@@ -7,23 +7,25 @@
 	<meta name="Description" content="AgilityNerd is the oldest dog agility blog with articles on agility training, dog handling, agility courses, agility course analysis, agility equipment and agility videos.">
 	<meta name="keywords" content="steve schwarz, agilitynerd, dog agility, dog agility training, dog agility video, dog agility blog, dog agility courses" />
         <title>Dog Agility Jump Height Calculator</title>
-        <link rel="stylesheet" href="http://agilitynerd.com/jumpheights/theme/css/style.b3c899e6.min.css">
+        <link rel="stylesheet" href="http://agilitynerd.com/jumpheights/theme/css/style.afb35a2c.min.css">
 </head>
 <body id="index" class="home">
         <div class="container">
     
 	<nav>
 		<ul>
-			<li><a href="http://agilitynerd.com/">AgilityNerd</a></li>
-			<li><a href="http://agilitycourses.com/"><span class="hidden-small">Agility</span> Courses</a></li>
-			<li><a href="http://googility.com/"><span class="hidden-small">Googility</span> Search</a></li>
-			<li><a href="http://store.agilitynerd.com/"><span class="hidden-small">AgilityNerd</span> Store</a></li>
+			<li><a href="https://agilitynerd.com/">AgilityNerd</a></li>
+			<li><a href="https://agilitycourses.com/"><span class="hidden-small">Agility</span> Courses</a></li>
+			<li><a href="https://googility.com/"><span class="hidden-small">Googility</span> Search</a></li>
+			<li><a href="https://store.agilitynerd.com/"><span class="hidden-small">AgilityNerd</span> Store</a></li>
 		</ul>
 	</nav>
 	<h1>Dog Agility Jump Height Calculator</h1>
 	<div class="row">
-		<input class="six columns" type="number" step="any" min="2" id="height" value="" placeholder="Enter your dog's height in inches" autocomplete="off" />
-		<input class="button-primary six columns" type="button" onclick="onHeightChange()" value="Show Me My Jump Heights!" />
+		<form onsubmit="onHeightChange();return false;">
+			<input class="six columns" type="number" step="any" min="2" id="height" value="" placeholder="Enter your dog's height in inches" autocomplete="off" />
+			<input class="button-primary six columns" type="button" onclick="onHeightChange()" value="Show Me My Jump Heights!" />
+		</form>
 	</div>
 	<div class="row" id="filters">
 		<label>
@@ -44,6 +46,7 @@
 				<li>Organizations may have additional and/or optional higher or lower jump heights.</li>
 				<li>Organizations may have additional jump height divisions for junior handlers and senior dogs/handlers.</li>
 				<li><em>Always confirm</em> the rules by clicking on any organization's name!</li>
+				<li>Please email any corrections to steve at agilitynerd.com</li>
 			</ul>
 		</div>
 	</div>
@@ -68,9 +71,15 @@
 		</div>
 	</div>
 	<h5>Updates</h5>
-	<div class="row updates">
-		<div class="two columns">2017-03-01</div>
-		<div class="ten columns">Added AAC 2018 Jump Heights. Sort by Organization Name or by Jump Height. Removed &quot;Effective on Dec 28, 2016&quot; from USDAA entries. Added top level links.</div>
+	<div class="updates">
+		<div class="row">
+			<div class="two columns">2019-10-03</div>
+			<div class="ten columns">Removed AAC jump heights prior to 2018. Updated links to latest rule books (except USDAA).</div>
+		</div>
+		<div class="row">
+			<div class="two columns">2017-03-01</div>
+			<div class="ten columns">Added AAC 2018 Jump Heights. Sort by Organization Name or by Jump Height. Removed &quot;Effective on Dec 28, 2016&quot; from USDAA entries. Added top level links.</div>
+		</div>
 	</div>
 	<script id="results-template" type="text/x-template">
 		<table class="results-table" class="twelve columns u-max-full-width">
@@ -94,17 +103,16 @@
                 <!-- <li>Follow Us:</li> -->
         <li><a href="https://www.facebook.com/AgilityNerd/">Facebook</a></li>
         <li><a href="https://twitter.com/agilitynerd">Twitter</a></li>
-        <li><a href="https://plus.google.com/u/1/b/106305718347292859842/">Google Plus</a></li>
         </ul>
         </div><!--/.well -->
         <footer>
             <div class="row footer">
-                <div class="twelve columns maker">Made with &hearts; by Steve Schwarz and AgilityNerd LLC</div>
+                <div class="twelve columns maker">Made with <span class="text-danger">&hearts;</span> by Steve Schwarz and AgilityNerd LLC</div>
             </div>
         </footer><!-- /#contentinfo -->
         </div><!-- /.container -->
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-        <script src="http://agilitynerd.com/jumpheights/theme/js/main.1525cdd0.min.js"></script>
+        <script src="http://agilitynerd.com/jumpheights/theme/js/main.414a533c.min.js"></script>
     <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-1127677-2']);
