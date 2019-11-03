@@ -27,7 +27,6 @@ LINKS = ()
 SOCIAL = (
     ('Facebook', 'https://www.facebook.com/AgilityNerd/'),
     ('Twitter', 'https://twitter.com/agilitynerd'),
-    ('Google Plus', 'https://plus.google.com/u/1/b/106305718347292859842/')
 )
 
 DEFAULT_PAGINATION = False

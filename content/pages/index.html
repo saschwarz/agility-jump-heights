@@ -6,16 +6,18 @@
 <body>
 	<nav>
 		<ul>
-			<li><a href="http://agilitynerd.com/">AgilityNerd</a></li>
-			<li><a href="http://agilitycourses.com/"><span class="hidden-small">Agility</span> Courses</a></li>
-			<li><a href="http://googility.com/"><span class="hidden-small">Googility</span> Search</a></li>
-			<li><a href="http://store.agilitynerd.com/"><span class="hidden-small">AgilityNerd</span> Store</a></li>
+			<li><a href="https://agilitynerd.com/">AgilityNerd</a></li>
+			<li><a href="https://agilitycourses.com/"><span class="hidden-small">Agility</span> Courses</a></li>
+			<li><a href="https://googility.com/"><span class="hidden-small">Googility</span> Search</a></li>
+			<li><a href="https://store.agilitynerd.com/"><span class="hidden-small">AgilityNerd</span> Store</a></li>
 		</ul>
 	</nav>
 	<h1>Dog Agility Jump Height Calculator</h1>
 	<div class="row">
-		<input class="six columns" type="number" step="any" min="2" id="height" value="" placeholder="Enter your dog's height in inches" autocomplete="off"/>
-		<input class="button-primary six columns" type="button" onclick="onHeightChange()" value="Show Me My Jump Heights!"/>
+		<form onsubmit="onHeightChange();return false;">
+			<input class="six columns" type="number" step="any" min="2" id="height" value="" placeholder="Enter your dog's height in inches" autocomplete="off"/>
+			<input class="button-primary six columns" type="button" onclick="onHeightChange()" value="Show Me My Jump Heights!"/>
+		</form>
 	</div>
 	<div class="row" id="filters">
 		<label>
@@ -36,6 +38,7 @@
 				<li>Organizations may have additional and/or optional higher or lower jump heights.</li>
 				<li>Organizations may have additional jump height divisions for junior handlers and senior dogs/handlers.</li>
 				<li><em>Always confirm</em> the rules by clicking on any organization's name!</li>
+				<li>Please email any corrections to steve at agilitynerd.com</li>
 			</ul>
 		</div>
 	</div>
@@ -60,9 +63,15 @@
 		</div>
 	</div>
 	<h5>Updates</h5>
-	<div class="row updates">
-		<div class="two columns">2017-03-01</div>
-		<div class="ten columns">Added AAC 2018 Jump Heights. Sort by Organization Name or by Jump Height. Removed &quot;Effective on Dec 28, 2016&quot; from USDAA entries. Added top level links.</div>
+	<div class="updates">
+		<div class="row">
+			<div class="two columns">2019-10-03</div>
+			<div class="ten columns">Removed AAC jump heights prior to 2018. Updated links to latest rule books (except USDAA).</div>
+		</div>
+		<div class="row">
+			<div class="two columns">2017-03-01</div>
+			<div class="ten columns">Added AAC 2018 Jump Heights. Sort by Organization Name or by Jump Height. Removed &quot;Effective on Dec 28, 2016&quot; from USDAA entries. Added top level links.</div>
+		</div>
 	</div>
 	<script id="results-template" type="text/x-template">
 		<table class="results-table" class="twelve columns u-max-full-width">
