@@ -36,7 +36,7 @@ DEFAULT_PAGINATION = False
 
 CURRDATE = datetime.now().strftime('%Y-%m-%d')
 # copy PNG to root directory
-EXTRA_PATH_METADATA = {'images/jumpheights.png': {'path': 'jumpheights.png'}, {'extra/CNAME': {'path': 'CNAME'},}}
+EXTRA_PATH_METADATA = {'images/jumpheights.png': {'path': 'jumpheights.png'}, 'extra/CNAME': {'path': 'CNAME'}}
 
 STATIC_PATHS = ['images', 'extra/CNAME']  # put page specific assets here
 PLUGIN_PATHS = ['../pelican-plugins']  # set this to the location of your plugins checkout
