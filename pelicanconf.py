@@ -36,10 +36,12 @@ DEFAULT_PAGINATION = False
 
 CURRDATE = datetime.now().strftime('%Y-%m-%d')
 # copy PNG to root directory
-EXTRA_PATH_METADATA = {'images/jumpheights.png': {'path': 'jumpheights.png'}, 'extra/CNAME': {'path': 'CNAME'}}
+EXTRA_PATH_METADATA = {
+    'images/jumpheights.png': {'path': 'jumpheights.png'}, 'extra/CNAME': {'path': 'CNAME'}}
 
 STATIC_PATHS = ['images', 'extra/CNAME']  # put page specific assets here
-PLUGIN_PATHS = ['../pelican-plugins']  # set this to the location of your plugins checkout
+# set this to the location of your plugins checkout
+PLUGIN_PATHS = ['../pelican-plugins']
 PLUGINS = ['assets']
 THEME = './theme'          # All CSS/JS files go in directories under here
 # I only want to generate Pages so I disable all "blog-like" pages see Note in:
@@ -48,7 +50,8 @@ TAGS_SAVE_AS = ''          # Don't generate Tags pages
 TAG_SAVE_AS = ''
 CATEGORY_SAVE_AS = ''      # Don't generate Category pages
 AUTHOR_SAVE_AS = ''        # Don't generate Author pages
-DIRECT_TEMPLATES = ['index']  # Don't generate tag, category, or author output for some themes
+# Don't generate tag, category, or author output for some themes
+DIRECT_TEMPLATES = ['index']
 # In the generated output directory move files to the root and adjust their URLs to match:
 PAGE_URL = '{slug}.html'
 PAGE_SAVE_AS = '{slug}.html'
