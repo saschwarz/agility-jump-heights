@@ -1,87 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-        <meta charset="utf-8" />
+	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta name="robots" content="index,follow">
 	<meta name="Description" content="AgilityNerd is the oldest dog agility blog with articles on agility training, dog handling, agility courses, agility course analysis, agility equipment and agility videos.">
 	<meta name="keywords" content="steve schwarz, agilitynerd, dog agility, dog agility training, dog agility video, dog agility blog, dog agility courses" />
-        <title>Dog Agility Jump Height Calculator</title>
-        <link rel="stylesheet" href="http://agilitynerd.com/jumpheights/theme/css/style.afb35a2c.min.css">
+	<title>Dog Agility Jump Height Calculator</title>
+	<link rel="stylesheet" href="http://agilitynerd.com/jumpheights/theme/css/style.afb35a2c.min.css">
 </head>
+
 <body id="index" class="home">
-        <div class="container">
-    
-	<nav>
-		<ul>
-			<li><a href="https://agilitynerd.com/">AgilityNerd</a></li>
-			<li><a href="https://agilitycourses.com/"><span class="hidden-small">Agility</span> Courses</a></li>
-			<li><a href="https://googility.com/"><span class="hidden-small">Googility</span> Search</a></li>
-			<li><a href="https://store.agilitynerd.com/"><span class="hidden-small">AgilityNerd</span> Store</a></li>
-		</ul>
-	</nav>
-	<h1>Dog Agility Jump Height Calculator</h1>
-	<div class="row">
-		<form onsubmit="onHeightChange();return false;">
-			<input class="six columns" type="number" step="any" min="2" id="height" value="" placeholder="Enter your dog's height in inches" autocomplete="off" />
-			<input class="button-primary six columns" type="button" onclick="onHeightChange()" value="Show Me My Jump Heights!" />
-		</form>
-	</div>
-	<div class="row" id="filters">
-		<label>
-			Sort by Jump Height <input type="radio" name="sort" value="jump" checked onclick="onHeightChange()" />
-		</label>
-		<label>
-			Sort by Organization <input type="radio" name="sort" value="org" onclick="onHeightChange()" />
-		</label>
-	</div>
-	<div class="row" id="results">
-	</div>
-	<div class="row">
-		<div class="twelve columns u-max-full-width notes">
-			<h5>Please read:</h5>
+	<div class="container">
+		<nav>
 			<ul>
-				<li>The calculator displays the <em>lowest jump heights</em> by dog height for many organizations and their main competition
-				divisions, but <em>not all organizations or divisions</em>.</li>
-				<li>Organizations may have additional and/or optional higher or lower jump heights.</li>
-				<li>Organizations may have additional jump height divisions for junior handlers and senior dogs/handlers.</li>
-				<li><em>Always confirm</em> the rules by clicking on any organization's name!</li>
-				<li>Please email any corrections to steve at agilitynerd.com</li>
+				<li><a href="https://agilitynerd.com/">AgilityNerd</a></li>
+				<li><a href="https://agilitycourses.com/"><span class="hidden-small">Agility</span> Courses</a></li>
+				<li><a href="https://googility.com/"><span class="hidden-small">Googility</span> Search</a></li>
+				<li><a href="https://store.agilitynerd.com/"><span class="hidden-small">AgilityNerd</span> Store</a></li>
 			</ul>
-		</div>
-	</div>
-	<div class="row">
-		<div class="twelve columns u-max-full-width" id="graph1">
-		</div>
-	</div>
-	<div class="row">
-		<div class="twelve columns u-max-full-width" id="graph2">
-		</div>
-	</div>
-	<div class="row">
-		<div class="twelve columns u-max-full-width" id="graph3">
-		</div>
-	</div>
-	<div class="row">
-		<div class="twelve columns u-max-full-width" id="graph4">
-		</div>
-	</div>
-	<div class="row">
-		<div class="twelve columns u-max-full-width" id="graph5">
-		</div>
-	</div>
-	<h5>Updates</h5>
-	<div class="updates">
+		</nav>
+		<h1>Dog Agility Jump Height Calculator</h1>
 		<div class="row">
-			<div class="two columns">2019-10-03</div>
-			<div class="ten columns">Removed AAC jump heights prior to 2018. Updated links to latest rule books (except USDAA).</div>
+			<form onsubmit="onHeightChange();return false;">
+				<input class="six columns" type="number" step="any" min="2" id="height" value="" placeholder="Enter your dog's height in inches" autocomplete="off" />
+				<input class="button-primary six columns" type="button" onclick="onHeightChange()" value="Show Me My Jump Heights!" />
+			</form>
+		</div>
+		<div class="row" id="filters">
+			<label>
+				Sort by Jump Height <input type="radio" name="sort" value="jump" checked onclick="onHeightChange()" />
+			</label>
+			<label>
+				Sort by Organization <input type="radio" name="sort" value="org" onclick="onHeightChange()" />
+			</label>
+		</div>
+		<div class="row" id="results">
 		</div>
 		<div class="row">
-			<div class="two columns">2017-03-01</div>
-			<div class="ten columns">Added AAC 2018 Jump Heights. Sort by Organization Name or by Jump Height. Removed &quot;Effective on Dec 28, 2016&quot; from USDAA entries. Added top level links.</div>
+			<div class="twelve columns u-max-full-width notes">
+				<h5>Please read:</h5>
+				<ul>
+					<li>The calculator displays the <em>lowest jump heights</em> by dog height for many organizations and their main competition
+						divisions, but <em>not all organizations or divisions</em>.</li>
+					<li>Organizations may have additional and/or optional higher or lower jump heights.</li>
+					<li>Organizations may have additional jump height divisions for junior handlers and senior dogs/handlers.</li>
+					<li><em>Always confirm</em> the rules by clicking on any organization's name!</li>
+					<li>Please email any corrections to steve at agilitynerd.com</li>
+				</ul>
+			</div>
 		</div>
-	</div>
-	<script id="results-template" type="text/x-template">
+		<div class="row">
+			<div class="twelve columns u-max-full-width" id="graph1">
+			</div>
+		</div>
+		<div class="row">
+			<div class="twelve columns u-max-full-width" id="graph2">
+			</div>
+		</div>
+		<div class="row">
+			<div class="twelve columns u-max-full-width" id="graph3">
+			</div>
+		</div>
+		<div class="row">
+			<div class="twelve columns u-max-full-width" id="graph4">
+			</div>
+		</div>
+		<div class="row">
+			<div class="twelve columns u-max-full-width" id="graph5">
+			</div>
+		</div>
+		<h5>Updates</h5>
+		<div class="updates">
+			<div class="row">
+				<div class="two columns">2019-10-03</div>
+				<div class="ten columns">Removed AAC jump heights prior to 2018. Updated links to latest rule books (except USDAA).</div>
+			</div>
+			<div class="row">
+				<div class="two columns">2017-03-01</div>
+				<div class="ten columns">Added AAC 2018 Jump Heights. Sort by Organization Name or by Jump Height. Removed &quot;Effective on Dec 28, 2016&quot; from USDAA entries. Added top level links.</div>
+			</div>
+		</div>
+		<script id="results-template" type="text/x-template">
 		<table class="results-table" class="twelve columns u-max-full-width">
 			<thead>
 				<tr>
@@ -96,32 +97,29 @@
 			</tbody>
 		</table>
 	</script>
-
-        <div class="well sidebar-nav">
-        <!---->
-        <ul class="nav nav-list social row">
-                <!-- <li>Follow Us:</li> -->
-        <li><a href="https://www.facebook.com/AgilityNerd/">Facebook</a></li>
-        <li><a href="https://twitter.com/agilitynerd">Twitter</a></li>
-        </ul>
-        </div><!--/.well -->
-        <footer>
-            <div class="row footer">
-                <div class="twelve columns maker">Made with <span class="text-danger">&hearts;</span> by Steve Schwarz and AgilityNerd LLC</div>
-            </div>
-        </footer><!-- /#contentinfo -->
-        </div><!-- /.container -->
-        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-        <script src="http://agilitynerd.com/jumpheights/theme/js/main.414a533c.min.js"></script>
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-1127677-2']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = 'https://ssl.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    </script>
+		<div class="well sidebar-nav">
+			<ul class="nav nav-list social row">
+				<!-- <li>Follow Us:</li> -->
+				<li><a href="https://www.facebook.com/AgilityNerd/">Facebook</a></li>
+				<li><a href="https://twitter.com/agilitynerd">Twitter</a></li>
+			</ul>
+		</div>
+		<!--/.well -->
+		<footer>
+			<div class="row footer">
+				<div class="twelve columns maker">Made with <span class="text-danger">&hearts;</span> by Steve Schwarz and AgilityNerd LLC</div>
+			</div>
+		</footer><!-- /#contentinfo -->
+	</div><!-- /.container -->
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script src="http://agilitynerd.com/jumpheights/theme/js/main.414a533c.min.js"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1127677-13"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-1127677-13');
+	</script>
 </body>
+
 </html>
