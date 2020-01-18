@@ -4,8 +4,8 @@ var config = [{
   division: 'Regular',
   cutoffs: [4, 8, 12, 16, 20],
   jumpheights: [2, 4, 8, 12, 16],
-  display: '<a href="http://www.k9tdaa.com/documents/2011%20Forms/Rules%20and%20Regulations%20v%205.2.pdf">TDAA</a>',
-  rules: 'http://www.k9tdaa.com/documents/2011%20Forms/Rules%20and%20Regulations%20v%205.2.pdf',
+  display: '<a href="https://www.k9tdaa.com/documents/2011%20Forms/Rules%20and%20Regulations%20v%205.2.pdf">TDAA</a>',
+  rules: 'https://www.k9tdaa.com/documents/2011%20Forms/Rules%20and%20Regulations%20v%205.2.pdf',
   notes: ''
 }, {
   group: 3,
@@ -31,8 +31,8 @@ var config = [{
   division: 'Veterans',
   cutoffs: [12, 16, 26],
   jumpheights: [4, 8, 12],
- display: '<a href="https://www.usdaa.com/article.cfm?newsID=3387">USDAA Veterans</a>',
-  rules: 'https://www.usdaa.com/article.cfm?newsID=3387',
+  display: '<a href="https://usdaa.com/regulations/upload/NJHs-Long-Jump-Table-Aframe-Final.pdf">USDAA Veterans</a>',
+  rules: 'https://usdaa.com/regulations/upload/NJHs-Long-Jump-Table-Aframe-Final.pdf',
   notes: ''
 }, {
   group: 4,
@@ -79,7 +79,7 @@ var config = [{
   display: '<a href="https://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Proficient</a>',
   rules: 'https://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights',
   notes: "Dog's >= 7yro."
-},  {
+}, {
   group: 3,
   name: 'CPE',
   division: 'Veterans',
@@ -148,8 +148,8 @@ var config = [{
   division: 'Performance',
   cutoffs: [12, 16, 19, 21, 26],
   jumpheights: [8, 12, 14, 16, 20],
-  display: '<a href="https://www.usdaa.com/article.cfm?newsID=3387">USDAA Perf.</a>',
-  rules: 'https://www.usdaa.com/article.cfm?newsID=3387',
+  display: '<a href="https://usdaa.com/regulations/upload/NJHs-Long-Jump-Table-Aframe-Final.pdf">USDAA Perf.</a>',
+  rules: 'https://usdaa.com/regulations/upload/NJHs-Long-Jump-Table-Aframe-Final.pdf',
   notes: ''
 }, {
   group: 1,
@@ -200,7 +200,7 @@ var config = [{
   group: 4,
   name: 'CKC',
   division: 'Selected',
-  cutoffs: [10, 14, 18, 22, 26],
+  cutoffs: [11, 14, 18, 22, 26],
   jumpheights: [4, 8, 12, 16, 20],
   display: '<a href="https://www.ckc.ca/en/Files/Forms/Shows-Trials/Event-Rules-Regulations/Agility-Rules-and-Regulations-Effective-January-1.aspx">CKC Selected</a>',
   rules: 'https://www.ckc.ca/en/Files/Forms/Shows-Trials/Event-Rules-Regulations/Agility-Rules-and-Regulations-Effective-January-1.aspx',
@@ -227,7 +227,7 @@ var config = [{
   group: 4,
   name: 'CKC',
   division: 'Regular',
-  cutoffs: [10, 14, 18, 22, 26],
+  cutoffs: [11, 14, 18, 22, 26],
   jumpheights: [8, 12, 16, 20, 24],
   display: '<a href="https://www.ckc.ca/en/Files/Forms/Shows-Trials/Event-Rules-Regulations/Agility-Rules-and-Regulations-Effective-January-1.aspx">CKC Regular</a>',
   rules: 'https://www.ckc.ca/en/Files/Forms/Shows-Trials/Event-Rules-Regulations/Agility-Rules-and-Regulations-Effective-January-1.aspx',
@@ -249,8 +249,8 @@ var config = [{
   division: 'Championship',
   cutoffs: [12, 14, 17, 19, 21, 26],
   jumpheights: [10, 14, 16, 20, 22, 24],
-  display: '<a href="https://www.usdaa.com/article.cfm?newsID=3387">USDAA Champ.</a>',
-  rules: 'https://www.usdaa.com/article.cfm?newsID=3387',
+  display: '<a href="https://usdaa.com/regulations/upload/NJHs-Long-Jump-Table-Aframe-Final.pdf">USDAA Champ.</a>',
+  rules: 'https://usdaa.com/regulations/upload/NJHs-Long-Jump-Table-Aframe-Final.pdf',
   notes: ''
 }, {
   group: 4,
@@ -307,7 +307,7 @@ function annotate(config) {
       org.heightDiffs[height] = i === 0 ? org.cutoffs[i] : org.cutoffs[i] - org.cutoffs[i - 1];
       org.heights.push({
         cutoff: org.cutoffs[i],
-        cutoffdisplay: org.cutoffnotes && (org.cutoffs[i] + ' ' +org.cutoffnotes[i]) || org.cutoffs[i],
+        cutoffdisplay: org.cutoffnotes && (org.cutoffs[i] + ' ' + org.cutoffnotes[i]) || org.cutoffs[i],
         jumpheight: org.jumpheights[i],
         jumpheightdisplay: org.jumpheightsdisplay && org.jumpheightsdisplay[i] || org.jumpheights[i],
         notes: org.jumpheightsnotes && org.jumpheightsnotes[i] || '',
@@ -320,23 +320,23 @@ function annotate(config) {
 
 // from https://personal.sron.nl/~pault/colourschemes.pdf
 var colors = {
-    2: '#781C81',
-    300: '#781C81',
-    4: '#413B93',
-    400: '#413B93',
-    6: '#4065B1',
-    500: '#4065B1',
-    8: '#488BC2',
-    525: '#488BC2',
-    10: '#55A1B1',
-    600: '#55A1B1',
-    12: '#63AD99',
-    14: '#7FB972',
-    16: '#B5BD4C',
-    20: '#D9AD3C',
-    22: '#E68E34',
-    24: '#E6642C',
-    26: '#D92120',
+  2: '#781C81',
+  300: '#781C81',
+  4: '#413B93',
+  400: '#413B93',
+  6: '#4065B1',
+  500: '#4065B1',
+  8: '#488BC2',
+  525: '#488BC2',
+  10: '#55A1B1',
+  600: '#55A1B1',
+  12: '#63AD99',
+  14: '#7FB972',
+  16: '#B5BD4C',
+  20: '#D9AD3C',
+  22: '#E68E34',
+  24: '#E6642C',
+  26: '#D92120',
 };
 
 function setup(config) {
@@ -360,7 +360,7 @@ function setup(config) {
       name: height,
       type: 'bar',
       text: _.map(matches, function (o) { return o[2] }),
-      marker: {color: _.map(matches, function (o) { return o[3] })}
+      marker: { color: _.map(matches, function (o) { return o[3] }) }
     };
   });
 }
@@ -410,7 +410,7 @@ function updateTable(height, filter) {
   var filterBy = ['jump'];
   var filters = document.getElementById('filters');
   if (!height) {
-      resultsRow.innerHTML = '';
+    resultsRow.innerHTML = '';
     resultsRow.className = 'u-max-full-width';
     return;
   }
@@ -420,9 +420,9 @@ function updateTable(height, filter) {
   }
   filters.style.display = 'block';
   resultsRow.innerHTML = resultsTemplate;
-  var data = _(config).map(function(org){
+  var data = _(config).map(function (org) {
     var jumpheight = 'N/A', jump = 0, rule = 'N/A', notes = org.notes;
-    var index = _.findIndex(org.cutoffs, function(h) { return height <= h });
+    var index = _.findIndex(org.cutoffs, function (h) { return height <= h });
     var data = org.heights[index];
     if (data) {
       rule = 'height <= ' + data.cutoffdisplay;
@@ -433,7 +433,7 @@ function updateTable(height, filter) {
         rule = 'height > ' + org.heights[index - 1].cutoffdisplay;
       }
     }
-    return {name: org.name, rules: org.rules, division: org.division, jumpheight: jumpheight, rule: rule, notes: notes, jump: jump};
+    return { name: org.name, rules: org.rules, division: org.division, jumpheight: jumpheight, rule: rule, notes: notes, jump: jump };
   }).sortBy(filterBy).value();
   var dest = resultsRow.getElementsByClassName('results-body')[0];
   var template = _.template('<tr><td><a href="<%= rules %>"><%= name %></a></td><td><%= division %></td><td class="jump-height"><%= jumpheight %></td><td class="max-height"><%= rule %></td><td><%= notes %></td></tr>');
@@ -449,7 +449,7 @@ function updateGraph(gnode, orgs, data, layout, height) {
       y: _.fill(Array(orgs.length), height),
       name: "",
       type: 'line',
-      line: {color: '#444444', width: 3}
+      line: { color: '#444444', width: 3 }
     };
     data.push(heights);
   }
@@ -478,32 +478,33 @@ try {
   var gnodes = [];  // graph nodes
   // all configs based on index in this array:
   var graphConfigs = [
-   'Jump Heights US Organizations<br>"Regular/Championship"',
-   'Jump Heights US Organizations<br>"Performance/Preferred"',
-   'Jump Heights US Organizations<br>"Veterans/Specialist"',
-   'Jump Heights Canadian Organizations',
-   'Jump Heights International<br>Championship Organizations'
+    'Jump Heights US Organizations<br>"Regular/Championship"',
+    'Jump Heights US Organizations<br>"Performance/Preferred"',
+    'Jump Heights US Organizations<br>"Veterans/Specialist"',
+    'Jump Heights Canadian Organizations',
+    'Jump Heights International<br>Championship Organizations'
   ];
-  var graphData = _.map(graphConfigs, function(title, i){
+  var graphData = _.map(graphConfigs, function (title, i) {
     var index = i + 1;
     var filtered = _.filter(annotated, { group: index });
     var data = setup(filtered);
     var gnode = Plotly.d3.select('#graph' + index).node();
     gnodes.push(gnode);
-    return { gnode: gnode,
-             filtered: filtered,
-             data: data,
-             layout: buildLayout(filtered, title)
-            };
+    return {
+      gnode: gnode,
+      filtered: filtered,
+      data: data,
+      layout: buildLayout(filtered, title)
+    };
   })
 
   function onHeightChange() {
     var height = getHeight();
     var filter = getFilter();
     updateTable(height, filter);
-    _.each(graphData, function(config) {
+    _.each(graphData, function (config) {
       // updateGraph modifies data
-      window.setTimeout(function() { updateGraph(config.gnode, config.filtered, config.data.slice(), config.layout, height) });
+      window.setTimeout(function () { updateGraph(config.gnode, config.filtered, config.data.slice(), config.layout, height) });
     });
   }
   onHeightChange();
@@ -518,8 +519,8 @@ function displayError() {
   document.getElementById('graph1').appendChild(p);
 }
 
-window.onresize = _.debounce(function() {
-  _.each(gnodes, function(gnode) {
+window.onresize = _.debounce(function () {
+  _.each(gnodes, function (gnode) {
     Plotly.Plots.resize(gnode);
   })
 }, 250);

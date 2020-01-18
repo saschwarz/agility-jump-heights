@@ -1,8 +1,10 @@
 <html lang="en">
+
 <head>
 	<title>Dog Agility Jump Height Calculator</title>
-	<meta name="save_as" content="index.html"/>
+	<meta name="save_as" content="index.html" />
 </head>
+
 <body>
 	<nav>
 		<ul>
@@ -15,16 +17,16 @@
 	<h1>Dog Agility Jump Height Calculator</h1>
 	<div class="row">
 		<form onsubmit="onHeightChange();return false;">
-			<input class="six columns" type="number" step="any" min="2" id="height" value="" placeholder="Enter your dog's height in inches" autocomplete="off"/>
-			<input class="button-primary six columns" type="button" onclick="onHeightChange()" value="Show Me My Jump Heights!"/>
+			<input class="six columns" type="number" step="any" min="2" id="height" value="" placeholder="Enter your dog's height in inches" autocomplete="off" />
+			<input class="button-primary six columns" type="button" onclick="onHeightChange()" value="Show Me My Jump Heights!" />
 		</form>
 	</div>
 	<div class="row" id="filters">
 		<label>
-			Sort by Jump Height <input type="radio" name="sort" value="jump" checked onclick="onHeightChange()"/>
+			Sort by Jump Height <input type="radio" name="sort" value="jump" checked onclick="onHeightChange()" />
 		</label>
 		<label>
-			Sort by Organization <input type="radio" name="sort" value="org" onclick="onHeightChange()"/>
+			Sort by Organization <input type="radio" name="sort" value="org" onclick="onHeightChange()" />
 		</label>
 	</div>
 	<div class="row" id="results">
@@ -34,7 +36,7 @@
 			<h5>Please read:</h5>
 			<ul>
 				<li>The calculator displays the <em>lowest jump heights</em> by dog height for many organizations and their main competition
-				divisions, but <em>not all organizations or divisions</em>.</li>
+					divisions, but <em>not all organizations or divisions</em>.</li>
 				<li>Organizations may have additional and/or optional higher or lower jump heights.</li>
 				<li>Organizations may have additional jump height divisions for junior handlers and senior dogs/handlers.</li>
 				<li><em>Always confirm</em> the rules by clicking on any organization's name!</li>
@@ -65,6 +67,10 @@
 	<h5>Updates</h5>
 	<div class="updates">
 		<div class="row">
+			<div class="two columns">2020-01-18</div>
+			<div class="ten columns">Updated jump height cutoffs for CKC. Updated links to latest CKC and USDAA rule books.</div>
+		</div>
+		<div class="row">
 			<div class="two columns">2019-10-03</div>
 			<div class="ten columns">Removed AAC jump heights prior to 2018. Updated links to latest rule books (except USDAA).</div>
 		</div>
@@ -89,4 +95,5 @@
 		</table>
 	</script>
 </body>
+
 </html>
