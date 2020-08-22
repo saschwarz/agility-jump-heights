@@ -203,3 +203,14 @@ nav a:hover {
 .maker .text-danger {
     color: red;
 }
+
+.kofi {
+    color: red;
+    display: flex;
+    font-size: 1.2em;
+    justify-content: center;
+}
+
+.kofi img {
+    margin: 0 6px;
+}
