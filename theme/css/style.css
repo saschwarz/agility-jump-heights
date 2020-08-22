@@ -176,17 +176,19 @@ nav a:hover {
 #filters {
     display: none;
 }
+
 #filters label {
-  display: inline-block;
-  color: #0FA0CE;
-}
-#filters input {
-  margin: 0 10px;
+    display: inline-block;
+    color: #0FA0CE;
 }
 
-.updates .row{
-  border-bottom: 1px solid #cdcdcd;
-  padding: 1em 0;
+#filters input {
+    margin: 0 10px;
+}
+
+.updates .row {
+    border-bottom: 1px solid #cdcdcd;
+    padding: 1em 0;
 }
 
 .updates {
@@ -194,9 +196,21 @@ nav a:hover {
 }
 
 .maker {
-  color: #888;
-  text-align: center;
+    color: #888;
+    text-align: center;
 }
+
 .maker .text-danger {
     color: red;
+}
+
+.kofi {
+    color: red;
+    display: flex;
+    font-size: 1.2em;
+    justify-content: center;
+}
+
+.kofi img {
+    margin: 0 6px;
 }
