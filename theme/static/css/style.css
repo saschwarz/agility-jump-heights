@@ -160,7 +160,7 @@ nav a {
 }
 
 nav a:hover {
-    border-bottom: 1px solid #1EAEDB;
+    border-bottom: 1px solid #3c6dc5;
 }
 
 .hidden-small {
@@ -196,7 +196,7 @@ nav a:hover {
 }
 
 .maker {
-    color: #888;
+    /* color: #888; */
     text-align: center;
 }
 
