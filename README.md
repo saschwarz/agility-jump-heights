@@ -10,7 +10,7 @@ Here's what it looks like:
 
 ## Demo
 
-You can see this page in action at [http://agilitynerd.com/jumpheights/](http://www.agilitynerd.com/jumpheights/).
+You can see this page in action at [https://agility-jump-heights.agilitynerd.com](https://agility-jump-heights.agilitynerd.com).
 
 ## Motivation
 
