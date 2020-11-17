@@ -375,12 +375,14 @@ function buildLayout(orgs, title) {
   };
   return {
     xaxis: {
-      tickangle: smallScreen ? 90 : 'auto'
+      tickangle: smallScreen ? 90 : 'auto',
+      fixedrange: true,
     },
     yaxis: {
       title: "Dog's Height at Withers",
       autotick: false,
-      dtick: 2
+      dtick: 2,
+      fixedrange: true,
     },
     barmode: 'relative',
     title: title,
@@ -453,7 +455,7 @@ function updateGraph(gnode, orgs, data, layout, height) {
     };
     data.push(heights);
   }
-  Plotly.newPlot(gnode, data, layout);
+  Plotly.newPlot(gnode, data, layout, {scrollZoom: false, displayModeBar: false, editable: false});
 }
 
 function getFilter() {
