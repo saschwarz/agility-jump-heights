@@ -31,8 +31,8 @@ var config = [{
   division: 'Veterans',
   cutoffs: [12, 16, 26],
   jumpheights: [4, 8, 12],
-  display: '<a href="https://usdaa.com/regulations/upload/NJHs-Long-Jump-Table-Aframe-Final.pdf">USDAA Veterans</a>',
-  rules: 'https://usdaa.com/regulations/upload/NJHs-Long-Jump-Table-Aframe-Final.pdf',
+  display: '<a href="https://www.usdaa.com/news/cynosport-2021-update.cfm">USDAA Veterans</a>',
+  rules: 'https://www.usdaa.com/news/cynosport-2021-update.cfm',
   notes: ''
 }, {
   group: 4,
@@ -146,10 +146,10 @@ var config = [{
   group: 2,
   name: 'USDAA',
   division: 'Performance',
-  cutoffs: [12, 16, 19, 21, 26],
+  cutoffs:     [13, 17, 19, 21, 26],
   jumpheights: [8, 12, 14, 16, 20],
-  display: '<a href="https://usdaa.com/regulations/upload/NJHs-Long-Jump-Table-Aframe-Final.pdf">USDAA Perf.</a>',
-  rules: 'https://usdaa.com/regulations/upload/NJHs-Long-Jump-Table-Aframe-Final.pdf',
+  display: '<a href="https://www.usdaa.com/news/cynosport-2021-update.cfm">USDAA Perf.</a>',
+  rules: 'https://www.usdaa.com/news/cynosport-2021-update.cfm',
   notes: ''
 }, {
   group: 1,
@@ -247,10 +247,10 @@ var config = [{
   group: 1,
   name: 'USDAA',
   division: 'Championship',
-  cutoffs: [12, 14, 17, 19, 21, 26],
-  jumpheights: [10, 14, 16, 20, 22, 24],
-  display: '<a href="https://usdaa.com/regulations/upload/NJHs-Long-Jump-Table-Aframe-Final.pdf">USDAA Champ.</a>',
-  rules: 'https://usdaa.com/regulations/upload/NJHs-Long-Jump-Table-Aframe-Final.pdf',
+  cutoffs:     [12, 13, 14, 17, 19, 21, 26],
+  jumpheights: [10, 12, 14, 16, 20, 22, 24],
+  display: '<a href="https://www.usdaa.com/news/cynosport-2021-update.cfm">USDAA Champ.</a>',
+  rules: 'https://www.usdaa.com/news/cynosport-2021-update.cfm',
   notes: ''
 }, {
   group: 4,
