@@ -2,25 +2,26 @@
 <html lang="{{ DEFAULT_LANG }}">
 
 <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta name="robots" content="index,follow">
-        <meta name="Description" content="AgilityNerd dog agility jump height calculator. For AAC, AKC, ASCA, CKC, CPE, DOCNA, FCI, IFCS, NADAC, TDAA, UKC, UKI, USDAA, and WAO organizations.">
-        <meta name="keywords" content="agilitynerd, dog agility, dog agility jumping, dog agility jump heights, AAC, AKC, ASCA, CKC, CPE, DOCNA, FCI, IFCS, NADAC, TDAA, UKC, UKI, USDAA, WAO" />
-        <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
-        {% assets filters="cssmin", output="css/style.%(version)s.min.css", "css/normalize.css", "css/skeleton.css", "css/style.css" %}
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
-        {% endassets %}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="robots" content="index,follow">
+  <meta name="Description" content="AgilityNerd dog agility jump height calculator. For AAC, AKC, ASCA, CKC, CPE, DOCNA, FCI, IFCS, NADAC, TDAA, UKC, UKI, USDAA, and WAO organizations.">
+  <meta name="keywords" content="agilitynerd, dog agility, dog agility jumping, dog agility jump heights, AAC, AKC, ASCA, CKC, CPE, DOCNA, FCI, IFCS, NADAC, TDAA, UKC, UKI, USDAA, WAO" />
+  <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+  {% assets filters="cssmin", output="css/style.%(version)s.min.css", "css/normalize.css", "css/skeleton.css", "css/style.css" %}
+  <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+  {% endassets %}
+  <script async defer data-website-id="b7a3646e-7cac-452c-a205-488c8e551b82" src="https://umami.agilitynerd.com/umami.js"></script>
 </head>
 
 <body id="index" class="home">
-        {% include 'github.html' %}
-        <div class="container">
-                {% block content %}
-                {% endblock %}
-                {% if LINKS or SOCIAL %}
-                <div class="well sidebar-nav">
-                        <!--{% if LINKS %}
+  {% include 'github.html' %}
+  <div class="container">
+    {% block content %}
+    {% endblock %}
+    {% if LINKS or SOCIAL %}
+    <div class="well sidebar-nav">
+      <!--{% if LINKS %}
         <ul class="nav nav-list">
         <li class="nav-header">Blogroll</li>
         {% for name, link in LINKS %}
@@ -28,29 +29,29 @@
         {% endfor %}
         </ul>
         {% endif %}-->
-                        {% if SOCIAL %}
-                        <ul class="nav nav-list social row">
-                                <!-- <li>Follow Us:</li> -->
-                                {% for name, link in SOCIAL %}
-                                <li><a href="{{ link }}">{{ name }}</a></li>
-                                {% endfor %}
-                        </ul>
-                        {% endif %}
-                </div>
-                <!--/.well -->
-                {% endif %}
-                <footer>
-                        <div class="row footer">
-                                <div class="twelve columns maker">Made with <span class="text-danger">&hearts;</span> by Steve Schwarz and AgilityNerd LLC</div>
-                        </div>
-                </footer><!-- /#contentinfo -->
-        </div><!-- /.container -->
-        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-        {% assets filters="jsmin", output="js/main.%(version)s.min.js", "js/lodash.js", "js/main.js" %}
-        <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
-        {% endassets %}
-        {% include 'analytics.html' %}
-        {% include 'disqus_script.html' %}
+      {% if SOCIAL %}
+      <ul class="nav nav-list social row">
+        <!-- <li>Follow Us:</li> -->
+        {% for name, link in SOCIAL %}
+        <li><a href="{{ link }}">{{ name }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    <!--/.well -->
+    {% endif %}
+    <footer>
+      <div class="row footer">
+        <div class="twelve columns maker">Made with <span class="text-danger">&hearts;</span> by Steve Schwarz and AgilityNerd LLC</div>
+      </div>
+    </footer><!-- /#contentinfo -->
+  </div><!-- /.container -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  {% assets filters="jsmin", output="js/main.%(version)s.min.js", "js/lodash.js", "js/main.js" %}
+  <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
+  {% endassets %}
+  {% include 'analytics.html' %}
+  {% include 'disqus_script.html' %}
 </body>
 
 </html>
