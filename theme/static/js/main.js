@@ -294,7 +294,56 @@ var config = [{
   display: '<a href="https://ifcsdogsports.org/wp-content/uploads/2017/04/IFCS-Agility-Rules-Dated-February-2017.pdf">IFCS</a>',
   rules: 'https://ifcsdogsports.org/wp-content/uploads/2017/04/IFCS-Agility-Rules-Dated-February-2017.pdf',
   notes: ''
-}];
+},
+{
+  group: 6,
+  name: 'WAO Future',
+  division: '',
+  cutoffs: [12.60, 14.96, 17.32, 19.69, 26],
+  cutoffnotes: ['(250mm)', '(320 mm)', '(410 mm)', '(500 mm)', '(500mm)'],
+  jumpheights: [250, 300, 400, 525, 600],
+  jumpheightsnotes: ['Jump height 9.84 in.', 'Jump height 11.81 in.', 'Jump height 15.75 in.', 'Jump height 20.66 in.', 'Jump height 23.62 in.'],
+  display: '<a href="https://www.facebook.com/WorldAgilityOpen/posts/5316818461693961">WAO Future</a>',
+  rules: 'https://www.facebook.com/WorldAgilityOpen/posts/5316818461693961',
+  notes: ''
+},
+{
+  group: 6,
+  name: 'WAO Current',
+  division: '',
+  cutoffs: [12.60, 16.14, 19.69, 26],
+  cutoffnotes: ['(320 mm)', '(410 mm)', '(500 mm)', '(500mm)'],
+  jumpheights: [300, 400, 525, 600],
+  jumpheightsnotes: ['Jump height 11.81 in.', 'Jump height 15.75 in.', 'Jump height 20.66 in.', 'Jump height 23.62 in.'],
+  display: '<a href="https://www.worldagilityopen.com/jump-heights/">WAO Current</a>',
+  rules: 'https://www.worldagilityopen.com/jump-heights/',
+  notes: ''
+},
+{
+  group: 7,
+  name: 'UKI Future',
+  division: 'Regular',
+  cutoffs: [12.75, 15, 17.5, 22, 26],
+  jumpheights: [8, 12, 16, 20, 22],
+  jumpheightsdisplay: [8, 12, 16, 20, '22/24'],
+  jumpheightsnotes: ['', '', '', '', 'Choice of 22 in or 24 in.'],
+  display: '<a href="https://ukagilityinternational.com/wp-content/uploads/2019/09/UKI-5th-Edition-Rules-March-1-2019-updated-2.28.pdf">UKI Future</a>',
+  rules: 'https://ukagilityinternational.com/wp-content/uploads/2019/09/UKI-5th-Edition-Rules-March-1-2019-updated-2.28.pdf',
+  notes: ''
+},
+{
+  group: 7,
+  name: 'UKI Current',
+  division: 'Regular',
+  cutoffs: [11, 14, 17.5, 22, 26],
+  jumpheights: [8, 12, 16, 20, 22],
+  jumpheightsdisplay: [8, 12, 16, 20, '22/24'],
+  jumpheightsnotes: ['', '', '', '', 'Choice of 22 in or 24 in.'],
+  display: '<a href="https://ukagilityinternational.com/wp-content/uploads/2019/09/UKI-5th-Edition-Rules-March-1-2019-updated-2.28.pdf">UKI Current</a>',
+  rules: 'https://ukagilityinternational.com/wp-content/uploads/2019/09/UKI-5th-Edition-Rules-March-1-2019-updated-2.28.pdf',
+  notes: ''
+}
+];
 
 function annotate(config) {
   return _.map(config, function (org) {
@@ -422,7 +471,8 @@ function updateTable(height, filter) {
   }
   filters.style.display = 'block';
   resultsRow.innerHTML = resultsTemplate;
-  var data = _(config).map(function (org) {
+  var filtered = _.filter(config, function(d) { return !d.name.includes('Current') });
+  var data = _(filtered).map(function (org) {
     var jumpheight = 'N/A', jump = 0, rule = 'N/A', notes = org.notes;
     var index = _.findIndex(org.cutoffs, function (h) { return height <= h });
     var data = org.heights[index];
@@ -484,7 +534,9 @@ try {
     'Jump Heights US Organizations<br>"Performance/Preferred"',
     'Jump Heights US Organizations<br>"Veterans/Specialist"',
     'Jump Heights Canadian Organizations',
-    'Jump Heights International<br>Championship Organizations'
+    'Jump Heights International<br>Championship Organizations',
+    'WAO Future vs Current',
+    'UKI Future vs Current<br>Select is one jump height lower',
   ];
   var graphData = _.map(graphConfigs, function (title, i) {
     var index = i + 1;
