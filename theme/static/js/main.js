@@ -60,7 +60,7 @@ var config = [{
   jumpheights: [4, 8, 12, 16, 20],
   display: '<a href="https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf">AAC Vet</a>',
   rules: 'https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf',
-  notes: 'Effective 2018-Jan-01.'
+  notes: ''
 }, {
   group: 3,
   name: 'DOCNA',
@@ -195,7 +195,7 @@ var config = [{
   jumpheights: [4, 8, 12, 16, 20],
   display: '<a href="https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf">AAC Special</a>',
   rules: 'https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf',
-  notes: 'Effective 2018-Jan-01.'
+  notes: ''
 }, {
   group: 4,
   name: 'CKC',
@@ -260,7 +260,7 @@ var config = [{
   jumpheights: [8, 12, 16, 20, 24],
   display: '<a href="https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf">AAC Reg</a>',
   rules: 'https://www.aac.ca/en/forms/_pdf/AAC_DogMeasurementForm_2017-18_v2.pdf',
-  notes: '> 12in can jump next higher. Effective 2018-Jan-01.'
+  notes: '> 12in can jump next higher.'
 }, {
   group: 5,
   name: 'FCI',
