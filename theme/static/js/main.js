@@ -327,8 +327,8 @@ var config = [{
   jumpheights: [8, 12, 16, 20, 22],
   jumpheightsdisplay: [8, 12, 16, 20, '22/24'],
   jumpheightsnotes: ['', '', '', '', 'Choice of 22 in or 24 in.'],
-  display: '<a href="https://ukagilityinternational.com/wp-content/uploads/2019/09/UKI-5th-Edition-Rules-March-1-2019-updated-2.28.pdf">UKI Future</a>',
-  rules: 'https://ukagilityinternational.com/wp-content/uploads/2019/09/UKI-5th-Edition-Rules-March-1-2019-updated-2.28.pdf',
+  display: '<a href="https://www.facebook.com/permalink.php?story_fbid=10158255710228370&id=249253213369">UKI Future</a>',
+  rules: 'https://www.facebook.com/permalink.php?story_fbid=10158255710228370&id=249253213369',
   notes: ''
 },
 {
