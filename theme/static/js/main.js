@@ -300,7 +300,7 @@ var config = [{
   name: 'WAO Future',
   division: '',
   cutoffs: [12.60, 14.96, 17.32, 19.69, 26],
-  cutoffnotes: ['(250mm)', '(320 mm)', '(410 mm)', '(500 mm)', '(500mm)'],
+  cutoffnotes: ['(320mm)', '(380 mm)', '(440 mm)', '(500 mm)', '(500mm)'],
   jumpheights: [250, 300, 400, 525, 600],
   jumpheightsnotes: ['Jump height 9.84 in.', 'Jump height 11.81 in.', 'Jump height 15.75 in.', 'Jump height 20.66 in.', 'Jump height 23.62 in.'],
   display: '<a href="https://www.facebook.com/WorldAgilityOpen/posts/5316818461693961">WAO Future</a>',
