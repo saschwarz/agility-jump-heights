@@ -29,10 +29,10 @@ var config = [{
   group: 3,
   name: 'USDAA',
   division: 'Veterans',
-  cutoffs: [12, 16, 26],
+  cutoffs: [13, 17, 26],
   jumpheights: [4, 8, 12],
-  display: '<a href="https://www.usdaa.com/news/cynosport-2021-update.cfm">USDAA Veterans</a>',
-  rules: 'https://www.usdaa.com/news/cynosport-2021-update.cfm',
+  display: '<a href="https://www.usdaa.com/regulations/upload/EquipmentSettingsChart2021_final.pdf">USDAA Veterans</a>',
+  rules: 'https://www.usdaa.com/regulations/upload/EquipmentSettingsChart2021_final.pdf',
   notes: ''
 }, {
   group: 4,
@@ -146,7 +146,7 @@ var config = [{
   group: 2,
   name: 'USDAA',
   division: 'Performance',
-  cutoffs:     [13, 17, 19, 21, 26],
+  cutoffs: [13, 17, 19, 21, 26],
   jumpheights: [8, 12, 14, 16, 20],
   display: '<a href="https://www.usdaa.com/news/cynosport-2021-update.cfm">USDAA Perf.</a>',
   rules: 'https://www.usdaa.com/news/cynosport-2021-update.cfm',
@@ -247,7 +247,7 @@ var config = [{
   group: 1,
   name: 'USDAA',
   division: 'Championship',
-  cutoffs:     [12, 13, 14, 17, 19, 21, 26],
+  cutoffs: [12, 13, 14, 17, 19, 21, 26],
   jumpheights: [10, 12, 14, 16, 20, 22, 24],
   display: '<a href="https://www.usdaa.com/news/cynosport-2021-update.cfm">USDAA Champ.</a>',
   rules: 'https://www.usdaa.com/news/cynosport-2021-update.cfm',
@@ -471,7 +471,7 @@ function updateTable(height, filter) {
   }
   filters.style.display = 'block';
   resultsRow.innerHTML = resultsTemplate;
-  var filtered = _.filter(config, function(d) { return !d.name.includes('Current') });
+  var filtered = _.filter(config, function (d) { return !d.name.includes('Current') });
   var data = _(filtered).map(function (org) {
     var jumpheight = 'N/A', jump = 0, rule = 'N/A', notes = org.notes;
     var index = _.findIndex(org.cutoffs, function (h) { return height <= h });
@@ -505,7 +505,7 @@ function updateGraph(gnode, orgs, data, layout, height) {
     };
     data.push(heights);
   }
-  Plotly.newPlot(gnode, data, layout, {scrollZoom: false, displayModeBar: false, editable: false});
+  Plotly.newPlot(gnode, data, layout, { scrollZoom: false, displayModeBar: false, editable: false });
 }
 
 function getFilter() {
