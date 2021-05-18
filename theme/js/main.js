@@ -137,10 +137,10 @@ var config = [{
   group: 2,
   name: 'UKI',
   division: 'Select',
-  cutoffs: [11, 14, 17.5, 22, 26],
+  cutoffs: [12.75, 15, 17.5, 22, 26],
   jumpheights: [4, 8, 12, 16, 20],
-  display: '<a href="https://ukagilityinternational.com/wp-content/uploads/2019/09/UKI-5th-Edition-Rules-March-1-2019-updated-2.28.pdf">UKI Select</a>',
-  rules: 'https://ukagilityinternational.com/wp-content/uploads/2019/09/UKI-5th-Edition-Rules-March-1-2019-updated-2.28.pdf',
+  display: '<a href="https://ukagilityinternational.com/events/jump-heights/">UKI Select</a>',
+  rules: 'https://ukagilityinternational.com/events/jump-heights/',
   notes: ''
 }, {
   group: 2,
@@ -236,12 +236,12 @@ var config = [{
   group: 1,
   name: 'UKI',
   division: 'Regular',
-  cutoffs: [11, 14, 17.5, 22, 26],
+  cutoffs: [12.75, 15, 17.5, 22, 26],
   jumpheights: [8, 12, 16, 20, 22],
   jumpheightsdisplay: [8, 12, 16, 20, '22/24'],
   jumpheightsnotes: ['', '', '', '', 'Choice of 22 in or 24 in.'],
-  display: '<a href="https://ukagilityinternational.com/wp-content/uploads/2019/09/UKI-5th-Edition-Rules-March-1-2019-updated-2.28.pdf">UKI Regular</a>',
-  rules: 'https://ukagilityinternational.com/wp-content/uploads/2019/09/UKI-5th-Edition-Rules-March-1-2019-updated-2.28.pdf',
+  display: '<a href="https://ukagilityinternational.com/events/jump-heights/">UKI</a>',
+  rules: 'https://ukagilityinternational.com/events/jump-heights/',
   notes: ''
 }, {
   group: 1,
@@ -319,30 +319,6 @@ var config = [{
   rules: 'https://www.worldagilityopen.com/jump-heights/',
   notes: ''
 },
-{
-  group: 7,
-  name: 'UKI Future',
-  division: 'Regular',
-  cutoffs: [12.75, 15, 17.5, 22, 26],
-  jumpheights: [8, 12, 16, 20, 22],
-  jumpheightsdisplay: [8, 12, 16, 20, '22/24'],
-  jumpheightsnotes: ['', '', '', '', 'Choice of 22 in or 24 in.'],
-  display: '<a href="https://www.facebook.com/permalink.php?story_fbid=10158255710228370&id=249253213369">UKI Future</a>',
-  rules: 'https://www.facebook.com/permalink.php?story_fbid=10158255710228370&id=249253213369',
-  notes: ''
-},
-{
-  group: 7,
-  name: 'UKI Current',
-  division: 'Regular',
-  cutoffs: [11, 14, 17.5, 22, 26],
-  jumpheights: [8, 12, 16, 20, 22],
-  jumpheightsdisplay: [8, 12, 16, 20, '22/24'],
-  jumpheightsnotes: ['', '', '', '', 'Choice of 22 in or 24 in.'],
-  display: '<a href="https://ukagilityinternational.com/wp-content/uploads/2019/09/UKI-5th-Edition-Rules-March-1-2019-updated-2.28.pdf">UKI Current</a>',
-  rules: 'https://ukagilityinternational.com/wp-content/uploads/2019/09/UKI-5th-Edition-Rules-March-1-2019-updated-2.28.pdf',
-  notes: ''
-}
 ];
 
 function annotate(config) {
@@ -536,7 +512,6 @@ try {
     'Jump Heights Canadian Organizations',
     'Jump Heights International<br>Championship Organizations',
     'WAO Future vs Current',
-    'UKI Future vs Current<br>Select is one jump height lower',
   ];
   var graphData = _.map(graphConfigs, function (title, i) {
     var index = i + 1;
