@@ -287,7 +287,7 @@ var config = [{
   group: 5,
   name: 'IFCS',
   division: '',
-  cutoffs: [12.60, 15.75, 19.69, 26],
+  cutoffs: [11.81, 15.75, 19.69, 26],
   cutoffnotes: ['(300 mm)', '(400 mm)', '(500 mm)', '(600mm)'],
   jumpheights: [300, 400, 500, 600],
   jumpheightsnotes: ['Jump height 11.81 in.', 'Jump height 15.75 in.', 'Jump height 19.68 in.', 'Jump height 23.62 in.'],
