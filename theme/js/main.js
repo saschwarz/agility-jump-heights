@@ -276,12 +276,12 @@ var config = [{
   group: 5,
   name: 'WAO',
   division: '',
-  cutoffs: [12.60, 16.14, 19.69, 26],
-  cutoffnotes: ['(320 mm)', '(410 mm)', '(500 mm)', '(500mm)'],
-  jumpheights: [300, 400, 525, 600],
-  jumpheightsnotes: ['Jump height 11.81 in.', 'Jump height 15.75 in.', 'Jump height 20.66 in.', 'Jump height 23.62 in.'],
-  display: '<a href="https://www.worldagilityopen.com/jump-heights/">WAO</a>',
-  rules: 'https://www.worldagilityopen.com/jump-heights/',
+  cutoffs: [12.60, 14.96, 17.32, 19.69, 26],
+  cutoffnotes: ['(320mm)', '(380 mm)', '(440 mm)', '(500 mm)', '(500mm)'],
+  jumpheights: [250, 300, 400, 525, 600],
+  jumpheightsnotes: ['Jump height 9.84 in.', 'Jump height 11.81 in.', 'Jump height 15.75 in.', 'Jump height 20.66 in.', 'Jump height 23.62 in.'],
+  display: '<a href="https://www.facebook.com/WorldAgilityOpen/posts/5316818461693961">WAO</a>',
+  rules: 'https://www.facebook.com/WorldAgilityOpen/posts/5316818461693961',
   notes: ''
 }, {
   group: 5,
@@ -297,26 +297,62 @@ var config = [{
 },
 {
   group: 6,
-  name: 'WAO Future',
-  division: '',
-  cutoffs: [12.60, 14.96, 17.32, 19.69, 26],
-  cutoffnotes: ['(320mm)', '(380 mm)', '(440 mm)', '(500 mm)', '(500mm)'],
-  jumpheights: [250, 300, 400, 525, 600],
-  jumpheightsnotes: ['Jump height 9.84 in.', 'Jump height 11.81 in.', 'Jump height 15.75 in.', 'Jump height 20.66 in.', 'Jump height 23.62 in.'],
-  display: '<a href="https://www.facebook.com/WorldAgilityOpen/posts/5316818461693961">WAO Future</a>',
-  rules: 'https://www.facebook.com/WorldAgilityOpen/posts/5316818461693961',
+  name: 'USDAA Future',
+  division: 'Veterans',
+  cutoffs: [15, 18, 26],
+  jumpheights: [4, 8, 12],
+  display: '<a href="https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf">Vet. Dec</a>',
+  rules: 'https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf',
   notes: ''
 },
 {
   group: 6,
-  name: 'WAO Current',
-  division: '',
-  cutoffs: [12.60, 16.14, 19.69, 26],
-  cutoffnotes: ['(320 mm)', '(410 mm)', '(500 mm)', '(500mm)'],
-  jumpheights: [300, 400, 525, 600],
-  jumpheightsnotes: ['Jump height 11.81 in.', 'Jump height 15.75 in.', 'Jump height 20.66 in.', 'Jump height 23.62 in.'],
-  display: '<a href="https://www.worldagilityopen.com/jump-heights/">WAO Current</a>',
-  rules: 'https://www.worldagilityopen.com/jump-heights/',
+  name: 'USDAA Current',
+  division: 'Veterans',
+  cutoffs: [13, 17, 26],
+  jumpheights: [4, 8, 12],
+  display: '<a href="https://www.usdaa.com/regulations/upload/EquipmentSettingsChart2021_final.pdf">Vet. Current</a>',
+  rules: 'https://www.usdaa.com/regulations/upload/EquipmentSettingsChart2021_final.pdf',
+  notes: ''
+},
+{
+  group: 6,
+  name: 'USDAA Current',
+  division: 'Performance',
+  cutoffs: [13, 17, 19, 21, 26],
+  jumpheights: [8, 12, 14, 16, 20],
+  display: '<a href="https://www.usdaa.com/news/cynosport-2021-update.cfm">Perf. Current</a>',
+  rules: 'https://www.usdaa.com/news/cynosport-2021-update.cfm',
+  notes: ''
+},
+{
+  group: 6,
+  name: 'USDAA Future',
+  division: 'Performance',
+  cutoffs: [12, 15, 18, 22, 26],
+  jumpheights: [4, 8, 12, 16, 20],
+  display: '<a href="https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf">Perf. Dec</a>',
+  rules: 'https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf',
+  notes: ''
+},
+{
+  group: 6,
+  name: 'USDAA Current',
+  division: 'Championship',
+  cutoffs: [12, 13, 14, 17, 19, 21, 26],
+  jumpheights: [10, 12, 14, 16, 20, 22, 24],
+  display: '<a href="https://www.usdaa.com/news/cynosport-2021-update.cfm">Champ Current</a>',
+  rules: 'https://www.usdaa.com/news/cynosport-2021-update.cfm',
+  notes: ''
+},
+{
+  group: 6,
+  name: 'USDAA Future',
+  division: 'Championship',
+  cutoffs: [12, 15, 18, 22, 26],
+  jumpheights: [8, 12, 16, 20, 24],
+  display: '<a href="https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf">Champ. Dec</a>',
+  rules: 'https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf',
   notes: ''
 },
 ];
@@ -504,18 +540,19 @@ function getHeight() {
 try {
   var annotated = annotate(config);
   var gnodes = [];  // graph nodes
-  // all configs based on index in this array:
+  // all configs based on 1-based index into this array:
   var graphConfigs = [
     'Jump Heights US Organizations<br>"Regular/Championship"',
     'Jump Heights US Organizations<br>"Performance/Preferred"',
     'Jump Heights US Organizations<br>"Veterans/Specialist"',
     'Jump Heights Canadian Organizations',
     'Jump Heights International<br>Championship Organizations',
-    'WAO Future vs Current',
+    'USDAA Dec 2022 vs Current',
   ];
   var graphData = _.map(graphConfigs, function (title, i) {
     var index = i + 1;
     var filtered = _.filter(annotated, { group: index });
+    var layout = buildLayout(filtered, title);
     var data = setup(filtered);
     var gnode = Plotly.d3.select('#graph' + index).node();
     gnodes.push(gnode);
@@ -523,7 +560,7 @@ try {
       gnode: gnode,
       filtered: filtered,
       data: data,
-      layout: buildLayout(filtered, title)
+      layout: layout,
     };
   })
 
