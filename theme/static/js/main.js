@@ -537,6 +537,13 @@ function getHeight() {
   return height;
 }
 
+function displayError() {
+  var p = document.createElement("p");
+  p.style = "color:red;font-face:bold;";
+  p.innerHTML = "I'm sorry!<br>If you don't see a graph here there was problem creating it.<br>This page uses some newer web technology you might try using more modern browser.";
+  document.getElementById('graph1').appendChild(p);
+}
+
 try {
   var annotated = annotate(config);
   var gnodes = [];  // graph nodes
@@ -576,13 +583,6 @@ try {
   onHeightChange();
 } catch (e) {
   displayError();
-}
-
-function displayError() {
-  var p = document.createElement("p");
-  p.style = "color:red;font-face:bold;";
-  p.innerHTML = "I'm sorry!<br>If you don't see a graph here there was problem creating it.<br>This page uses some newer web technology you might try using more modern browser.";
-  document.getElementById('graph1').appendChild(p);
 }
 
 window.onresize = _.debounce(function () {
