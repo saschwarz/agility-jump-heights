@@ -29,10 +29,10 @@ var config = [{
   group: 3,
   name: 'USDAA',
   division: 'Veterans',
-  cutoffs: [13, 17, 26],
+  cutoffs: [15, 18, 26],
   jumpheights: [4, 8, 12],
-  display: '<a href="https://www.usdaa.com/regulations/upload/EquipmentSettingsChart2021_final.pdf">USDAA Veterans</a>',
-  rules: 'https://www.usdaa.com/regulations/upload/EquipmentSettingsChart2021_final.pdf',
+  display: '<a href="https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf">USDAA Veterans</a>',
+  rules: 'https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf',
   notes: ''
 }, {
   group: 4,
@@ -146,10 +146,10 @@ var config = [{
   group: 2,
   name: 'USDAA',
   division: 'Performance',
-  cutoffs: [13, 17, 19, 21, 26],
-  jumpheights: [8, 12, 14, 16, 20],
-  display: '<a href="https://www.usdaa.com/news/cynosport-2021-update.cfm">USDAA Perf.</a>',
-  rules: 'https://www.usdaa.com/news/cynosport-2021-update.cfm',
+  cutoffs: [12, 15, 18, 22, 26],
+  jumpheights: [4, 8, 12, 16, 20],
+  display: '<a href="https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf">USDAA Perf.</a>',
+  rules: 'https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf',
   notes: ''
 }, {
   group: 1,
@@ -247,10 +247,10 @@ var config = [{
   group: 1,
   name: 'USDAA',
   division: 'Championship',
-  cutoffs: [12, 13, 14, 17, 19, 21, 26],
-  jumpheights: [10, 12, 14, 16, 20, 22, 24],
-  display: '<a href="https://www.usdaa.com/news/cynosport-2021-update.cfm">USDAA Champ.</a>',
-  rules: 'https://www.usdaa.com/news/cynosport-2021-update.cfm',
+  cutoffs: [12, 15, 18, 22, 26],
+  jumpheights: [8, 12, 16, 20, 24],
+  display: '<a href="https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf">USDAA Champ.</a>',
+  rules: 'https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf',
   notes: ''
 }, {
   group: 4,
@@ -294,67 +294,7 @@ var config = [{
   display: '<a href="https://ifcsdogsports.org/wp-content/uploads/2017/04/IFCS-Agility-Rules-Dated-February-2017.pdf">IFCS</a>',
   rules: 'https://ifcsdogsports.org/wp-content/uploads/2017/04/IFCS-Agility-Rules-Dated-February-2017.pdf',
   notes: ''
-},
-{
-  group: 6,
-  name: 'USDAA Future',
-  division: 'Veterans',
-  cutoffs: [15, 18, 26],
-  jumpheights: [4, 8, 12],
-  display: '<a href="https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf">Vet. Dec</a>',
-  rules: 'https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf',
-  notes: ''
-},
-{
-  group: 6,
-  name: 'USDAA Current',
-  division: 'Veterans',
-  cutoffs: [13, 17, 26],
-  jumpheights: [4, 8, 12],
-  display: '<a href="https://www.usdaa.com/regulations/upload/EquipmentSettingsChart2021_final.pdf">Vet. Current</a>',
-  rules: 'https://www.usdaa.com/regulations/upload/EquipmentSettingsChart2021_final.pdf',
-  notes: ''
-},
-{
-  group: 6,
-  name: 'USDAA Current',
-  division: 'Performance',
-  cutoffs: [13, 17, 19, 21, 26],
-  jumpheights: [8, 12, 14, 16, 20],
-  display: '<a href="https://www.usdaa.com/news/cynosport-2021-update.cfm">Perf. Current</a>',
-  rules: 'https://www.usdaa.com/news/cynosport-2021-update.cfm',
-  notes: ''
-},
-{
-  group: 6,
-  name: 'USDAA Future',
-  division: 'Performance',
-  cutoffs: [12, 15, 18, 22, 26],
-  jumpheights: [4, 8, 12, 16, 20],
-  display: '<a href="https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf">Perf. Dec</a>',
-  rules: 'https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf',
-  notes: ''
-},
-{
-  group: 6,
-  name: 'USDAA Current',
-  division: 'Championship',
-  cutoffs: [12, 13, 14, 17, 19, 21, 26],
-  jumpheights: [10, 12, 14, 16, 20, 22, 24],
-  display: '<a href="https://www.usdaa.com/news/cynosport-2021-update.cfm">Champ Current</a>',
-  rules: 'https://www.usdaa.com/news/cynosport-2021-update.cfm',
-  notes: ''
-},
-{
-  group: 6,
-  name: 'USDAA Future',
-  division: 'Championship',
-  cutoffs: [12, 15, 18, 22, 26],
-  jumpheights: [8, 12, 16, 20, 24],
-  display: '<a href="https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf">Champ. Dec</a>',
-  rules: 'https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf',
-  notes: ''
-},
+}
 ];
 
 function annotate(config) {
@@ -517,6 +457,7 @@ function updateGraph(gnode, orgs, data, layout, height) {
     };
     data.push(heights);
   }
+  console.table(data);
   Plotly.newPlot(gnode, data, layout, { scrollZoom: false, displayModeBar: false, editable: false });
 }
 
@@ -554,7 +495,6 @@ try {
     'Jump Heights US Organizations<br>"Veterans/Specialist"',
     'Jump Heights Canadian Organizations',
     'Jump Heights International<br>Championship Organizations',
-    'USDAA Dec 2022 vs Current',
   ];
   var graphData = _.map(graphConfigs, function (title, i) {
     var index = i + 1;
