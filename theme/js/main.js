@@ -31,7 +31,7 @@ var config = [{
   division: 'Veterans',
   cutoffs: [15, 18, 26],
   jumpheights: [4, 8, 12],
-  display: '<a href="https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf">Vet. Dec</a>',
+  display: '<a href="https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf">USDAA Veterans</a>',
   rules: 'https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf',
   notes: ''
 }, {
@@ -148,7 +148,7 @@ var config = [{
   division: 'Performance',
   cutoffs: [12, 15, 18, 22, 26],
   jumpheights: [4, 8, 12, 16, 20],
-  display: '<a href="https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf">Perf. Dec</a>',
+  display: '<a href="https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf">USDAA Perf.</a>',
   rules: 'https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf',
   notes: ''
 }, {
@@ -249,7 +249,7 @@ var config = [{
   division: 'Championship',
   cutoffs: [12, 15, 18, 22, 26],
   jumpheights: [8, 12, 16, 20, 24],
-  display: '<a href="https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf">Champ. Dec</a>',
+  display: '<a href="https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf">USDAA Champ.</a>',
   rules: 'https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf',
   notes: ''
 }, {
@@ -294,7 +294,7 @@ var config = [{
   display: '<a href="https://ifcsdogsports.org/wp-content/uploads/2017/04/IFCS-Agility-Rules-Dated-February-2017.pdf">IFCS</a>',
   rules: 'https://ifcsdogsports.org/wp-content/uploads/2017/04/IFCS-Agility-Rules-Dated-February-2017.pdf',
   notes: ''
-},
+}
 ];
 
 function annotate(config) {
@@ -457,6 +457,7 @@ function updateGraph(gnode, orgs, data, layout, height) {
     };
     data.push(heights);
   }
+  console.table(data);
   Plotly.newPlot(gnode, data, layout, { scrollZoom: false, displayModeBar: false, editable: false });
 }
 
