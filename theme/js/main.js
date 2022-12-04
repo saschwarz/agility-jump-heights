@@ -457,7 +457,6 @@ function updateGraph(gnode, orgs, data, layout, height) {
     };
     data.push(heights);
   }
-  console.table(data);
   Plotly.newPlot(gnode, data, layout, { scrollZoom: false, displayModeBar: false, editable: false });
 }
 
