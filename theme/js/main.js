@@ -63,15 +63,6 @@ var config = [{
   notes: ''
 }, {
   group: 3,
-  name: 'DOCNA',
-  division: 'Veterans',
-  cutoffs: [14, 18, 22, 26],
-  jumpheights: [4, 8, 12, 16],
-  display: '<a href="https://rsagility.com/Forms/2_Organizational_Structure.pdf">DOCNA Veterans</a>',
-  rules: 'https://rsagility.com/Forms/2_Organizational_Structure.pdf',
-  notes: "Dog's >= 7yro."
-}, {
-  group: 3,
   name: 'NADAC',
   division: 'Veterans',
   cutoffs: [11, 14, 18, 26],
@@ -126,15 +117,6 @@ var config = [{
   notes: ''
 }, {
   group: 2,
-  name: 'DOCNA',
-  division: 'Select',
-  cutoffs: [11, 14, 18, 22, 26],
-  jumpheights: [4, 8, 12, 16, 20],
-  display: '<a href="https://rsagility.com/Forms/2_Organizational_Structure.pdf">DOCNA Select</a>',
-  rules: 'https://rsagility.com/Forms/2_Organizational_Structure.pdf',
-  notes: ''
-}, {
-  group: 2,
   name: 'UKI',
   division: 'Select',
   cutoffs: [12.75, 15, 17.5, 22, 26],
@@ -177,15 +159,6 @@ var config = [{
   jumpheights: [8, 12, 16, 20, 24],
   display: '<a href="https://images.akc.org/pdf/rulebooks/REAGIL.pdf">AKC Regular</a>',
   rules: 'https://images.akc.org/pdf/rulebooks/REAGIL.pdf',
-  notes: ''
-}, {
-  group: 1,
-  name: 'DOCNA',
-  division: 'Competition',
-  cutoffs: [11, 14, 18, 22, 26],
-  jumpheights: [8, 12, 16, 20, 24],
-  display: '<a href="https://rsagility.com/Forms/2_Organizational_Structure.pdf">DOCNA Comp.</a>',
-  rules: 'https://rsagility.com/Forms/2_Organizational_Structure.pdf',
   notes: ''
 }, {
   group: 4,
