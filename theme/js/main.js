@@ -2,10 +2,10 @@ var config = [{
   group: 1,
   name: 'TDAA',
   division: 'Regular',
-  cutoffs: [4, 8, 12, 16, 20],
-  jumpheights: [2, 4, 8, 12, 16],
-  display: '<a href="https://www.k9tdaa.com/documents/2011%20Forms/Rules%20and%20Regulations%20v%205.2.pdf">TDAA</a>',
-  rules: 'https://www.k9tdaa.com/documents/2011%20Forms/Rules%20and%20Regulations%20v%205.2.pdf',
+  cutoffs: [8, 12, 16, 20],
+  jumpheights: [4, 8, 12, 16],
+  display: '<a href="https://k9tdaa.com/site2021/wp-content/uploads/2022/11/Rules-and-Regulations-v-5.8.3.pdf">TDAA</a>',
+  rules: 'https://k9tdaa.com/site2021/wp-content/uploads/2022/11/Rules-and-Regulations-v-5.8.3.pdf',
   notes: ''
 }, {
   group: 3,
