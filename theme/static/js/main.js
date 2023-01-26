@@ -238,12 +238,12 @@ var config = [{
   group: 5,
   name: 'FCI',
   division: '',
-  cutoffs: [13.75, 16.92, 26],
-  cutoffnotes: ['(350 mm)', '(430 mm)', '(430 mm)'],
-  jumpheights: [300, 400, 600],
-  jumpheightsnotes: ['Cutoff LESS THAN 350 mm. Jump height 11.81 in.', 'Cutoff LESS THAN 430 mm. Jump height 15.75 in.', 'Jump height 23.62 in.'],
-  display: '<a href="http://www.fci.be/medias/AGI-REG-2018-en-7610.pdf">FCI</a>',
-  rules: 'http://www.fci.be/medias/AGI-REG-2018-en-7610.pdf',
+  cutoffs: [13.75, 16.92, 18.89, 26],
+  cutoffnotes: ['(350 mm)', '(430 mm)', '(480 mm)', '(600 mm)'],
+  jumpheights: [300, 400, 500, 600],
+  jumpheightsnotes: ['*Cutoff IS LESS THAN 350 mm. Jump height ~12 in.', '*Cutoff IS LESS THAN 430 mm. Jump height ~16 in.', '*Cutoff IS LESS THAN 480 mm. Jump height ~24 in.', 'Jump height ~24 in.'],
+  display: '<a href="file:///Users/saschwarz/Downloads/AGI-REG-49-2020-en.pdf">FCI</a>',
+  rules: 'file:///Users/saschwarz/Downloads/AGI-REG-49-2020-en.pdf',
   notes: ''
 }, {
   group: 5,
@@ -252,7 +252,7 @@ var config = [{
   cutoffs: [12.60, 14.96, 17.32, 19.69, 26],
   cutoffnotes: ['(320mm)', '(380 mm)', '(440 mm)', '(500 mm)', '(500mm)'],
   jumpheights: [250, 300, 400, 525, 600],
-  jumpheightsnotes: ['Jump height 9.84 in.', 'Jump height 11.81 in.', 'Jump height 15.75 in.', 'Jump height 20.66 in.', 'Jump height 23.62 in.'],
+  jumpheightsnotes: ['Jump height ~10 in.', 'Jump height ~12 in.', 'Jump height ~16 in.', 'Jump height ~20 in.', 'Jump height ~24 in.'],
   display: '<a href="https://www.facebook.com/WorldAgilityOpen/posts/5316818461693961">WAO</a>',
   rules: 'https://www.facebook.com/WorldAgilityOpen/posts/5316818461693961',
   notes: ''
@@ -263,7 +263,7 @@ var config = [{
   cutoffs: [11.81, 15.75, 19.69, 26],
   cutoffnotes: ['(300 mm)', '(400 mm)', '(500 mm)', '(600mm)'],
   jumpheights: [300, 400, 500, 600],
-  jumpheightsnotes: ['Jump height 11.81 in.', 'Jump height 15.75 in.', 'Jump height 19.68 in.', 'Jump height 23.62 in.'],
+  jumpheightsnotes: ['Jump height ~12 in.', 'Jump height ~16 in.', 'Jump height ~20 in.', 'Jump height ~24 in.'],
   display: '<a href="https://ifcsdogsports.org/wp-content/uploads/2017/04/IFCS-Agility-Rules-Dated-February-2017.pdf">IFCS</a>',
   rules: 'https://ifcsdogsports.org/wp-content/uploads/2017/04/IFCS-Agility-Rules-Dated-February-2017.pdf',
   notes: ''

@@ -1,196 +1,167 @@
 <html lang="en">
-  <head>
-    <title>AgilityNerd's Dog Agility Jump Height Calculator</title>
-    <meta name="save_as" content="index.html" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="msapplication-config" content="/browserconfig.xml" />
-    <meta name="theme-color" content="#ffffff" />
-  </head>
 
-  <body>
-    <nav>
+<head>
+  <title>AgilityNerd's Dog Agility Jump Height Calculator</title>
+  <meta name="save_as" content="index.html" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="msapplication-config" content="/browserconfig.xml" />
+  <meta name="theme-color" content="#ffffff" />
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="https://agilitynerd.com/">AgilityNerd</a></li>
+      <li>
+        <a href="https://agilitycourses.com/"><span class="hidden-small">Agility</span> Courses</a>
+      </li>
+      <li>
+        <a href="https://googility.com/"><span class="hidden-small">Googility</span> Search</a>
+      </li>
+      <li>
+        <a href="https://store.agilitynerd.com/"><span class="hidden-small">AgilityNerd</span> Store</a>
+      </li>
+    </ul>
+  </nav>
+  <h1>Dog Agility Jump Height Calculator</h1>
+  <div class="row">
+    <form onsubmit="onHeightChange();return false;">
+      <input class="six columns" type="number" step="any" min="2" id="height" value="" placeholder="Enter your dog's height in inches" autocomplete="off" />
+      <input class="button-primary six columns" type="submit" value="Show Me My Jump Heights!" />
+    </form>
+  </div>
+  <div class="row" id="filters">
+    <label>
+      Sort by Jump Height
+      <input type="radio" name="sort" value="jump" checked onclick="onHeightChange()" />
+    </label>
+    <label>
+      Sort by Organization
+      <input type="radio" name="sort" value="org" onclick="onHeightChange()" />
+    </label>
+  </div>
+  <div class="row" id="results"></div>
+  <div class="row">
+    <div class="twelve columns u-max-full-width notes">
+      <h5>Please read:</h5>
       <ul>
-        <li><a href="https://agilitynerd.com/">AgilityNerd</a></li>
         <li>
-          <a href="https://agilitycourses.com/"
-            ><span class="hidden-small">Agility</span> Courses</a
-          >
+          The calculator displays the <em>lowest jump heights</em> by dog
+          height for many organizations and their main competition divisions,
+          but <em>not all organizations or divisions</em>.
         </li>
         <li>
-          <a href="https://googility.com/"
-            ><span class="hidden-small">Googility</span> Search</a
-          >
+          Organizations may have additional and/or optional higher or lower
+          jump heights.
         </li>
         <li>
-          <a href="https://store.agilitynerd.com/"
-            ><span class="hidden-small">AgilityNerd</span> Store</a
-          >
+          Organizations may have additional jump height divisions for specific
+          breeds, junior handlers, and/or senior dogs/handlers.
         </li>
+        <li>
+          <em>Always confirm</em> the rules by clicking on any organization's
+          name!
+        </li>
+        <li>Please email any corrections to steve at agilitynerd.com</li>
       </ul>
-    </nav>
-    <h1>Dog Agility Jump Height Calculator</h1>
-    <div class="row">
-      <form onsubmit="onHeightChange();return false;">
-        <input
-          class="six columns"
-          type="number"
-          step="any"
-          min="2"
-          id="height"
-          value=""
-          placeholder="Enter your dog's height in inches"
-          autocomplete="off"
-        />
-        <input
-          class="button-primary six columns"
-          type="submit"
-          value="Show Me My Jump Heights!"
-        />
-      </form>
     </div>
-    <div class="row" id="filters">
-      <label>
-        Sort by Jump Height
-        <input
-          type="radio"
-          name="sort"
-          value="jump"
-          checked
-          onclick="onHeightChange()"
-        />
-      </label>
-      <label>
-        Sort by Organization
-        <input
-          type="radio"
-          name="sort"
-          value="org"
-          onclick="onHeightChange()"
-        />
-      </label>
-    </div>
-    <div class="row" id="results"></div>
+  </div>
+  <div class="row">
+    <div class="twelve columns u-max-full-width" id="graph1"></div>
+  </div>
+  <div class="row">
+    <div class="twelve columns u-max-full-width" id="graph2"></div>
+  </div>
+  <div class="row">
+    <div class="twelve columns u-max-full-width" id="graph3"></div>
+  </div>
+  <div class="row">
+    <div class="twelve columns u-max-full-width" id="graph4"></div>
+  </div>
+  <div class="row">
+    <div class="twelve columns u-max-full-width" id="graph5"></div>
+  </div>
+  <h5 id="updates">Updates</h5>
+  <div class="updates">
     <div class="row">
-      <div class="twelve columns u-max-full-width notes">
-        <h5>Please read:</h5>
-        <ul>
-          <li>
-            The calculator displays the <em>lowest jump heights</em> by dog
-            height for many organizations and their main competition divisions,
-            but <em>not all organizations or divisions</em>.
-          </li>
-          <li>
-            Organizations may have additional and/or optional higher or lower
-            jump heights.
-          </li>
-          <li>
-            Organizations may have additional jump height divisions for specific
-            breeds, junior handlers, and/or senior dogs/handlers.
-          </li>
-          <li>
-            <em>Always confirm</em> the rules by clicking on any organization's
-            name!
-          </li>
-          <li>Please email any corrections to steve at agilitynerd.com</li>
-        </ul>
+      <div class="two columns">2023-01-26</div>
+      <div class="ten columns">
+        Updated for <a href="file:///Users/saschwarz/Downloads/AGI-REG-49-2020-en.pdf">FCI 2023 rules</a>: added Intermediate jump height.
       </div>
     </div>
     <div class="row">
-      <div class="twelve columns u-max-full-width" id="graph1"></div>
+      <div class="two columns">2022-12-03</div>
+      <div class="ten columns">
+        Updated TDAA for
+        <a href="https://k9tdaa.com/site2021/wp-content/uploads/2022/11/Rules-and-Regulations-v-5.8.3.pdf">2022 Nov rules</a>.<br />
+        Jump height changes for
+        <a href="https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf">USDAA December 1, 2022</a>.<br />
+        Removed DOCNA organization.
+      </div>
     </div>
     <div class="row">
-      <div class="twelve columns u-max-full-width" id="graph2"></div>
+      <div class="two columns">2022-10-13</div>
+      <div class="ten columns">
+        Finally made WAO 2022 jump height changes official.
+      </div>
     </div>
     <div class="row">
-      <div class="twelve columns u-max-full-width" id="graph3"></div>
+      <div class="two columns">2021-10-26</div>
+      <div class="ten columns">
+        Corrected jump height inches for IFCS 300mm from 12.60 inches to 11.81
+        inches
+      </div>
     </div>
     <div class="row">
-      <div class="twelve columns u-max-full-width" id="graph4"></div>
+      <div class="two columns">2021-05-18</div>
+      <div class="ten columns">
+        Updated UKI for changes effective Apr 1 2021.
+      </div>
     </div>
     <div class="row">
-      <div class="twelve columns u-max-full-width" id="graph5"></div>
-    </div>
-    <h5 id="updates">Updates</h5>
-    <div class="updates">
-      <div class="row">
-        <div class="two columns">2022-12-03</div>
-        <div class="ten columns">
-          Updated TDAA for
-          <a
-            href="https://k9tdaa.com/site2021/wp-content/uploads/2022/11/Rules-and-Regulations-v-5.8.3.pdf"
-            >2022 Nov rules</a
-          >.<br />
-          Jump height changes for
-          <a
-            href="https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf"
-            >USDAA December 1, 2022</a
-          >.<br />
-          Removed DOCNA organization.
-        </div>
-      </div>
-      <div class="row">
-        <div class="two columns">2022-10-13</div>
-        <div class="ten columns">
-          Finally made WAO 2022 jump height changes official.
-        </div>
-      </div>
-      <div class="row">
-        <div class="two columns">2021-10-26</div>
-        <div class="ten columns">
-          Corrected jump height inches for IFCS 300mm from 12.60 inches to 11.81
-          inches
-        </div>
-      </div>
-      <div class="row">
-        <div class="two columns">2021-05-18</div>
-        <div class="ten columns">
-          Updated UKI for changes effective Apr 1 2021.
-        </div>
-      </div>
-      <div class="row">
-        <div class="two columns">2021-05-04</div>
-        <div class="ten columns">
-          Updated veterans jump heights for USDAA 2021.
-        </div>
-      </div>
-      <div class="row">
-        <div class="two columns">2021-02-12</div>
-        <div class="ten columns">Updated jump heights for USDAA 2021.</div>
-      </div>
-      <div class="row">
-        <div class="two columns">2020-11-16</div>
-        <div class="ten columns">Changed graphs to work better on phones.</div>
-      </div>
-      <div class="row">
-        <div class="two columns">2020-01-18</div>
-        <div class="ten columns">
-          Updated jump height cutoffs for CKC. Updated links to latest CKC and
-          USDAA rule books.
-        </div>
-      </div>
-      <div class="row">
-        <div class="two columns">2019-10-03</div>
-        <div class="ten columns">
-          Removed AAC jump heights prior to 2018. Updated links to latest rule
-          books (except USDAA).
-        </div>
-      </div>
-      <div class="row">
-        <div class="two columns">2017-03-01</div>
-        <div class="ten columns">
-          Added AAC 2018 Jump Heights. Sort by Organization Name or by Jump
-          Height. Removed &quot;Effective on Dec 28, 2016&quot; from USDAA
-          entries. Added top level links.
-        </div>
+      <div class="two columns">2021-05-04</div>
+      <div class="ten columns">
+        Updated veterans jump heights for USDAA 2021.
       </div>
     </div>
-    <script id="results-template" type="text/x-template">
+    <div class="row">
+      <div class="two columns">2021-02-12</div>
+      <div class="ten columns">Updated jump heights for USDAA 2021.</div>
+    </div>
+    <div class="row">
+      <div class="two columns">2020-11-16</div>
+      <div class="ten columns">Changed graphs to work better on phones.</div>
+    </div>
+    <div class="row">
+      <div class="two columns">2020-01-18</div>
+      <div class="ten columns">
+        Updated jump height cutoffs for CKC. Updated links to latest CKC and
+        USDAA rule books.
+      </div>
+    </div>
+    <div class="row">
+      <div class="two columns">2019-10-03</div>
+      <div class="ten columns">
+        Removed AAC jump heights prior to 2018. Updated links to latest rule
+        books (except USDAA).
+      </div>
+    </div>
+    <div class="row">
+      <div class="two columns">2017-03-01</div>
+      <div class="ten columns">
+        Added AAC 2018 Jump Heights. Sort by Organization Name or by Jump
+        Height. Removed &quot;Effective on Dec 28, 2016&quot; from USDAA
+        entries. Added top level links.
+      </div>
+    </div>
+  </div>
+  <script id="results-template" type="text/x-template">
       <table class="results-table" class="twelve columns u-max-full-width">
       	<thead>
       		<tr>
@@ -210,22 +181,13 @@
           <p>Thanks!</p>
         </div>
     </script>
-    <div class="row kofi">
-      <p>
-        If you found this helpful won't you please
-        <a
-          href="https://ko-fi.com/O4O61JURA"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><img
-            width="127px"
-            height="32px"
-            src="https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2"
-            border="0"
-            alt="Buy Me a Coffee at ko-fi.com"
-        /></a>
-      </p>
-      <p>Thanks!</p>
-    </div>
-  </body>
+  <div class="row kofi">
+    <p>
+      If you found this helpful won't you please
+      <a href="https://ko-fi.com/O4O61JURA" target="_blank" rel="noopener noreferrer"><img width="127px" height="32px" src="https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2" border="0" alt="Buy Me a Coffee at ko-fi.com" /></a>
+    </p>
+    <p>Thanks!</p>
+  </div>
+</body>
+
 </html>
