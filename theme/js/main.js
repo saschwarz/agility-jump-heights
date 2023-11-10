@@ -260,12 +260,12 @@ var config = [{
   group: 5,
   name: 'IFCS',
   division: '',
-  cutoffs: [11.81, 15.75, 19.69, 26],
-  cutoffnotes: ['(300 mm)', '(400 mm)', '(500 mm)', '(600mm)'],
-  jumpheights: [300, 400, 500, 600],
-  jumpheightsnotes: ['Jump height ~12 in.', 'Jump height ~16 in.', 'Jump height ~20 in.', 'Jump height ~24 in.'],
-  display: '<a href="https://ifcsdogsports.org/wp-content/uploads/2017/04/IFCS-Agility-Rules-Dated-February-2017.pdf">IFCS</a>',
-  rules: 'https://ifcsdogsports.org/wp-content/uploads/2017/04/IFCS-Agility-Rules-Dated-February-2017.pdf',
+  cutoffs: [11.81, 13.78, 16.54, 19.69, 26],
+  cutoffnotes: ['(300 mm)', '(350 mm)', '(420 mm)', '(500 mm)', '(500mm)'],
+  jumpheights: [250, 300, 400, 500, 600],
+  jumpheightsnotes: ['Jump height ~10 in.', 'Jump height ~12 in.', 'Jump height ~16 in.', 'Jump height ~20 in.', 'Jump height ~24 in.'],
+  display: '<a href="https://ifcsdogsports.org/latestnews/council-approves-new-height-divisions/">IFCS</a>',
+  rules: 'https://ifcsdogsports.org/latestnews/council-approves-new-height-divisions/',
   notes: ''
 }
 ];
