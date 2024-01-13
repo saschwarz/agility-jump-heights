@@ -31,6 +31,8 @@ var config = [{
   division: 'Veterans',
   cutoffs: [15, 18, 26],
   jumpheights: [4, 8, 12],
+  jumpheightsdisplay: [4, 8, '12/16'],
+  jumpheightsnotes: ['', '', 'Choice of 12 in or 16 in.'],
   display: '<a href="https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf">USDAA Veterans</a>',
   rules: 'https://www.usdaa.com/regulations/upload/USDAAEquipmentSettingsChart2023.pdf',
   notes: ''
