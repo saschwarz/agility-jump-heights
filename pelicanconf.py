@@ -49,6 +49,7 @@ EXTRA_PATH_METADATA = {
     "images/jumpheights.png": {"path": "jumpheights.png"},
     "images/mstile-150x150.png": {"path": "mstile-150x150.png"},
     "images/safari-pinned-tab.svg": {"path": "safari-pinned-tab.svg"},
+    "images/screenshot.png": {"path": "screenshot.png"},
     "images/site.webmanifest": {"path": "site.webmanifest"},
     "extra/CNAME": {"path": "CNAME"},
 }

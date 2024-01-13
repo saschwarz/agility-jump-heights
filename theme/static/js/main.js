@@ -69,10 +69,22 @@ var config = [{
   division: 'Veterans',
   cutoffs: [11, 14, 18, 26],
   jumpheights: [4, 8, 12, 16],
-  display: '<a href="https://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Proficient</a>',
-  rules: 'https://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights',
+  display: '<a href="https://www.nadac.com/WPsite/wp-content/uploads/2022/12/NADAC-Exhibitor_MasterFile-Rev-12.24.22.pdf">NADAC Proficient</a>',
+  rules: 'https://www.nadac.com/WPsite/wp-content/uploads/2022/12/NADAC-Exhibitor_MasterFile-Rev-12.24.22.pdf',
   notes: "Dog's >= 7yro."
-}, {
+},
+{
+  group: 3,
+  name: 'NADAC',
+  division: 'Veterans',
+  cutoffs: [14, 18, 26],
+  jumpheights: [4, 8, 12],
+  display: '<a href="https://www.nadac.com/WPsite/wp-content/uploads/2022/12/NADAC-Exhibitor_MasterFile-Rev-12.24.22.pdf">NADAC Skilled</a>',
+  rules: 'https://www.nadac.com/WPsite/wp-content/uploads/2022/12/NADAC-Exhibitor_MasterFile-Rev-12.24.22.pdf',
+  notes: "Dog's >= 7yro."
+},
+
+{
   group: 3,
   name: 'CPE',
   division: 'Veterans',
@@ -87,8 +99,8 @@ var config = [{
   division: 'Skilled',
   cutoffs: [11, 14, 18, 26],
   jumpheights: [4, 8, 12, 16],
-  display: '<a href="https://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Skilled</a>',
-  rules: 'https://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights',
+  display: '<a href="https://www.nadac.com/WPsite/wp-content/uploads/2022/12/NADAC-Exhibitor_MasterFile-Rev-12.24.22.pdf">NADAC Skilled</a>',
+  rules: 'https://www.nadac.com/WPsite/wp-content/uploads/2022/12/NADAC-Exhibitor_MasterFile-Rev-12.24.22.pdf',
   notes: ''
 }, {
   group: 2,
@@ -150,8 +162,8 @@ var config = [{
   division: 'Proficient',
   cutoffs: [11, 14, 18, 26],
   jumpheights: [8, 12, 16, 20],
-  display: '<a href="https://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights">NADAC Prof.</a>',
-  rules: 'https://www.nadac.com/Rules_for_NADAC_trials.htm#_Jump_Heights',
+  display: '<a href="https://www.nadac.com/WPsite/wp-content/uploads/2022/12/NADAC-Exhibitor_MasterFile-Rev-12.24.22.pdf">NADAC Prof.</a>',
+  rules: 'https://www.nadac.com/WPsite/wp-content/uploads/2022/12/NADAC-Exhibitor_MasterFile-Rev-12.24.22.pdf',
   notes: ''
 }, {
   group: 1,
