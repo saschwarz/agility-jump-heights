@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
 
 from datetime import datetime
 
@@ -28,6 +27,7 @@ LINKS = ()
 SOCIAL = (
     ("Facebook", "https://www.facebook.com/AgilityNerd/"),
     ("Twitter", "https://twitter.com/agilitynerd"),
+    ("Bluesky", "https://bsky.app/profile/agilitynerd.com"),
 )
 
 DEFAULT_PAGINATION = False
