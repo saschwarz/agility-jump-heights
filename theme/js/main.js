@@ -255,7 +255,7 @@ var config = [{
   cutoffs: [13.75, 16.92, 18.89, 26],
   cutoffnotes: ['(350 mm)', '(430 mm)', '(480 mm)', '(600 mm)'],
   jumpheights: [300, 400, 500, 600],
-  jumpheightsnotes: ['*Cutoff IS LESS THAN 350 mm. Jump height ~12 in.', '*Cutoff IS LESS THAN 430 mm. Jump height ~16 in.', '*Cutoff IS LESS THAN 480 mm. Jump height ~24 in.', 'Jump height ~24 in.'],
+  jumpheightsnotes: ['*Cutoff IS LESS THAN 350 mm. Jump height ~12 in.', '*Cutoff IS LESS THAN 430 mm. Jump height ~16 in.', '*Cutoff IS LESS THAN 480 mm. Jump height ~20 in.', 'Jump height ~24 in.'],
   display: '<a href="https://www.fci.be/medias/AGI-REG-49-2020-en-15525.pdf">FCI</a>',
   rules: 'https://www.fci.be/medias/AGI-REG-49-2020-en-15525.pdf',
   notes: ''
